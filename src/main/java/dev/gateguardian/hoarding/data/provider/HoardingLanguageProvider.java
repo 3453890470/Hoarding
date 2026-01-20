@@ -1,15 +1,15 @@
-package com.xinluo.hoarding.data.provider;
+package dev.gateguardian.hoarding.data.provider;
 
-import com.xinluo.hoarding.Hoarding;
+import dev.gateguardian.hoarding.Hoarding;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import static com.xinluo.hoarding.common.registry.HoardingBlocks.*;
-import static com.xinluo.hoarding.common.registry.HoardingItems.*;
+import static dev.gateguardian.hoarding.common.registry.HoardingBlocks.*;
+import static dev.gateguardian.hoarding.common.registry.HoardingItems.*;
 
-public class EnglishLanguageProvider extends LanguageProvider {
-    public EnglishLanguageProvider(PackOutput packOutput) {
-        super(packOutput, Hoarding.MODID, "en_us");
+public class HoardingLanguageProvider extends LanguageProvider {
+    public HoardingLanguageProvider(PackOutput packOutput) {
+        super(packOutput, Hoarding.MOD_ID, "en_us");
     }
 
     @Override

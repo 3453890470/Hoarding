@@ -26,7 +26,7 @@ base {
 
 java {
     toolchain {
-        version = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 

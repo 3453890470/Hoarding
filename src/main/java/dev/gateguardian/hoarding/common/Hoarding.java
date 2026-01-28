@@ -1,18 +1,15 @@
-package dev.gateguardian.hoarding;
+package dev.gateguardian.hoarding.common;
 
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.common.registry.HoardingCreativeModeTabs;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
-import dev.gateguardian.hoarding.data.Datagen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Mod(Hoarding.MOD_ID)
 public class Hoarding {
 
     public static final String MOD_ID = "hoarding";
@@ -21,21 +18,19 @@ public class Hoarding {
 
     public Hoarding(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-
-        modEventBus.addListener(Datagen::init);
-        modEventBus.addListener(this::addCreative);
-
-        HoardingItems.init(modEventBus);
-        HoardingBlocks.init(modEventBus);
-        HoardingCreativeModeTabs.init(modEventBus);
+        modEventBus.addListener(this::addItemsToCreativeModeTab);
+        HoardingItems.bootstrap(modEventBus);
+        HoardingBlocks.bootstrap(modEventBus);
+        HoardingCreativeModeTabs.bootstrap(modEventBus);
     }
 
     public static ResourceLocation id(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == HoardingCreativeModeTabs.HOARDING_MAIN_TAB.getKey())
-            HoardingItems.CREATIVE_TAB_ITEMS.forEach(event::accept);
+    private void addItemsToCreativeModeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey().equals(HoardingCreativeModeTabs.MAIN.getKey())) {
+            HoardingItems.CREATIVE_MODE_TAB_ITEMS.forEach(event::accept);
+        }
     }
 }

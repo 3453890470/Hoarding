@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hoarding:block/sugarcane_bundle_end",
+    "side": "hoarding:block/sugarcane_bundle_side"
+  }
+}

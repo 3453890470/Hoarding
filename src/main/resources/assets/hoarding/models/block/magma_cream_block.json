@@ -1,0 +1,37 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"surface": "hoarding:block/magma_cream_block",
+		"inner": "minecraft:block/lava_still",
+		"particle": "hoarding:block/magma_cream_block"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#surface", "cullface": "north"},
+				"east": {"uv": [0, 16, 16, 0], "texture": "#surface", "cullface": "east"},
+				"south": {"uv": [16, 16, 0, 0], "texture": "#surface", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#surface", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#surface", "cullface": "up"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#surface", "cullface": "down"}
+			}
+		},
+		{
+			"from": [3, 3, 3],
+			"to": [13, 13, 13],
+			"faces": {
+				"north": {"uv": [0, 0, 10, 10], "texture": "#inner"},
+				"east": {"uv": [0, 0, 10, 10], "texture": "#inner"},
+				"south": {"uv": [0, 0, 10, 10], "texture": "#inner"},
+				"west": {"uv": [0, 0, 10, 10], "texture": "#inner"},
+				"up": {"uv": [0, 0, 10, 10], "texture": "#inner"},
+				"down": {"uv": [0, 0, 10, 10], "texture": "#inner"}
+			}
+		}
+	],
+    "render_type": "minecraft:translucent"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hoarding:turtle_scute_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "minecraft:turtle_helmet"
+  }
+}

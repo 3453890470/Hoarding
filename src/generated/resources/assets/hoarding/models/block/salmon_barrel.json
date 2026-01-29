@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "hoarding:block/barrel/barrel_bottom",
+    "side": "hoarding:block/barrel/barrel_side",
+    "top": "hoarding:block/barrel/salmon_barrel_top"
+  }
+}

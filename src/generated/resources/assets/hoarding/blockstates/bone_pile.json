@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hoarding:block/bone_pile_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hoarding:block/bone_pile"
+    },
+    "axis=z": {
+      "model": "hoarding:block/bone_pile_horizontal",
+      "x": 90
+    }
+  }
+}

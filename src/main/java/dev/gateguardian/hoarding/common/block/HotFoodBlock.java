@@ -19,7 +19,7 @@ public class HotFoodBlock extends Block {
             double x = pos.getX() + 0.5;
             double y = pos.getY() + 1.0;
             double z = pos.getZ() + 0.5;
-            level.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.1, 0.0);
+            level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 0.0, 0.1, 0.0);
         }
     }
 }

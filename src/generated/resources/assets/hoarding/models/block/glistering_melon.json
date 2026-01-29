@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "bottom": "hoarding:block/glistering_melon_top",
-    "side": "hoarding:block/glistering_melon_side",
-    "top": "hoarding:block/glistering_melon_top"
+    "end": "hoarding:block/glistering_melon_end",
+    "side": "hoarding:block/glistering_melon_side"
   }
 }

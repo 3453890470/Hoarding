@@ -1,0 +1,9 @@
+{
+  "parent": "hoarding:block/cube_symmetry_north_west",
+  "textures": {
+    "bottom": "hoarding:block/bag/seed_bag/seed_bag_bottom",
+    "north": "hoarding:block/bag/seed_bag/seed_bag_side",
+    "top": "hoarding:block/bag/seed_bag/torchflower_seeds_bag_top",
+    "west": "hoarding:block/bag/seed_bag/seed_bag_side_tied"
+  }
+}

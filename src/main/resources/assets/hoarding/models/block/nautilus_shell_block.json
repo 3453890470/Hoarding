@@ -1,0 +1,27 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"south": "hoarding:block/nautilus_block_back",
+		"bottom": "hoarding:block/nautilus_block_bottom",
+		"west": "hoarding:block/nautilus_block_side",
+		"top": "hoarding:block/nautilus_block_top",
+		"north": "hoarding:block/nautilus_block_front",
+		"particle": "hoarding:block/nautilus_block_side"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 0],
+			"to": [15, 16, 16],
+			"faces": {
+				"north": {"uv": [1, 0, 15, 16], "texture": "#north", "cullface": "north"},
+				"east": {"uv": [16, 0, 0, 16], "texture": "#west"},
+				"south": {"uv": [1, 0, 15, 16], "texture": "#south", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#west"},
+				"up": {"uv": [1, 0, 15, 16], "texture": "#top", "cullface": "up"},
+				"down": {"uv": [1, 16, 15, 0], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
+}

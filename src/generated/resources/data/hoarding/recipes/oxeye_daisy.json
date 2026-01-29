@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hoarding:oxeye_daisy_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "minecraft:oxeye_daisy"
+  }
+}

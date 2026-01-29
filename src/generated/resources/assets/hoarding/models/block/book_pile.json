@@ -1,0 +1,9 @@
+{
+  "parent": "hoarding:block/cube_symmetry_north_west",
+  "textures": {
+    "bottom": "hoarding:block/book_pile_bottom",
+    "north": "hoarding:block/book_pile_side",
+    "top": "hoarding:block/book_pile_top",
+    "west": "hoarding:block/book_pile_side_2"
+  }
+}

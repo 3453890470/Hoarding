@@ -1,15 +1,17 @@
 package dev.gateguardian.hoarding.common.registry;
 
 import dev.gateguardian.hoarding.common.Hoarding;
-import dev.gateguardian.hoarding.common.block.BagBlock;
+import dev.gateguardian.hoarding.common.block.HorizontalFacingBlock;
 import dev.gateguardian.hoarding.common.block.EffectBlock;
 import dev.gateguardian.hoarding.common.block.HotFoodBlock;
+import dev.gateguardian.hoarding.common.block.NautilusBlock;
 import lombok.experimental.UtilityClass;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -93,7 +95,10 @@ public class HoardingBlocks {
     public final RegistryObject<Block> CRIMSON_FUNGUS_CRATE = crimsonCrate("crimson_fungus_crate");
     public final RegistryObject<Block> WARPED_FUNGUS_CRATE = crimsonCrate("warped_fungus_crate");
     public final RegistryObject<Block> NETHER_WART_CRATE = crimsonCrate("nether_wart_crate");
-    public final RegistryObject<Block> WITHER_ROSE_CRATE = crimsonCrate("wither_rose_crate", props -> new EffectBlock(props, MobEffects.WITHER));
+    public final RegistryObject<Block> WITHER_ROSE_CRATE = crimsonCrate(
+            "wither_rose_crate",
+            props -> new EffectBlock(props, MobEffects.WITHER)
+    );
 
     //endregion Crimson Crates
 
@@ -112,7 +117,10 @@ public class HoardingBlocks {
     public final RegistryObject<Block> COOKED_SALMON_BARREL = barrel("cooked_salmon_barrel", HotFoodBlock::new);
     public final RegistryObject<Block> INK_SAC_BARREL = barrel("ink_sac_barrel");
     public final RegistryObject<Block> GLOW_INK_SAC_BARREL = barrel("glow_ink_sac_barrel");
-    public final RegistryObject<Block> PUFFER_FISH_BARREL = barrel("pufferfish_barrel", props -> new EffectBlock(props, MobEffects.POISON));
+    public final RegistryObject<Block> PUFFER_FISH_BARREL = barrel(
+            "pufferfish_barrel",
+            props -> new EffectBlock(props, MobEffects.POISON)
+    );
     public final RegistryObject<Block> TROPICAL_FISH_BARREL = barrel("tropical_fish_barrel");
 
     //endregion Barrels
@@ -148,82 +156,123 @@ public class HoardingBlocks {
 
     //region Sacks
 
-    public final RegistryObject<Block> SUGAR_BAG = sack("sugar_bag");
-    public final RegistryObject<Block> GUNPOWDER_BAG = sack("gunpowder_bag");
-    public final RegistryObject<Block> COCOA_BEANS_BAG = sack("cocoa_beans_bag");
-    public final RegistryObject<Block> FEATHER_BAG = sack("feather_bag");
+    public final RegistryObject<HorizontalFacingBlock> SUGAR_BAG = bag("sugar_bag");
+    public final RegistryObject<HorizontalFacingBlock> GUNPOWDER_BAG = bag("gunpowder_bag");
+    public final RegistryObject<HorizontalFacingBlock> COCOA_BEANS_BAG = bag("cocoa_beans_bag");
+    public final RegistryObject<HorizontalFacingBlock> FEATHER_BAG = bag("feather_bag");
 
     //endregion Sacks
 
     //region Seed Bags
 
-    public final RegistryObject<Block> WHEAT_SEEDS_BAG = seedBag("wheat_seeds_bag");
-    public final RegistryObject<Block> BEETROOT_SEEDS_BAG = seedBag("beetroot_seeds_bag");
-    public final RegistryObject<Block> MELON_SEEDS_BAG = seedBag("melon_seeds_bag");
-    public final RegistryObject<Block> PUMPKIN_SEEDS_BAG = seedBag("pumpkin_seeds_bag");
-    public final RegistryObject<Block> TORCHFLOWER_SEEDS_BAG = seedBag("torchflower_seeds_bag");
+    public final RegistryObject<HorizontalFacingBlock> WHEAT_SEEDS_BAG = bag("wheat_seeds_bag");
+    public final RegistryObject<HorizontalFacingBlock> BEETROOT_SEEDS_BAG = bag("beetroot_seeds_bag");
+    public final RegistryObject<HorizontalFacingBlock> MELON_SEEDS_BAG = bag("melon_seeds_bag");
+    public final RegistryObject<HorizontalFacingBlock> PUMPKIN_SEEDS_BAG = bag("pumpkin_seeds_bag");
+    public final RegistryObject<HorizontalFacingBlock> TORCHFLOWER_SEEDS_BAG = bag("torchflower_seeds_bag");
 
     //endregion Seed Bags
 
     //region Crimson Bags
 
-    public final RegistryObject<Block> BLAZE_POWDER_BAG = crimsonBag("blaze_powder_bag");
+    public final RegistryObject<HorizontalFacingBlock> BLAZE_POWDER_BAG = bag("blaze_powder_bag");
 
     //endregion Crimson Bags
 
     //region Compressed Blocks
 
-    public final RegistryObject<Block> FLINT_BLOCK = block("flint_block", () -> new Block(Block.Properties.copy(Blocks.COBBLESTONE)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.STONE)));
-    public final RegistryObject<Block> NETHER_STAR_BLOCK = block("nether_star_block", () -> new Block(Block.Properties.copy(Blocks.NETHERITE_BLOCK)
-            .strength(50.0F, 1200.0F)
-            .sound(SoundType.METAL)));
-    public final RegistryObject<Block> LEATHER_BLOCK = block("leather_block", () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOL)));
-    public final RegistryObject<Block> CACTUS_BUNDLE = block("cactus_bundle", () -> new Block(Block.Properties.copy(Blocks.CACTUS)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOD)));
-    public final RegistryObject<Block> SUGARCANE_BUNDLE = block("sugarcane_bundle", () -> new Block(Block.Properties.copy(Blocks.OAK_WOOD)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOD)));
-    public final RegistryObject<Block> STICK_BUNDLE = block("stick_bundle", () -> new Block(Block.Properties.copy(Blocks.OAK_WOOD)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOD)));
-    public final RegistryObject<Block> BLAZE_ROD_BUNDLE = block("blaze_rod_bundle", () -> new Block(Block.Properties.copy(Blocks.END_ROD)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOD)
-            .lightLevel((state) -> 10)));
-    public final RegistryObject<Block> GLISTERING_MELON = block("glistering_melon", () -> new Block(Block.Properties.copy(Blocks.MELON)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOD)
-            .lightLevel((state) -> 10)));
-    public final RegistryObject<Block> SPOOL = block("spool", () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOL)));
-    public final RegistryObject<Block> BONE_PILE = block("bone_pile", () -> new Block(Block.Properties.copy(Blocks.BONE_BLOCK)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.BONE_BLOCK)));
-    public final RegistryObject<Block> BOOK_PILE = block("book_pile", () -> new Block(Block.Properties.copy(Blocks.BOOKSHELF)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOL)));
-    public final RegistryObject<Block> PAPER_STACK = block("paper_stack", () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOL)));
-    public final RegistryObject<Block> TURTLE_SCUTE_BLOCK = block("turtle_scute_block", () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOL)));
-    public final RegistryObject<Block> PHANTOM_MEMBRANE_BLOCK = block("phantom_membrane_block", () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.WOOL)));
-    public final RegistryObject<Block> MAGMA_CREAM_BLOCK = block("magma_cream_block", () -> new Block(Block.Properties.copy(Blocks.SLIME_BLOCK)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.SLIME_BLOCK)
-            .lightLevel((state) -> 10)));
-    public final RegistryObject<Block> NAUTILUS_BLOCK = block("nautilus_block", () -> new Block(Block.Properties.copy(Blocks.BONE_BLOCK)
-            .strength(2.0F, 3.0F)
-            .sound(SoundType.BONE_BLOCK)));
+    public final RegistryObject<Block> FLINT_BLOCK = block(
+            "flint_block",
+            () -> new Block(Block.Properties.copy(Blocks.COBBLESTONE)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.STONE)
+            )
+    );
+    public final RegistryObject<Block> NETHER_STAR_BLOCK = block(
+            "nether_star_block",
+            () -> new Block(Block.Properties.copy(Blocks.NETHERITE_BLOCK)
+                    .strength(50.0F, 1200.0F)
+                    .sound(SoundType.METAL)
+            )
+    );
+    public final RegistryObject<RotatedPillarBlock> LEATHER_BLOCK = block(
+            "leather_block",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.WHITE_WOOL)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOL)
+            )
+    );
+    public final RegistryObject<RotatedPillarBlock> CACTUS_BUNDLE = block(
+            "cactus_bundle",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.CACTUS))
+    );
+    public final RegistryObject<RotatedPillarBlock> SUGARCANE_BUNDLE = block(
+            "sugarcane_bundle",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.OAK_WOOD)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+            )
+    );
+    public final RegistryObject<RotatedPillarBlock> STICK_BUNDLE = block(
+            "stick_bundle",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.OAK_WOOD)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+            )
+    );
+    public final RegistryObject<RotatedPillarBlock> BLAZE_ROD_BUNDLE = block(
+            "blaze_rod_bundle",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.END_ROD)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+                    .lightLevel((state) -> 10)
+            )
+    );
+    public final RegistryObject<RotatedPillarBlock> GLISTERING_MELON = block(
+            "glistering_melon",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.MELON))
+    );
+    public final RegistryObject<RotatedPillarBlock> SPOOL = block(
+            "spool",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.WHITE_WOOL))
+    );
+    public final RegistryObject<RotatedPillarBlock> BONE_PILE = block(
+            "bone_pile",
+            () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.BONE_BLOCK))
+    );
+    public final RegistryObject<HorizontalFacingBlock> BOOK_PILE = block(
+            "book_pile",
+            () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.BOOKSHELF))
+    );
+    public final RegistryObject<HorizontalFacingBlock> PAPER_STACK = block(
+            "paper_stack",
+            () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.WHITE_WOOL))
+    );
+    public final RegistryObject<HorizontalFacingBlock> TURTLE_SCUTE_BLOCK = block(
+            "turtle_scute_block",
+            () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.WHITE_WOOL)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOL))
+    );
+    public final RegistryObject<Block> PHANTOM_MEMBRANE_BLOCK = block(
+            "phantom_membrane_block",
+            () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.WHITE_WOOL)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOL))
+    );
+    public final RegistryObject<HorizontalFacingBlock> MAGMA_CREAM_BLOCK = block(
+            "magma_cream_block",
+            () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.SLIME_BLOCK)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.SLIME_BLOCK)
+                    .lightLevel((state) -> 10))
+    );
+    public final RegistryObject<NautilusBlock> NAUTILUS_BLOCK = block(
+            "nautilus_block",
+            () -> new NautilusBlock(Block.Properties.copy(Blocks.BONE_BLOCK)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.BONE_BLOCK))
+    );
 
     //endregion Compressed Blocks
 
@@ -231,105 +280,69 @@ public class HoardingBlocks {
         REGISTER.register(eventBus);
     }
 
-    private static RegistryObject<Block> block(String name, Supplier<Block> supplier) {
-        RegistryObject<Block> block = REGISTER.register(name, supplier);
+    private <T extends Block> RegistryObject<T> block(String name, Supplier<T> supplier) {
+        RegistryObject<T> block = REGISTER.register(name, supplier);
         HoardingItems.item(name, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
 
-    private static RegistryObject<Block> birchCrate(String name) {
-        return birchCrate(name, Block::new);
+    private RegistryObject<Block> birchCrate(String name) {
+        return block(name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
     }
 
-    private static RegistryObject<Block> birchCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
-    }
-
-    private static RegistryObject<Block> oakCrate(String name) {
+    private RegistryObject<Block> oakCrate(String name) {
         return oakCrate(name, Block::new);
     }
 
-    private static RegistryObject<Block> oakCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
+    private RegistryObject<Block> oakCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
         return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     }
 
-    private static RegistryObject<Block> spruceCrate(String name) {
+    private RegistryObject<Block> spruceCrate(String name) {
         return spruceCrate(name, Block::new);
     }
 
-    private static RegistryObject<Block> spruceCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
+    private RegistryObject<Block> spruceCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
         return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
     }
 
-    private static RegistryObject<Block> crimsonCrate(String name) {
+    private RegistryObject<Block> crimsonCrate(String name) {
         return crimsonCrate(name, Block::new);
     }
 
-    private static RegistryObject<Block> crimsonCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
+    private RegistryObject<Block> crimsonCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
         return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     }
 
-    private static RegistryObject<Block> ironCrate(String name) {
-        return ironCrate(name, Block::new);
+    private RegistryObject<Block> ironCrate(String name) {
+        return block(name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     }
 
-    private static RegistryObject<Block> ironCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    private RegistryObject<Block> endStoneCrate(String name) {
+        return block(name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE)));
     }
 
-    private static RegistryObject<Block> endStoneCrate(String name) {
-        return endStoneCrate(name, Block::new);
-    }
-
-    private static RegistryObject<Block> endStoneCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.END_STONE)));
-    }
-
-    private static RegistryObject<Block> barrel(String name) {
+    private RegistryObject<Block> barrel(String name) {
         return barrel(name, Block::new);
     }
 
-    private static RegistryObject<Block> barrel(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
+    private RegistryObject<Block> barrel(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
         return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     }
 
-    private static RegistryObject<Block> bucket(String name) {
-        return bucket(name, Block::new);
+    private RegistryObject<Block> bucket(String name) {
+        return block(name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     }
 
-    private static RegistryObject<Block> bucket(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    private RegistryObject<Block> rack(String name) {
+        return block(name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     }
 
-    private static RegistryObject<Block> rack(String name) {
-        return rack(name, Block::new);
+    private RegistryObject<HorizontalFacingBlock> bag(String name) {
+        return bag(name, HorizontalFacingBlock::new);
     }
 
-    private static RegistryObject<Block> rack(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    }
-
-    private static RegistryObject<Block> sack(String name) {
-        return sack(name, BagBlock::new);
-    }
-
-    private static RegistryObject<Block> sack(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
-    }
-
-    private static RegistryObject<Block> seedBag(String name) {
-        return sack(name, BagBlock::new);
-    }
-
-    private static RegistryObject<Block> seedBag(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
-    }
-
-    private static RegistryObject<Block> crimsonBag(String name) {
-        return sack(name, BagBlock::new);
-    }
-
-    private static RegistryObject<Block> crimsonBag(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
+    private RegistryObject<HorizontalFacingBlock> bag(String name, Function<BlockBehaviour.Properties, HorizontalFacingBlock> blockFactory) {
         return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     }
 }

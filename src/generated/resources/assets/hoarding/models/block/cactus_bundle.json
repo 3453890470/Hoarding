@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "bottom": "hoarding:block/cactus_bundle_top",
-    "side": "hoarding:block/cactus_bundle_side",
-    "top": "hoarding:block/cactus_bundle_top"
+    "end": "hoarding:block/cactus_bundle_end",
+    "side": "hoarding:block/cactus_bundle_side"
   }
 }

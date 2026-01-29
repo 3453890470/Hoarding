@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hoarding:block/spool_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hoarding:block/spool"
+    },
+    "axis=z": {
+      "model": "hoarding:block/spool_horizontal",
+      "x": 90
+    }
+  }
+}

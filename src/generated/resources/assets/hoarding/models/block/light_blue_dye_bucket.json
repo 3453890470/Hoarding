@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "hoarding:block/bucket/bucket_bottom",
+    "side": "hoarding:block/bucket/bucket_side",
+    "top": "hoarding:block/bucket/light_blue_dye_bucket_top"
+  }
+}

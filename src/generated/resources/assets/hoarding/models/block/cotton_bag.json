@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "hoarding:block/rice_bag_bottom",
-    "side": "hoarding:block/rice_bag_side",
-    "top": "hoarding:block/cotton_bag_top"
-  }
-}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "hoarding:block/crate/ars_nouveau/bottom_archwood",
+    "side": "hoarding:block/crate/ars_nouveau/sourceberry_crate_side",
+    "top": "hoarding:block/crate/ars_nouveau/sourceberry_crate_top"
+  }
+}

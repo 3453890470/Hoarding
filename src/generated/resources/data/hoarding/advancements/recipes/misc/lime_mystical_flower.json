@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_mystical_flower_crate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hoarding:lime_mystical_flower_crate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoarding:lime_mystical_flower"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_lime_mystical_flower_crate",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoarding:lime_mystical_flower"
+    ]
+  },
+  "sends_telemetry_event": false
+}

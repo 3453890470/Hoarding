@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hoarding:red_mystical_flower_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "botania:red_mystical_flower"
+  }
+}

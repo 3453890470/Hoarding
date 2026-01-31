@@ -3,6 +3,8 @@ package dev.gateguardian.hoarding.generator;
 import dev.gateguardian.hoarding.common.Hoarding;
 import dev.gateguardian.hoarding.generator.provider.*;
 import lombok.experimental.UtilityClass;
+import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,8 +16,8 @@ public class DataGenerator {
     @SubscribeEvent
     public void bootstrap(GatherDataEvent event) {
         var generator = event.getGenerator();
-        var output = generator.getPackOutput();
-        var helper = event.getExistingFileHelper();
+        PackOutput output = generator.getPackOutput();
+        ExistingFileHelper helper = event.getExistingFileHelper();
         var lookup = event.getLookupProvider();
 
         generator.addProvider(event.includeClient(), new HoardingLanguageProvider(output));

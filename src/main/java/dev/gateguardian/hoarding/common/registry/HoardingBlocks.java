@@ -280,7 +280,7 @@ public class HoardingBlocks {
         REGISTER.register(eventBus);
     }
 
-    private <T extends Block> RegistryObject<T> block(String name, Supplier<T> supplier) {
+    public <T extends Block> RegistryObject<T> block(String name, Supplier<T> supplier) {
         RegistryObject<T> block = REGISTER.register(name, supplier);
         HoardingItems.item(name, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;

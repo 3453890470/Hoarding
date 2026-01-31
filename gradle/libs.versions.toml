@@ -14,6 +14,11 @@ rei                   = "12.1.785"
 jade                  = "11.13.2+forge"
 modernui              = "3.12.0.1"
 jecharacters          = "4.6.1"
+botania               = "1.20.1-450-FORGE"
+patchouli             = "1.20.1-84.1-FORGE"
+arsnouveau            = "4.9.0.165"
+geckolib              = "4.8.2"
+curios                = "5.14.1+1.20.1"
 
 # Plugins
 modDevGradle          = "2.0.122"
@@ -23,6 +28,7 @@ lombok                = "9.1.0"
 jetbrains-annotations = { module = "org.jetbrains:annotations"                           , version.ref = "jetbrains-annotations" }
 mixin                 = { module = "org.spongepowered:mixin"                             , version.ref = "mixin" }
 mixinExtras-common    = { module = "io.github.llamalad7:mixinextras-common"              , version.ref = "mixinExtras" }
+mixinExtras-forge     = { module = "io.github.llamalad7:mixinextras-forge"               , version.ref = "mixinExtras" }
 
 emi                   = { module = "dev.emi:emi-forge"                                   , version.ref = "emi" }
 jei-api-common        = { module = "mezz.jei:jei-1.20.1-common-api"                      , version.ref = "jei" }
@@ -35,6 +41,11 @@ rei-plugin            = { module = "me.shedaniel:RoughlyEnoughItems-default-plug
 jade                  = { module = "maven.modrinth:jade"                                 , version.ref = "jade" }
 modernui              = { module = "maven.modrinth:modern-ui"                            , version.ref = "modernui" }
 jecharacters          = { module = "maven.modrinth:justenoughcharacters"                 , version.ref = "jecharacters" }
+botania               = { module = "vazkii.botania:Botania"                              , version.ref = "botania" }
+patchouli             = { module = "vazkii.patchouli:Patchouli"                          , version.ref = "patchouli" }
+arsnouveau            = { module = "com.hollingsworth.ars_nouveau:ars_nouveau-1.20.1"    , version.ref = "arsnouveau" }
+geckolib              = { module = "software.bernie.geckolib:geckolib-forge-1.20.1"      , version.ref = "geckolib" }
+curios                = { module = "top.theillusivec4.curios:curios-forge"               , version.ref = "curios" }
 
 [plugins]
 modDevGradle = { id = "net.neoforged.moddev.legacyforge", version.ref = "modDevGradle" }

@@ -3,6 +3,7 @@ package dev.gateguardian.hoarding.common;
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.common.registry.HoardingCreativeModeTabs;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
+import dev.gateguardian.hoarding.integration.ModIntegration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,7 @@ public class Hoarding {
         HoardingItems.bootstrap(modEventBus);
         HoardingBlocks.bootstrap(modEventBus);
         HoardingCreativeModeTabs.bootstrap(modEventBus);
+        ModIntegration.bootstrap(context);
     }
 
     public static ResourceLocation id(String path) {

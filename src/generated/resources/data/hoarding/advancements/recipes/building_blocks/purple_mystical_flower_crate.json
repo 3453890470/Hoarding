@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_mystical_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "botania:purple_mystical_flower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoarding:purple_mystical_flower_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_purple_mystical_flower",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoarding:purple_mystical_flower_crate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

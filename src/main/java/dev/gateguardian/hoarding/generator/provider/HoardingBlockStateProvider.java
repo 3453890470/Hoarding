@@ -1,7 +1,8 @@
 package dev.gateguardian.hoarding.generator.provider;
 
 import dev.gateguardian.hoarding.common.Hoarding;
-import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
+import dev.gateguardian.hoarding.integration.arsnouveau.HoardingArsNouveauBlocks;
+import dev.gateguardian.hoarding.integration.botania.HoardingBotaniaBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -13,6 +14,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+import static dev.gateguardian.hoarding.common.registry.HoardingBlocks.*;
+
 public class HoardingBlockStateProvider extends BlockStateProvider {
 
     public HoardingBlockStateProvider(PackOutput output, ExistingFileHelper helper) {
@@ -22,182 +25,208 @@ public class HoardingBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         // Birch Crates
-        birchCrate(HoardingBlocks.ALLIUM_CRATE);
-        birchCrate(HoardingBlocks.AZURE_BLUET_CRATE);
-        birchCrate(HoardingBlocks.BLUE_ORCHID_CRATE);
-        birchCrate(HoardingBlocks.CORNFLOWER_CRATE);
-        birchCrate(HoardingBlocks.DANDELION_CRATE);
-        birchCrate(HoardingBlocks.LILY_CRATE);
-        birchCrate(HoardingBlocks.OXEYE_DAISY_CRATE);
-        birchCrate(HoardingBlocks.POPPY_CRATE);
-        birchCrate(HoardingBlocks.ORANGE_TULIP_CRATE);
-        birchCrate(HoardingBlocks.PINK_TULIP_CRATE);
-        birchCrate(HoardingBlocks.RED_TULIP_CRATE);
-        birchCrate(HoardingBlocks.WHITE_TULIP_CRATE);
-        birchCrate(HoardingBlocks.TORCHFLOWER_CRATE);
+        birchCrate(ALLIUM_CRATE);
+        birchCrate(AZURE_BLUET_CRATE);
+        birchCrate(BLUE_ORCHID_CRATE);
+        birchCrate(CORNFLOWER_CRATE);
+        birchCrate(DANDELION_CRATE);
+        birchCrate(LILY_CRATE);
+        birchCrate(OXEYE_DAISY_CRATE);
+        birchCrate(POPPY_CRATE);
+        birchCrate(ORANGE_TULIP_CRATE);
+        birchCrate(PINK_TULIP_CRATE);
+        birchCrate(RED_TULIP_CRATE);
+        birchCrate(WHITE_TULIP_CRATE);
+        birchCrate(TORCHFLOWER_CRATE);
 
         // Oak Crates
-        oakCrate(HoardingBlocks.APPLE_CRATE);
-        oakCrate(HoardingBlocks.GOLDEN_APPLE_CRATE);
-        oakCrate(HoardingBlocks.POTATO_CRATE);
-        oakCrate(HoardingBlocks.BAKED_POTATO_CRATE);
-        oakCrate(HoardingBlocks.POISONOUS_POTATO_CRATE);
-        oakCrate(HoardingBlocks.BEETROOT_CRATE);
-        oakCrate(HoardingBlocks.BROWN_MUSHROOM_CRATE);
-        oakCrate(HoardingBlocks.RED_MUSHROOM_CRATE);
-        oakCrate(HoardingBlocks.CARROT_CRATE);
-        oakCrate(HoardingBlocks.GOLDEN_CARROT_CRATE);
-        oakCrate(HoardingBlocks.SWEET_BERRIES_CRATE);
-        oakCrate(HoardingBlocks.GLOW_BERRIES_CRATE);
-        oakCrate(HoardingBlocks.COOKIE_CRATE);
-        oakCrate(HoardingBlocks.BREAD_CRATE);
+        oakCrate(APPLE_CRATE);
+        oakCrate(GOLDEN_APPLE_CRATE);
+        oakCrate(POTATO_CRATE);
+        oakCrate(BAKED_POTATO_CRATE);
+        oakCrate(POISONOUS_POTATO_CRATE);
+        oakCrate(BEETROOT_CRATE);
+        oakCrate(BROWN_MUSHROOM_CRATE);
+        oakCrate(RED_MUSHROOM_CRATE);
+        oakCrate(CARROT_CRATE);
+        oakCrate(GOLDEN_CARROT_CRATE);
+        oakCrate(SWEET_BERRIES_CRATE);
+        oakCrate(GLOW_BERRIES_CRATE);
+        oakCrate(COOKIE_CRATE);
+        oakCrate(BREAD_CRATE);
 
         // Spruce Crates
-        spruceCrate(HoardingBlocks.BEEF_CRATE);
-        spruceCrate(HoardingBlocks.COOKED_BEEF_CRATE);
-        spruceCrate(HoardingBlocks.CHICKEN_CRATE);
-        spruceCrate(HoardingBlocks.COOKED_CHICKEN_CRATE);
-        spruceCrate(HoardingBlocks.MUTTON_CRATE);
-        spruceCrate(HoardingBlocks.COOKED_MUTTON_CRATE);
-        spruceCrate(HoardingBlocks.RABBIT_CRATE);
-        spruceCrate(HoardingBlocks.COOKED_RABBIT_CRATE);
-        spruceCrate(HoardingBlocks.RABBIT_FOOT_CRATE);
-        spruceCrate(HoardingBlocks.PORKCHOP_CRATE);
-        spruceCrate(HoardingBlocks.COOKED_PORKCHOP_CRATE);
+        spruceCrate(BEEF_CRATE);
+        spruceCrate(COOKED_BEEF_CRATE);
+        spruceCrate(CHICKEN_CRATE);
+        spruceCrate(COOKED_CHICKEN_CRATE);
+        spruceCrate(MUTTON_CRATE);
+        spruceCrate(COOKED_MUTTON_CRATE);
+        spruceCrate(RABBIT_CRATE);
+        spruceCrate(COOKED_RABBIT_CRATE);
+        spruceCrate(RABBIT_FOOT_CRATE);
+        spruceCrate(PORKCHOP_CRATE);
+        spruceCrate(COOKED_PORKCHOP_CRATE);
 
         // Iron Crates
-        ironCrate(HoardingBlocks.ENDER_EYE_CRATE);
-        ironCrate(HoardingBlocks.ENDER_PEARL_CRATE);
-        ironCrate(HoardingBlocks.ROTTEN_FLESH_CRATE);
-        ironCrate(HoardingBlocks.SPIDER_EYE_CRATE);
-        ironCrate(HoardingBlocks.FERMENTED_SPIDER_EYE_CRATE);
+        ironCrate(ENDER_EYE_CRATE);
+        ironCrate(ENDER_PEARL_CRATE);
+        ironCrate(ROTTEN_FLESH_CRATE);
+        ironCrate(SPIDER_EYE_CRATE);
+        ironCrate(FERMENTED_SPIDER_EYE_CRATE);
 
         // Crimson Crates
-        crimsonCrate(HoardingBlocks.CRIMSON_FUNGUS_CRATE);
-        crimsonCrate(HoardingBlocks.WARPED_FUNGUS_CRATE);
-        crimsonCrate(HoardingBlocks.NETHER_WART_CRATE);
-        crimsonCrate(HoardingBlocks.WITHER_ROSE_CRATE);
+        crimsonCrate(CRIMSON_FUNGUS_CRATE);
+        crimsonCrate(WARPED_FUNGUS_CRATE);
+        crimsonCrate(NETHER_WART_CRATE);
+        crimsonCrate(WITHER_ROSE_CRATE);
 
         // End Stone Crates
-        endStoneCrate(HoardingBlocks.CHORUS_FRUIT_CRATE);
-        endStoneCrate(HoardingBlocks.POPPED_CHORUS_FRUIT_CRATE);
+        endStoneCrate(CHORUS_FRUIT_CRATE);
+        endStoneCrate(POPPED_CHORUS_FRUIT_CRATE);
 
         // Barrels
-        barrel(HoardingBlocks.COD_BARREL);
-        barrel(HoardingBlocks.COOKED_COD_BARREL);
-        barrel(HoardingBlocks.SALMON_BARREL);
-        barrel(HoardingBlocks.COOKED_SALMON_BARREL);
-        barrel(HoardingBlocks.INK_SAC_BARREL);
-        barrel(HoardingBlocks.GLOW_INK_SAC_BARREL);
-        barrel(HoardingBlocks.PUFFER_FISH_BARREL);
-        barrel(HoardingBlocks.TROPICAL_FISH_BARREL);
+        barrel(COD_BARREL);
+        barrel(COOKED_COD_BARREL);
+        barrel(SALMON_BARREL);
+        barrel(COOKED_SALMON_BARREL);
+        barrel(INK_SAC_BARREL);
+        barrel(GLOW_INK_SAC_BARREL);
+        barrel(PUFFER_FISH_BARREL);
+        barrel(TROPICAL_FISH_BARREL);
 
         // Buckets
-        bucket(HoardingBlocks.BLACK_DYE_BUCKET);
-        bucket(HoardingBlocks.RED_DYE_BUCKET);
-        bucket(HoardingBlocks.GREEN_DYE_BUCKET);
-        bucket(HoardingBlocks.BROWN_DYE_BUCKET);
-        bucket(HoardingBlocks.BLUE_DYE_BUCKET);
-        bucket(HoardingBlocks.PURPLE_DYE_BUCKET);
-        bucket(HoardingBlocks.CYAN_DYE_BUCKET);
-        bucket(HoardingBlocks.LIGHT_GRAY_DYE_BUCKET);
-        bucket(HoardingBlocks.GRAY_DYE_BUCKET);
-        bucket(HoardingBlocks.PINK_DYE_BUCKET);
-        bucket(HoardingBlocks.LIME_DYE_BUCKET);
-        bucket(HoardingBlocks.YELLOW_DYE_BUCKET);
-        bucket(HoardingBlocks.LIGHT_BLUE_DYE_BUCKET);
-        bucket(HoardingBlocks.MAGENTA_DYE_BUCKET);
-        bucket(HoardingBlocks.ORANGE_DYE_BUCKET);
-        bucket(HoardingBlocks.WHITE_DYE_BUCKET);
+        bucket(BLACK_DYE_BUCKET);
+        bucket(RED_DYE_BUCKET);
+        bucket(GREEN_DYE_BUCKET);
+        bucket(BROWN_DYE_BUCKET);
+        bucket(BLUE_DYE_BUCKET);
+        bucket(PURPLE_DYE_BUCKET);
+        bucket(CYAN_DYE_BUCKET);
+        bucket(LIGHT_GRAY_DYE_BUCKET);
+        bucket(GRAY_DYE_BUCKET);
+        bucket(PINK_DYE_BUCKET);
+        bucket(LIME_DYE_BUCKET);
+        bucket(YELLOW_DYE_BUCKET);
+        bucket(LIGHT_BLUE_DYE_BUCKET);
+        bucket(MAGENTA_DYE_BUCKET);
+        bucket(ORANGE_DYE_BUCKET);
+        bucket(WHITE_DYE_BUCKET);
 
         // Racks
-        rack(HoardingBlocks.EGG_RACK);
-        rack(HoardingBlocks.TURTLE_EGG_RACK);
-        rack(HoardingBlocks.BOTTLE_RACK);
+        rack(EGG_RACK);
+        rack(TURTLE_EGG_RACK);
+        rack(BOTTLE_RACK);
 
         // Sacks
-        sack(HoardingBlocks.SUGAR_BAG);
-        sack(HoardingBlocks.GUNPOWDER_BAG);
-        sack(HoardingBlocks.COCOA_BEANS_BAG);
-        sack(HoardingBlocks.FEATHER_BAG);
+        sack(SUGAR_BAG);
+        sack(GUNPOWDER_BAG);
+        sack(COCOA_BEANS_BAG);
+        sack(FEATHER_BAG);
 
         // Seed Bags
-        seedBag(HoardingBlocks.WHEAT_SEEDS_BAG);
-        seedBag(HoardingBlocks.BEETROOT_SEEDS_BAG);
-        seedBag(HoardingBlocks.MELON_SEEDS_BAG);
-        seedBag(HoardingBlocks.PUMPKIN_SEEDS_BAG);
-        seedBag(HoardingBlocks.TORCHFLOWER_SEEDS_BAG);
+        seedBag(WHEAT_SEEDS_BAG);
+        seedBag(BEETROOT_SEEDS_BAG);
+        seedBag(MELON_SEEDS_BAG);
+        seedBag(PUMPKIN_SEEDS_BAG);
+        seedBag(TORCHFLOWER_SEEDS_BAG);
 
         // Crimson Bags
-        crimsonBag(HoardingBlocks.BLAZE_POWDER_BAG);
+        crimsonBag(BLAZE_POWDER_BAG);
 
         // Compressed Blocks
-        simpleBlockWithItem(HoardingBlocks.FLINT_BLOCK);
-        simpleBlockWithItem(HoardingBlocks.NETHER_STAR_BLOCK);
+        simpleBlockWithItem(FLINT_BLOCK);
+        simpleBlockWithItem(NETHER_STAR_BLOCK);
 
-        axisBlock(HoardingBlocks.LEATHER_BLOCK.get());
-        simpleBlockItem(HoardingBlocks.LEATHER_BLOCK);
+        axisBlock(LEATHER_BLOCK.get());
+        simpleBlockItem(LEATHER_BLOCK);
 
-        axisBlock(HoardingBlocks.CACTUS_BUNDLE.get());
-        simpleBlockItem(HoardingBlocks.CACTUS_BUNDLE);
+        axisBlock(CACTUS_BUNDLE.get());
+        simpleBlockItem(CACTUS_BUNDLE);
 
-        axisBlock(HoardingBlocks.SUGARCANE_BUNDLE.get());
-        simpleBlockItem(HoardingBlocks.SUGARCANE_BUNDLE);
+        axisBlock(SUGARCANE_BUNDLE.get());
+        simpleBlockItem(SUGARCANE_BUNDLE);
 
-        axisBlock(HoardingBlocks.STICK_BUNDLE.get());
-        simpleBlockItem(HoardingBlocks.STICK_BUNDLE);
+        axisBlock(STICK_BUNDLE.get());
+        simpleBlockItem(STICK_BUNDLE);
 
-        axisBlock(HoardingBlocks.BLAZE_ROD_BUNDLE.get());
-        simpleBlockItem(HoardingBlocks.BLAZE_ROD_BUNDLE);
+        axisBlock(BLAZE_ROD_BUNDLE.get());
+        simpleBlockItem(BLAZE_ROD_BUNDLE);
 
-        axisBlock(HoardingBlocks.GLISTERING_MELON.get());
-        simpleBlockItem(HoardingBlocks.GLISTERING_MELON);
+        axisBlock(GLISTERING_MELON.get());
+        simpleBlockItem(GLISTERING_MELON);
 
-        axisBlock(HoardingBlocks.SPOOL.get());
-        simpleBlockItem(HoardingBlocks.SPOOL);
+        axisBlock(SPOOL.get());
+        simpleBlockItem(SPOOL);
 
-        axisBlock(HoardingBlocks.BONE_PILE.get());
-        simpleBlockItem(HoardingBlocks.BONE_PILE);
+        axisBlock(BONE_PILE.get());
+        simpleBlockItem(BONE_PILE);
 
-        ModelFile bookPileModel = models().withExistingParent(name(HoardingBlocks.BOOK_PILE.get()), Hoarding.id("cube_symmetry_north_west"))
+        ModelFile bookPileModel = models().withExistingParent(name(BOOK_PILE.get()), Hoarding.id("cube_symmetry_north_west"))
                 .texture("north", Hoarding.id("block/book_pile_side"))
                 .texture("west", Hoarding.id("block/book_pile_side_2"))
                 .texture("top", Hoarding.id("block/book_pile_top"))
                 .texture("bottom", Hoarding.id("block/book_pile_bottom"));
-        horizontalBlock(HoardingBlocks.BOOK_PILE.get(), bookPileModel);
-        simpleBlockItem(HoardingBlocks.BOOK_PILE.get(), bookPileModel);
+        horizontalBlock(BOOK_PILE.get(), bookPileModel);
+        simpleBlockItem(BOOK_PILE.get(), bookPileModel);
 
-        ModelFile paperStackModel = models().withExistingParent(name(HoardingBlocks.PAPER_STACK.get()), Hoarding.id("cube_symmetry_north_west"))
+        ModelFile paperStackModel = models().withExistingParent(name(PAPER_STACK.get()), Hoarding.id("cube_symmetry_north_west"))
                 .texture("north", Hoarding.id("block/paper_stack_front"))
                 .texture("west", Hoarding.id("block/paper_stack_side"))
                 .texture("top", Hoarding.id("block/paper_stack_top"))
                 .texture("bottom", Hoarding.id("block/paper_stack_top"));
-        horizontalBlock(HoardingBlocks.PAPER_STACK.get(), paperStackModel);
-        simpleBlockItem(HoardingBlocks.PAPER_STACK.get(), paperStackModel);
+        horizontalBlock(PAPER_STACK.get(), paperStackModel);
+        simpleBlockItem(PAPER_STACK.get(), paperStackModel);
 
-        ModelFile turtleScuteModel = models().withExistingParent(name(HoardingBlocks.TURTLE_SCUTE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
+        ModelFile turtleScuteModel = models().withExistingParent(name(TURTLE_SCUTE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
                 .texture("north", Hoarding.id("block/turtle_scute_block_front"))
                 .texture("south", Hoarding.id("block/turtle_scute_block_back"))
                 .texture("west", Hoarding.id("block/turtle_scute_block_side"))
                 .texture("top", Hoarding.id("block/turtle_scute_block_top"))
                 .texture("bottom", Hoarding.id("block/turtle_scute_block_bottom"));
-        horizontalBlock(HoardingBlocks.TURTLE_SCUTE_BLOCK.get(), turtleScuteModel);
-        simpleBlockItem(HoardingBlocks.TURTLE_SCUTE_BLOCK.get(), turtleScuteModel);
+        horizontalBlock(TURTLE_SCUTE_BLOCK.get(), turtleScuteModel);
+        simpleBlockItem(TURTLE_SCUTE_BLOCK.get(), turtleScuteModel);
 
-        ModelFile phantomMembraneModel = models().withExistingParent(name(HoardingBlocks.PHANTOM_MEMBRANE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
+        ModelFile phantomMembraneModel = models().withExistingParent(name(PHANTOM_MEMBRANE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
                 .texture("north", Hoarding.id("block/phantom_membrane_block_front"))
                 .texture("south", Hoarding.id("block/phantom_membrane_block_back"))
                 .texture("west", Hoarding.id("block/phantom_membrane_block_side"))
                 .texture("top", Hoarding.id("block/phantom_membrane_block_top"))
                 .texture("bottom", Hoarding.id("block/phantom_membrane_block_bottom"));
-        horizontalBlock(HoardingBlocks.PHANTOM_MEMBRANE_BLOCK.get(), phantomMembraneModel);
-        simpleBlockItem(HoardingBlocks.PHANTOM_MEMBRANE_BLOCK.get(), phantomMembraneModel);
+        horizontalBlock(PHANTOM_MEMBRANE_BLOCK.get(), phantomMembraneModel);
+        simpleBlockItem(PHANTOM_MEMBRANE_BLOCK.get(), phantomMembraneModel);
 
-        simpleBlockWithItem(HoardingBlocks.MAGMA_CREAM_BLOCK.get(), models().getExistingFile(Hoarding.id("block/magma_cream_block")));
+        simpleBlockWithItem(MAGMA_CREAM_BLOCK.get(), models().getExistingFile(Hoarding.id("block/magma_cream_block")));
 
         ModelFile nautilusModel = models().getExistingFile(Hoarding.id("block/nautilus_shell_block"));
-        horizontalBlock(HoardingBlocks.NAUTILUS_BLOCK.get(), nautilusModel);
-        simpleBlockItem(HoardingBlocks.NAUTILUS_BLOCK.get(), nautilusModel);
+        horizontalBlock(NAUTILUS_BLOCK.get(), nautilusModel);
+        simpleBlockItem(NAUTILUS_BLOCK.get(), nautilusModel);
+
+        registerCrossModBlocks();
+    }
+
+    private void registerCrossModBlocks() {
+        // Ars Nouveau integration
+        archwoodCrate(HoardingArsNouveauBlocks.MAGEBLOOM_CRATE);
+        archwoodCrate(HoardingArsNouveauBlocks.SOURCEBERRY_CRATE);
+
+        // Botania integration
+        mysticalFlowerCrate(HoardingBotaniaBlocks.WHITE_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.ORANGE_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.MAGENTA_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.LIGHT_BLUE_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.YELLOW_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.LIME_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.PINK_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.GRAY_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.LIGHT_GRAY_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.CYAN_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.PURPLE_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.BLUE_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.BROWN_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.GREEN_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.RED_MYSTICAL_FLOWER_CRATE);
+        mysticalFlowerCrate(HoardingBotaniaBlocks.BLACK_MYSTICAL_FLOWER_CRATE);
     }
 
     private ResourceLocation key(Block block) {
@@ -370,5 +399,31 @@ public class HoardingBlockStateProvider extends BlockStateProvider {
     private void simpleBlockItem(Supplier<? extends Block> supplier) {
         Block block = supplier.get();
         this.simpleBlockItem(block, new ModelFile.UncheckedModelFile(blockTexture(block)));
+    }
+
+    private void archwoodCrate(Supplier<? extends Block> supplier) {
+        String prefix = "block/crate/ars_nouveau/";
+        Block block = supplier.get();
+        ModelFile model = models().cubeBottomTop(
+                name(block),
+                key(block).withPath(path -> prefix + path + "_side"),
+                Hoarding.id(prefix + "bottom_archwood"),
+                key(block).withPath(path -> prefix + path + "_top")
+        );
+        this.simpleBlock(block, model);
+        this.simpleBlockItem(block, model);
+    }
+
+    private void mysticalFlowerCrate(Supplier<? extends Block> supplier) {
+        String prefix = "block/crate/botania/";
+        Block block = supplier.get();
+        ModelFile model = models().cubeBottomTop(
+                name(block),
+                key(block).withPath(path -> prefix + path + "_side"),
+                Hoarding.id(prefix + "bottom_livingwood"),
+                key(block).withPath(path -> prefix + path + "_top")
+        );
+        this.simpleBlock(block, model);
+        this.simpleBlockItem(block, model);
     }
 }

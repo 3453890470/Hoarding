@@ -33,7 +33,7 @@ public class HoardingItems {
         REGISTER.register(eventBus);
     }
 
-    RegistryObject<Item> item(final String name, final Supplier<Item> supplier) {
+    public RegistryObject<Item> item(final String name, final Supplier<Item> supplier) {
         RegistryObject<Item> block = REGISTER.register(name, supplier);
         CREATIVE_MODE_TAB_ITEMS.offer(block);
         return block;

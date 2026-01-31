@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hoarding:sourceberry_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "ars_nouveau:sourceberry_bush"
+  }
+}

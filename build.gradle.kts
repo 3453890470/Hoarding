@@ -161,8 +161,7 @@ obfuscation {
 
 dependencies {
     // Mixin (& Extras)
-//    annotationProcessor(variantOf(libs.mixin) { classifier("processor") })
-//    annotationProcessor(libs.mixinExtras.common)?.let { api(it) }
+    implementation(libs.mixinExtras.forge)
 
     // Recipe Viewers
     modCompileOnly(libs.jei.api.common)
@@ -173,6 +172,11 @@ dependencies {
     // region For testing
     "modLocalRuntime"(libs.jei.impl)
     "modLocalRuntime"(libs.emi)
+    implementation(libs.botania)
+    "modLocalRuntime"(libs.patchouli)
+    implementation(libs.arsnouveau)
+    "modLocalRuntime"(libs.geckolib)
+    "modLocalRuntime"(libs.curios)
     "modLocalClientRuntime"(libs.modernui)
     "modLocalClientRuntime"(libs.jecharacters)
     "modLocalClientRuntime"(libs.jade)

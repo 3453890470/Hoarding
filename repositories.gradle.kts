@@ -29,6 +29,30 @@ repositories {
     exclusiveContent {
         forRepository {
             maven {
+                name = "GeckoLib"
+                url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
+            }
+        }
+        filter {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Curios"
+                url = uri("https://maven.theillusivec4.top/")
+            }
+        }
+        filter {
+            includeGroup("top.theillusivec4.curios")
+        }
+    }
+
+    exclusiveContent {
+        forRepository {
+            maven {
                 name = "Modrinth"
                 url = uri("https://api.modrinth.com/maven")
             }

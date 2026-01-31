@@ -5,7 +5,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static dev.gateguardian.hoarding.common.registry.HoardingBlocks.*;
-import static dev.gateguardian.hoarding.common.registry.HoardingItems.PUMPKIN_SLICE;
+import static dev.gateguardian.hoarding.common.registry.HoardingItems.*;
+import static dev.gateguardian.hoarding.integration.arsnouveau.HoardingArsNouveauBlocks.*;
+import static dev.gateguardian.hoarding.integration.botania.HoardingBotaniaBlocks.*;
 
 public class HoardingLanguageProvider extends LanguageProvider {
 
@@ -147,5 +149,32 @@ public class HoardingLanguageProvider extends LanguageProvider {
         addBlock(PHANTOM_MEMBRANE_BLOCK, "Phantom Membrane Block");
         addBlock(MAGMA_CREAM_BLOCK, "Magma Cream Block");
         addBlock(NAUTILUS_BLOCK, "Nautilus Block");
+
+        // Cross-mod integration translations
+        addCrossModTranslations();
+    }
+
+    private void addCrossModTranslations() {
+        // Ars Nouveau integration
+        addBlock(MAGEBLOOM_CRATE, "Magebloom Crate");
+        addBlock(SOURCEBERRY_CRATE, "Source Berry Crate");
+
+        // Botania integration
+        addBlock(WHITE_MYSTICAL_FLOWER_CRATE, "White Mystical Flower Crate");
+        addBlock(ORANGE_MYSTICAL_FLOWER_CRATE, "Orange Mystical Flower Crate");
+        addBlock(MAGENTA_MYSTICAL_FLOWER_CRATE, "Magenta Mystical Flower Crate");
+        addBlock(LIGHT_BLUE_MYSTICAL_FLOWER_CRATE, "Light Blue Mystical Flower Crate");
+        addBlock(YELLOW_MYSTICAL_FLOWER_CRATE, "Yellow Mystical Flower Crate");
+        addBlock(LIME_MYSTICAL_FLOWER_CRATE, "Lime Mystical Flower Crate");
+        addBlock(PINK_MYSTICAL_FLOWER_CRATE, "Pink Mystical Flower Crate");
+        addBlock(GRAY_MYSTICAL_FLOWER_CRATE, "Gray Mystical Flower Crate");
+        addBlock(LIGHT_GRAY_MYSTICAL_FLOWER_CRATE, "Light Gray Mystical Flower Crate");
+        addBlock(CYAN_MYSTICAL_FLOWER_CRATE, "Cyan Mystical Flower Crate");
+        addBlock(PURPLE_MYSTICAL_FLOWER_CRATE, "Purple Mystical Flower Crate");
+        addBlock(BLUE_MYSTICAL_FLOWER_CRATE, "Blue Mystical Flower Crate");
+        addBlock(BROWN_MYSTICAL_FLOWER_CRATE, "Brown Mystical Flower Crate");
+        addBlock(GREEN_MYSTICAL_FLOWER_CRATE, "Green Mystical Flower Crate");
+        addBlock(RED_MYSTICAL_FLOWER_CRATE, "Red Mystical Flower Crate");
+        addBlock(BLACK_MYSTICAL_FLOWER_CRATE, "Black Mystical Flower Crate");
     }
 }

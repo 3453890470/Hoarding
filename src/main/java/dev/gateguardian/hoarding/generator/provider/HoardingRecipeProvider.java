@@ -1,7 +1,7 @@
 package dev.gateguardian.hoarding.generator.provider;
 
 import dev.gateguardian.hoarding.common.Hoarding;
-import dev.gateguardian.hoarding.generator.data.StorageBlockRegistry;
+import dev.gateguardian.hoarding.generator.data.StorageBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.level.ItemLike;
@@ -19,7 +19,7 @@ public class HoardingRecipeProvider extends RecipeProvider implements ICondition
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
-        for (var entry : StorageBlockRegistry.getEntries()) {
+        for (var entry : StorageBlocks.getEntries()) {
             RecipeCategory unpackedCategory = entry.unpackedCategory();
             RecipeCategory packedCategory = entry.packedCategory();
             Block packed = entry.getBlock();

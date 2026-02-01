@@ -1,7 +1,7 @@
 package dev.gateguardian.hoarding.generator.provider;
 
 import dev.gateguardian.hoarding.common.Hoarding;
-import dev.gateguardian.hoarding.generator.data.StorageBlockRegistry;
+import dev.gateguardian.hoarding.generator.data.StorageBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -32,7 +32,7 @@ public class HoardingItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         var storageBlocks = tag(Tags.Items.STORAGE_BLOCKS);
-        for (var entry : StorageBlockRegistry.getEntries()) {
+        for (var entry : StorageBlocks.getEntries()) {
             Item block = entry.getBlock().asItem();
             Item item = entry.getItem();
             TagKey<Item> subTag = createStorageBlockSubTag(item);

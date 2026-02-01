@@ -1,0 +1,10 @@
+{
+  "parent": "hoarding:block/cube_symmetry_west",
+  "textures": {
+    "bottom": "hoarding:block/scute_block_bottom",
+    "north": "hoarding:block/scute_block_front",
+    "south": "hoarding:block/scute_block_back",
+    "top": "hoarding:block/scute_block_top",
+    "west": "hoarding:block/scute_block_side"
+  }
+}

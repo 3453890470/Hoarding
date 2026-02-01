@@ -16,20 +16,19 @@ import java.util.function.Supplier;
 @UtilityClass
 public class HoardingItems {
 
-    public final Queue<RegistryObject<Item>> CREATIVE_MODE_TAB_ITEMS = new ArrayDeque<>();
+    public final Queue<RegistryObject<Item>> CREATIVE_MODE_TAB_ITEMS = new ArrayDeque<>(128);
     public final DeferredRegister<Item> REGISTER = DeferredRegister.create(ForgeRegistries.ITEMS, Hoarding.MOD_ID);
 
     public final RegistryObject<Item> PUMPKIN_SLICE = item("pumpkin_slice", () -> new Item(
-            new Item.Properties().food(
-                    new FoodProperties.Builder()
-                            .alwaysEat()
-                            .nutrition(1)
-                            .saturationMod(2f)
-                            .build()
+            new Item.Properties().food(new FoodProperties.Builder()
+                    .alwaysEat()
+                    .nutrition(1)
+                    .saturationMod(2f)
+                    .build()
             )
     ));
 
-    public void bootstrap(IEventBus eventBus) {
+    public void init(IEventBus eventBus) {
         REGISTER.register(eventBus);
     }
 

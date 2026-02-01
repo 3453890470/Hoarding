@@ -178,14 +178,14 @@ public class HoardingBlockStateProvider extends BlockStateProvider {
         horizontalBlock(PAPER_STACK.get(), paperStackModel);
         simpleBlockItem(PAPER_STACK.get(), paperStackModel);
 
-        ModelFile turtleScuteModel = models().withExistingParent(name(TURTLE_SCUTE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
-                .texture("north", Hoarding.id("block/turtle_scute_block_front"))
-                .texture("south", Hoarding.id("block/turtle_scute_block_back"))
-                .texture("west", Hoarding.id("block/turtle_scute_block_side"))
-                .texture("top", Hoarding.id("block/turtle_scute_block_top"))
-                .texture("bottom", Hoarding.id("block/turtle_scute_block_bottom"));
-        horizontalBlock(TURTLE_SCUTE_BLOCK.get(), turtleScuteModel);
-        simpleBlockItem(TURTLE_SCUTE_BLOCK.get(), turtleScuteModel);
+        ModelFile scuteModel = models().withExistingParent(name(SCUTE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
+                .texture("north", Hoarding.id("block/scute_block_front"))
+                .texture("south", Hoarding.id("block/scute_block_back"))
+                .texture("west", Hoarding.id("block/scute_block_side"))
+                .texture("top", Hoarding.id("block/scute_block_top"))
+                .texture("bottom", Hoarding.id("block/scute_block_bottom"));
+        horizontalBlock(SCUTE_BLOCK.get(), scuteModel);
+        simpleBlockItem(SCUTE_BLOCK.get(), scuteModel);
 
         ModelFile phantomMembraneModel = models().withExistingParent(name(PHANTOM_MEMBRANE_BLOCK.get()), Hoarding.id("cube_symmetry_west"))
                 .texture("north", Hoarding.id("block/phantom_membrane_block_front"))

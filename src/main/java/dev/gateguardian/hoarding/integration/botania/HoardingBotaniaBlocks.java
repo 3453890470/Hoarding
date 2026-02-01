@@ -27,7 +27,7 @@ public class HoardingBotaniaBlocks {
     public final RegistryObject<Block> RED_MYSTICAL_FLOWER_CRATE = mysticalFlowerCrate("red_mystical_flower_crate");
     public final RegistryObject<Block> BLACK_MYSTICAL_FLOWER_CRATE = mysticalFlowerCrate("black_mystical_flower_crate");
 
-    public void bootstrap() {
+    public void init() {
 
     }
 

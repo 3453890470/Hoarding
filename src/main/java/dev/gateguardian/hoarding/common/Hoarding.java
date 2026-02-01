@@ -19,11 +19,11 @@ public class Hoarding {
 
     public Hoarding(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+        HoardingItems.init(modEventBus);
+        HoardingBlocks.init(modEventBus);
+        HoardingCreativeModeTabs.init(modEventBus);
+        ModIntegration.init();
         modEventBus.addListener(this::addItemsToCreativeModeTab);
-        HoardingItems.bootstrap(modEventBus);
-        HoardingBlocks.bootstrap(modEventBus);
-        HoardingCreativeModeTabs.bootstrap(modEventBus);
-        ModIntegration.bootstrap(context);
     }
 
     public static ResourceLocation id(String path) {

@@ -145,7 +145,7 @@ public class HoardingLanguageProvider extends LanguageProvider {
         addBlock(BONE_PILE, "Bone Pile");
         addBlock(BOOK_PILE, "Book Pile");
         addBlock(PAPER_STACK, "Paper Stack");
-        addBlock(TURTLE_SCUTE_BLOCK, "Turtle Scute Block");
+        addBlock(SCUTE_BLOCK, "Scute Block");
         addBlock(PHANTOM_MEMBRANE_BLOCK, "Phantom Membrane Block");
         addBlock(MAGMA_CREAM_BLOCK, "Magma Cream Block");
         addBlock(NAUTILUS_BLOCK, "Nautilus Block");

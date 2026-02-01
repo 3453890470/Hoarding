@@ -2,8 +2,8 @@ package dev.gateguardian.hoarding.common.registry;
 
 import dev.gateguardian.hoarding.common.Hoarding;
 import dev.gateguardian.hoarding.common.block.HorizontalFacingBlock;
-import dev.gateguardian.hoarding.common.block.EffectBlock;
 import dev.gateguardian.hoarding.common.block.HotFoodBlock;
+import dev.gateguardian.hoarding.common.block.MobEffectBlock;
 import dev.gateguardian.hoarding.common.block.NautilusBlock;
 import lombok.experimental.UtilityClass;
 import net.minecraft.world.effect.MobEffects;
@@ -28,7 +28,6 @@ public class HoardingBlocks {
     public final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, Hoarding.MOD_ID);
 
     //region Birch Crates
-
     public final RegistryObject<Block> ALLIUM_CRATE = birchCrate("allium_crate");
     public final RegistryObject<Block> AZURE_BLUET_CRATE = birchCrate("azure_bluet_crate");
     public final RegistryObject<Block> BLUE_ORCHID_CRATE = birchCrate("blue_orchid_crate");
@@ -42,11 +41,9 @@ public class HoardingBlocks {
     public final RegistryObject<Block> RED_TULIP_CRATE = birchCrate("red_tulip_crate");
     public final RegistryObject<Block> WHITE_TULIP_CRATE = birchCrate("white_tulip_crate");
     public final RegistryObject<Block> TORCHFLOWER_CRATE = birchCrate("torchflower_crate");
-
     //endregion Birch Crates
 
     //region Oak Crates
-
     public final RegistryObject<Block> APPLE_CRATE = oakCrate("apple_crate");
     public final RegistryObject<Block> GOLDEN_APPLE_CRATE = oakCrate("golden_apple_crate");
     public final RegistryObject<Block> POTATO_CRATE = oakCrate("potato_crate");
@@ -61,11 +58,9 @@ public class HoardingBlocks {
     public final RegistryObject<Block> GLOW_BERRIES_CRATE = oakCrate("glow_berries_crate");
     public final RegistryObject<Block> COOKIE_CRATE = oakCrate("cookie_crate");
     public final RegistryObject<Block> BREAD_CRATE = oakCrate("bread_crate");
-
     //endregion Oak Crates
 
     //region Spruce Crates
-
     public final RegistryObject<Block> BEEF_CRATE = spruceCrate("beef_crate");
     public final RegistryObject<Block> COOKED_BEEF_CRATE = spruceCrate("cooked_beef_crate", HotFoodBlock::new);
     public final RegistryObject<Block> CHICKEN_CRATE = spruceCrate("chicken_crate");
@@ -77,40 +72,32 @@ public class HoardingBlocks {
     public final RegistryObject<Block> RABBIT_FOOT_CRATE = spruceCrate("rabbit_foot_crate");
     public final RegistryObject<Block> PORKCHOP_CRATE = spruceCrate("porkchop_crate");
     public final RegistryObject<Block> COOKED_PORKCHOP_CRATE = spruceCrate("cooked_porkchop_crate", HotFoodBlock::new);
-
     //endregion Spruce Crates
 
     //region Iron Crates
-
     public final RegistryObject<Block> ENDER_EYE_CRATE = ironCrate("ender_eye_crate");
     public final RegistryObject<Block> ENDER_PEARL_CRATE = ironCrate("ender_pearl_crate");
     public final RegistryObject<Block> ROTTEN_FLESH_CRATE = ironCrate("rotten_flesh_crate");
     public final RegistryObject<Block> SPIDER_EYE_CRATE = ironCrate("spider_eye_crate");
     public final RegistryObject<Block> FERMENTED_SPIDER_EYE_CRATE = ironCrate("fermented_spider_eye_crate");
-
     //endregion Iron Crates
 
     //region Crimson Crates
-
     public final RegistryObject<Block> CRIMSON_FUNGUS_CRATE = crimsonCrate("crimson_fungus_crate");
     public final RegistryObject<Block> WARPED_FUNGUS_CRATE = crimsonCrate("warped_fungus_crate");
     public final RegistryObject<Block> NETHER_WART_CRATE = crimsonCrate("nether_wart_crate");
     public final RegistryObject<Block> WITHER_ROSE_CRATE = crimsonCrate(
             "wither_rose_crate",
-            props -> new EffectBlock(props, MobEffects.WITHER)
+            props -> new MobEffectBlock(props, MobEffects.WITHER)
     );
-
     //endregion Crimson Crates
 
     //region End Stone Crates
-
     public final RegistryObject<Block> CHORUS_FRUIT_CRATE = endStoneCrate("chorus_fruit_crate");
     public final RegistryObject<Block> POPPED_CHORUS_FRUIT_CRATE = endStoneCrate("popped_chorus_fruit_crate");
-
     //endregion End Stone Crates
 
     //region Barrels
-
     public final RegistryObject<Block> COD_BARREL = barrel("cod_barrel");
     public final RegistryObject<Block> COOKED_COD_BARREL = barrel("cooked_cod_barrel", HotFoodBlock::new);
     public final RegistryObject<Block> SALMON_BARREL = barrel("salmon_barrel");
@@ -119,14 +106,12 @@ public class HoardingBlocks {
     public final RegistryObject<Block> GLOW_INK_SAC_BARREL = barrel("glow_ink_sac_barrel");
     public final RegistryObject<Block> PUFFER_FISH_BARREL = barrel(
             "pufferfish_barrel",
-            props -> new EffectBlock(props, MobEffects.POISON)
+            props -> new MobEffectBlock(props, MobEffects.POISON)
     );
     public final RegistryObject<Block> TROPICAL_FISH_BARREL = barrel("tropical_fish_barrel");
-
     //endregion Barrels
 
     //region Buckets
-
     public final RegistryObject<Block> WHITE_DYE_BUCKET = bucket("white_dye_bucket");
     public final RegistryObject<Block> ORANGE_DYE_BUCKET = bucket("orange_dye_bucket");
     public final RegistryObject<Block> MAGENTA_DYE_BUCKET = bucket("magenta_dye_bucket");
@@ -143,44 +128,34 @@ public class HoardingBlocks {
     public final RegistryObject<Block> GREEN_DYE_BUCKET = bucket("green_dye_bucket");
     public final RegistryObject<Block> RED_DYE_BUCKET = bucket("red_dye_bucket");
     public final RegistryObject<Block> BLACK_DYE_BUCKET = bucket("black_dye_bucket");
-
     //endregion Buckets
 
     //region Racks
-
     public final RegistryObject<Block> EGG_RACK = rack("egg_rack");
     public final RegistryObject<Block> TURTLE_EGG_RACK = rack("turtle_egg_rack");
     public final RegistryObject<Block> BOTTLE_RACK = rack("bottle_rack");
-
     //endregion Racks
 
     //region Sacks
-
-    public final RegistryObject<HorizontalFacingBlock> SUGAR_BAG = bag("sugar_bag");
-    public final RegistryObject<HorizontalFacingBlock> GUNPOWDER_BAG = bag("gunpowder_bag");
-    public final RegistryObject<HorizontalFacingBlock> COCOA_BEANS_BAG = bag("cocoa_beans_bag");
-    public final RegistryObject<HorizontalFacingBlock> FEATHER_BAG = bag("feather_bag");
-
+    public final RegistryObject<Block> SUGAR_BAG = bag("sugar_bag");
+    public final RegistryObject<Block> GUNPOWDER_BAG = bag("gunpowder_bag");
+    public final RegistryObject<Block> COCOA_BEANS_BAG = bag("cocoa_beans_bag");
+    public final RegistryObject<Block> FEATHER_BAG = bag("feather_bag");
     //endregion Sacks
 
     //region Seed Bags
-
-    public final RegistryObject<HorizontalFacingBlock> WHEAT_SEEDS_BAG = bag("wheat_seeds_bag");
-    public final RegistryObject<HorizontalFacingBlock> BEETROOT_SEEDS_BAG = bag("beetroot_seeds_bag");
-    public final RegistryObject<HorizontalFacingBlock> MELON_SEEDS_BAG = bag("melon_seeds_bag");
-    public final RegistryObject<HorizontalFacingBlock> PUMPKIN_SEEDS_BAG = bag("pumpkin_seeds_bag");
-    public final RegistryObject<HorizontalFacingBlock> TORCHFLOWER_SEEDS_BAG = bag("torchflower_seeds_bag");
-
+    public final RegistryObject<Block> WHEAT_SEEDS_BAG = bag("wheat_seeds_bag");
+    public final RegistryObject<Block> BEETROOT_SEEDS_BAG = bag("beetroot_seeds_bag");
+    public final RegistryObject<Block> MELON_SEEDS_BAG = bag("melon_seeds_bag");
+    public final RegistryObject<Block> PUMPKIN_SEEDS_BAG = bag("pumpkin_seeds_bag");
+    public final RegistryObject<Block> TORCHFLOWER_SEEDS_BAG = bag("torchflower_seeds_bag");
     //endregion Seed Bags
 
     //region Crimson Bags
-
-    public final RegistryObject<HorizontalFacingBlock> BLAZE_POWDER_BAG = bag("blaze_powder_bag");
-
+    public final RegistryObject<Block> BLAZE_POWDER_BAG = bag("blaze_powder_bag");
     //endregion Crimson Bags
 
     //region Compressed Blocks
-
     public final RegistryObject<Block> FLINT_BLOCK = block(
             "flint_block",
             () -> new Block(Block.Properties.copy(Blocks.COBBLESTONE)
@@ -240,16 +215,16 @@ public class HoardingBlocks {
             "bone_pile",
             () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.BONE_BLOCK))
     );
-    public final RegistryObject<HorizontalFacingBlock> BOOK_PILE = block(
+    public final RegistryObject<Block> BOOK_PILE = block(
             "book_pile",
             () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.BOOKSHELF))
     );
-    public final RegistryObject<HorizontalFacingBlock> PAPER_STACK = block(
+    public final RegistryObject<Block> PAPER_STACK = block(
             "paper_stack",
             () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.WHITE_WOOL))
     );
-    public final RegistryObject<HorizontalFacingBlock> TURTLE_SCUTE_BLOCK = block(
-            "turtle_scute_block",
+    public final RegistryObject<Block> SCUTE_BLOCK = block(
+            "scute_block",
             () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.WHITE_WOOL)
                     .strength(2.0F, 3.0F)
                     .sound(SoundType.WOOL))
@@ -260,23 +235,22 @@ public class HoardingBlocks {
                     .strength(2.0F, 3.0F)
                     .sound(SoundType.WOOL))
     );
-    public final RegistryObject<HorizontalFacingBlock> MAGMA_CREAM_BLOCK = block(
+    public final RegistryObject<Block> MAGMA_CREAM_BLOCK = block(
             "magma_cream_block",
             () -> new HorizontalFacingBlock(Block.Properties.copy(Blocks.SLIME_BLOCK)
                     .strength(2.0F, 3.0F)
                     .sound(SoundType.SLIME_BLOCK)
                     .lightLevel((state) -> 10))
     );
-    public final RegistryObject<NautilusBlock> NAUTILUS_BLOCK = block(
+    public final RegistryObject<Block> NAUTILUS_BLOCK = block(
             "nautilus_block",
             () -> new NautilusBlock(Block.Properties.copy(Blocks.BONE_BLOCK)
                     .strength(2.0F, 3.0F)
                     .sound(SoundType.BONE_BLOCK))
     );
-
     //endregion Compressed Blocks
 
-    public void bootstrap(IEventBus eventBus) {
+    public void init(IEventBus eventBus) {
         REGISTER.register(eventBus);
     }
 
@@ -338,11 +312,11 @@ public class HoardingBlocks {
         return block(name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     }
 
-    private RegistryObject<HorizontalFacingBlock> bag(String name) {
+    private RegistryObject<Block> bag(String name) {
         return bag(name, HorizontalFacingBlock::new);
     }
 
-    private RegistryObject<HorizontalFacingBlock> bag(String name, Function<BlockBehaviour.Properties, HorizontalFacingBlock> blockFactory) {
+    private RegistryObject<Block> bag(String name, Function<BlockBehaviour.Properties, HorizontalFacingBlock> blockFactory) {
         return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     }
 }

@@ -1,0 +1,179 @@
+{
+  "values": [
+    "#forge:storage_blocks/pumpkin_slice",
+    "#forge:storage_blocks/allium",
+    "#forge:storage_blocks/azure_bluet",
+    "#forge:storage_blocks/blue_orchid",
+    "#forge:storage_blocks/cornflower",
+    "#forge:storage_blocks/dandelion",
+    "#forge:storage_blocks/lily_of_the_valley",
+    "#forge:storage_blocks/oxeye_daisy",
+    "#forge:storage_blocks/poppy",
+    "#forge:storage_blocks/orange_tulip",
+    "#forge:storage_blocks/pink_tulip",
+    "#forge:storage_blocks/red_tulip",
+    "#forge:storage_blocks/white_tulip",
+    "#forge:storage_blocks/torchflower",
+    "#forge:storage_blocks/apple",
+    "#forge:storage_blocks/golden_apple",
+    "#forge:storage_blocks/potato",
+    "#forge:storage_blocks/baked_potato",
+    "#forge:storage_blocks/poisonous_potato",
+    "#forge:storage_blocks/beetroot",
+    "#forge:storage_blocks/brown_mushroom",
+    "#forge:storage_blocks/red_mushroom",
+    "#forge:storage_blocks/carrot",
+    "#forge:storage_blocks/golden_carrot",
+    "#forge:storage_blocks/sweet_berries",
+    "#forge:storage_blocks/glow_berries",
+    "#forge:storage_blocks/cookie",
+    "#forge:storage_blocks/bread",
+    "#forge:storage_blocks/beef",
+    "#forge:storage_blocks/cooked_beef",
+    "#forge:storage_blocks/chicken",
+    "#forge:storage_blocks/cooked_chicken",
+    "#forge:storage_blocks/mutton",
+    "#forge:storage_blocks/cooked_mutton",
+    "#forge:storage_blocks/rabbit",
+    "#forge:storage_blocks/cooked_rabbit",
+    "#forge:storage_blocks/rabbit_foot",
+    "#forge:storage_blocks/porkchop",
+    "#forge:storage_blocks/cooked_porkchop",
+    "#forge:storage_blocks/ender_eye",
+    "#forge:storage_blocks/ender_pearl",
+    "#forge:storage_blocks/rotten_flesh",
+    "#forge:storage_blocks/spider_eye",
+    "#forge:storage_blocks/fermented_spider_eye",
+    "#forge:storage_blocks/crimson_fungus",
+    "#forge:storage_blocks/warped_fungus",
+    "#forge:storage_blocks/nether_wart",
+    "#forge:storage_blocks/wither_rose",
+    "#forge:storage_blocks/chorus_fruit",
+    "#forge:storage_blocks/popped_chorus_fruit",
+    "#forge:storage_blocks/cod",
+    "#forge:storage_blocks/cooked_cod",
+    "#forge:storage_blocks/salmon",
+    "#forge:storage_blocks/cooked_salmon",
+    "#forge:storage_blocks/ink_sac",
+    "#forge:storage_blocks/glow_ink_sac",
+    "#forge:storage_blocks/pufferfish",
+    "#forge:storage_blocks/tropical_fish",
+    "#forge:storage_blocks/white_dye",
+    "#forge:storage_blocks/orange_dye",
+    "#forge:storage_blocks/magenta_dye",
+    "#forge:storage_blocks/light_blue_dye",
+    "#forge:storage_blocks/yellow_dye",
+    "#forge:storage_blocks/lime_dye",
+    "#forge:storage_blocks/pink_dye",
+    "#forge:storage_blocks/gray_dye",
+    "#forge:storage_blocks/light_gray_dye",
+    "#forge:storage_blocks/cyan_dye",
+    "#forge:storage_blocks/purple_dye",
+    "#forge:storage_blocks/blue_dye",
+    "#forge:storage_blocks/brown_dye",
+    "#forge:storage_blocks/green_dye",
+    "#forge:storage_blocks/red_dye",
+    "#forge:storage_blocks/black_dye",
+    "#forge:storage_blocks/egg",
+    "#forge:storage_blocks/turtle_egg",
+    "#forge:storage_blocks/glass_bottle",
+    "#forge:storage_blocks/sugar",
+    "#forge:storage_blocks/gunpowder",
+    "#forge:storage_blocks/cocoa_beans",
+    "#forge:storage_blocks/feather",
+    "#forge:storage_blocks/wheat_seeds",
+    "#forge:storage_blocks/beetroot_seeds",
+    "#forge:storage_blocks/melon_seeds",
+    "#forge:storage_blocks/pumpkin_seeds",
+    "#forge:storage_blocks/torchflower_seeds",
+    "#forge:storage_blocks/blaze_powder",
+    "#forge:storage_blocks/flint",
+    "#forge:storage_blocks/nether_star",
+    "#forge:storage_blocks/leather",
+    "#forge:storage_blocks/cactus",
+    "#forge:storage_blocks/sugar_cane",
+    "#forge:storage_blocks/stick",
+    "#forge:storage_blocks/blaze_rod",
+    "#forge:storage_blocks/glistering_melon_slice",
+    "#forge:storage_blocks/string",
+    "#forge:storage_blocks/bone",
+    "#forge:storage_blocks/book",
+    "#forge:storage_blocks/paper",
+    "#forge:storage_blocks/scute",
+    "#forge:storage_blocks/phantom_membrane",
+    "#forge:storage_blocks/magma_cream",
+    "#forge:storage_blocks/nautilus_shell",
+    {
+      "id": "forge:storage_blocks/magebloom",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/sourceberry_bush",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/white_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/orange_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/magenta_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/light_blue_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/yellow_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/lime_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/pink_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/gray_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/light_gray_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/cyan_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/purple_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/blue_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/brown_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/green_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/red_mystical_flower",
+      "required": false
+    },
+    {
+      "id": "forge:storage_blocks/black_mystical_flower",
+      "required": false
+    }
+  ]
+}

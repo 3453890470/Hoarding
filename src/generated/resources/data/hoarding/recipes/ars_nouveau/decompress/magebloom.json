@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ars_nouveau"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "hoarding:magebloom_crate"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "ars_nouveau:magebloom"
+        }
+      }
+    }
+  ]
+}

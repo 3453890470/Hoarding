@@ -16,11 +16,11 @@ public class HoardingCreativeModeTabs {
 
     public final RegistryObject<CreativeModeTab> MAIN = REGISTER.register("main_tab", () -> CreativeModeTab.builder()
             .icon(() -> HoardingItems.PUMPKIN_SLICE.get().getDefaultInstance())
-            .displayItems((parameters, output) -> output.accept(HoardingItems.PUMPKIN_SLICE.get()))
+            .displayItems((params, output) -> output.accept(HoardingItems.PUMPKIN_SLICE.get()))
             .title(Component.translatable("itemGroup.hoarding.main"))
             .build());
 
-    public void bootstrap(IEventBus eventBus) {
+    public void init(IEventBus eventBus) {
         REGISTER.register(eventBus);
     }
 }

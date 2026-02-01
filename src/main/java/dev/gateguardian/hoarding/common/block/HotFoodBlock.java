@@ -1,7 +1,7 @@
 package dev.gateguardian.hoarding.common.block;
 
+import dev.gateguardian.hoarding.common.registry.HoardingParticleTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -19,7 +19,7 @@ public class HotFoodBlock extends Block {
             double x = pos.getX() + 0.5;
             double y = pos.getY() + 1.0;
             double z = pos.getZ() + 0.5;
-            level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 0.0, 0.1, 0.0);
+            level.addParticle(HoardingParticleTypes.STEAM.get(), x, y, z, 0.0, 0.08, 0.0);
         }
     }
 }

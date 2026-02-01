@@ -3,6 +3,7 @@ package dev.gateguardian.hoarding.common;
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.common.registry.HoardingCreativeModeTabs;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
+import dev.gateguardian.hoarding.common.registry.HoardingParticleTypes;
 import dev.gateguardian.hoarding.integration.ModIntegration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -22,6 +23,7 @@ public class Hoarding {
         HoardingItems.init(modEventBus);
         HoardingBlocks.init(modEventBus);
         HoardingCreativeModeTabs.init(modEventBus);
+        HoardingParticleTypes.init(modEventBus);
         ModIntegration.init();
         modEventBus.addListener(this::addItemsToCreativeModeTab);
     }

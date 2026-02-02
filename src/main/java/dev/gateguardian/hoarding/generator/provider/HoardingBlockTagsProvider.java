@@ -1,11 +1,13 @@
 package dev.gateguardian.hoarding.generator.provider;
 
 import dev.gateguardian.hoarding.common.Hoarding;
+import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.generator.data.StorageBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -47,6 +49,7 @@ public class HoardingBlockTagsProvider extends BlockTagsProvider {
                 storageBlocks.addTag(subTag);
             }
         }
+        tag(BlockTags.ENCHANTMENT_POWER_PROVIDER).add(HoardingBlocks.BOOK_PILE.get());
     }
 
     private TagKey<Block> createStorageBlockSubTag(Item item) {

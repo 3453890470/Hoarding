@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_feather_bag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hoarding:feather_bag"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoarding:decompress/feather"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_feather_bag"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoarding:decompress/feather"
+    ]
+  }
+}

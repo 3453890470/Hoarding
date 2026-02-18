@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "bottom": "hoarding:block/crate/botania/bottom_livingwood",
-    "side": "hoarding:block/crate/botania/red_mystical_flower_crate_side",
-    "top": "hoarding:block/crate/botania/red_mystical_flower_crate_top"
+    "end": "hoarding:block/crate/botania/red_mystical_flower_crate_top",
+    "side": "hoarding:block/crate/botania/red_mystical_flower_crate_side"
   }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chicken_crate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hoarding:chicken_crate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoarding:decompress/chicken"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chicken_crate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoarding:decompress/chicken"
+    ]
+  }
+}

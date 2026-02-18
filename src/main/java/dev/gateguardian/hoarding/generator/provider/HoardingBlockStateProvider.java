@@ -1,12 +1,16 @@
 package dev.gateguardian.hoarding.generator.provider;
 
 import dev.gateguardian.hoarding.Hoarding;
+import dev.gateguardian.hoarding.integration.arsnouveau.HoardingArsNouveauBlocks;
+import dev.gateguardian.hoarding.integration.botania.HoardingBotaniaBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -200,6 +204,33 @@ public class HoardingBlockStateProvider extends BlockStateProvider {
         ModelFile nautilusModel = models().getExistingFile(Hoarding.id("block/nautilus_shell_block"));
         horizontalBlock(NAUTILUS_BLOCK.get(), nautilusModel);
         simpleBlockItem(NAUTILUS_BLOCK.get(), nautilusModel);
+
+        // Botania Integration Crates
+        if (ModList.get().isLoaded("botania")) {
+            for (var crate : HoardingBotaniaBlocks.ALL_CRATES) {
+                integrationCrate(crate, "botania");
+            }
+        }
+
+        // Ars Nouveau Integration Crates
+        if (ModList.get().isLoaded("ars_nouveau")) {
+            for (var crate : HoardingArsNouveauBlocks.ALL_CRATES) {
+                integrationCrate(crate, "ars_nouveau");
+            }
+        }
+    }
+
+    private void integrationCrate(net.neoforged.neoforge.registries.DeferredBlock<Block> crate, String modFolder) {
+        String prefix = "block/crate/" + modFolder + "/";
+        Block block = crate.get();
+        ResourceLocation blockId = crate.getId();
+        ModelFile model = models().cubeColumn(
+                blockId.getPath(),
+                blockId.withPath(path -> prefix + path + "_side"),
+                blockId.withPath(path -> prefix + path + "_top")
+        );
+        this.simpleBlock(block, model);
+        this.simpleBlockItem(block, model);
     }
 
     private ResourceLocation key(Block block) {

@@ -2,7 +2,11 @@ package dev.gateguardian.hoarding.generator.data;
 
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
+import dev.gateguardian.hoarding.integration.ModIntegration;
+import dev.gateguardian.hoarding.integration.arsnouveau.HoardingArsNouveauBlocks;
+import dev.gateguardian.hoarding.integration.botania.HoardingBotaniaBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -184,10 +188,80 @@ public class StorageBlocks {
         builder(HoardingBlocks.BONE_PILE, Items.BONE).build();
         builder(HoardingBlocks.BOOK_PILE, Items.BOOK).build();
         builder(HoardingBlocks.PAPER_STACK, Items.PAPER).build();
-        builder(HoardingBlocks.SCUTE_BLOCK, () -> BuiltInRegistries.ITEM.get(ResourceLocation.parse("minecraft:scute"))).build();
+        builder(HoardingBlocks.SCUTE_BLOCK, Items.TURTLE_SCUTE).build();
         builder(HoardingBlocks.PHANTOM_MEMBRANE_BLOCK, Items.PHANTOM_MEMBRANE).build();
         builder(HoardingBlocks.MAGMA_CREAM_BLOCK, Items.MAGMA_CREAM).build();
         builder(HoardingBlocks.NAUTILUS_BLOCK, Items.NAUTILUS_SHELL).build();
+
+        // Botania Integration
+        addBotaniaEntries();
+
+        // Ars Nouveau Integration
+        addArsNouveauEntries();
+    }
+
+    private static void addBotaniaEntries() {
+        if (!ModIntegration.isBotaniaLoaded()) return;
+
+        builder(HoardingBotaniaBlocks.WHITE_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "white_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.ORANGE_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "orange_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.MAGENTA_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "magenta_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.LIGHT_BLUE_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "light_blue_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.YELLOW_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "yellow_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.LIME_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "lime_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.PINK_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "pink_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.GRAY_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "gray_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.LIGHT_GRAY_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "light_gray_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.CYAN_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "cyan_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.PURPLE_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "purple_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.BLUE_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "blue_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.BROWN_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "brown_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.GREEN_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "green_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.RED_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "red_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+        builder(HoardingBotaniaBlocks.BLACK_MYSTICAL_FLOWER_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "black_mystical_flower")))
+                .modId(ModIntegration.BOTANIA_MOD_ID).build();
+    }
+
+    private static void addArsNouveauEntries() {
+        if (!ModIntegration.isArsNouveauLoaded()) return;
+
+        builder(HoardingArsNouveauBlocks.MAGEBLOOM_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.ARS_NOUVEAU_MOD_ID, "magebloom")))
+                .modId(ModIntegration.ARS_NOUVEAU_MOD_ID).build();
+        builder(HoardingArsNouveauBlocks.SOURCEBERRY_CRATE,
+                BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.ARS_NOUVEAU_MOD_ID, "sourceberry")))
+                .modId(ModIntegration.ARS_NOUVEAU_MOD_ID).build();
     }
 
     public static Builder builder(Supplier<? extends Block> storageBlock, Supplier<? extends Item> sourceItem) {

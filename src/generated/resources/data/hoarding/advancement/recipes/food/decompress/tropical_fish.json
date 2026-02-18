@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoarding:decompress/tropical_fish"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tropical_fish_barrel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hoarding:tropical_fish_barrel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tropical_fish_barrel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoarding:decompress/tropical_fish"
+    ]
+  }
+}

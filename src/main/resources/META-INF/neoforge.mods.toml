@@ -34,7 +34,7 @@ side = "BOTH"
 [[dependencies.hoarding]]
 modId = "botania"
 type = "optional"
-versionRange = "[451,)"
+versionRange = "[450,)"
 ordering = "AFTER"
 side = "BOTH"
 

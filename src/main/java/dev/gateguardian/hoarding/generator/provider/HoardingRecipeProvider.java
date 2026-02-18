@@ -29,6 +29,13 @@ public class HoardingRecipeProvider extends RecipeProvider implements ICondition
             Block packed = entry.getBlock();
             ItemLike unpacked = entry.getItem();
             String modId = entry.modId();
+            
+            // Debug: Check if unpacked item is valid
+            if (unpacked == null || unpacked.asItem() == null || unpacked.asItem().toString().contains("air")) {
+                System.err.println("WARNING: Invalid unpacked item for " + packed + ", skipping recipe");
+                continue;
+            }
+            
             if (modId != null) {
                 // Cross-mod recipes with conditions
                 compressRecipe(output, packedCategory, packed, unpacked, modId);

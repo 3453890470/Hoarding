@@ -5,6 +5,7 @@ import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.common.registry.HoardingCreativeModeTabs;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
 import dev.gateguardian.hoarding.common.registry.HoardingParticleTypes;
+import dev.gateguardian.hoarding.integration.ModIntegration;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -28,6 +29,9 @@ public class Hoarding {
         HoardingCreativeModeTabs.register(modEventBus);
         // 注册粒子类型
         HoardingParticleTypes.register(modEventBus);
+
+        // 初始化整合模块
+        ModIntegration.init();
 
         LOGGER.info("Hoarding mod initialized!");
     }

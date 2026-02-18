@@ -35,3 +35,6 @@ gradle-*.zip
 
 # Local config
 local.properties
+
+# Agent documentation (local only)
+AGENTS.md

@@ -80,8 +80,8 @@ dependencies {
     // 配方查看器 - JEI
     localRuntime "mezz.jei:jei-1.21.1-neoforge:19.21.1.305"
     
-    // Botania 依赖
-    localRuntime "vazkii.patchouli:Patchouli:1.21.1-92"
+    // Botania 依赖 - Patchouli (via Modrinth Maven)
+    localRuntime "maven.modrinth:patchouli:1.21.1-92-neoforge"
     
     // Ars Nouveau 依赖
     localRuntime "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7.2"

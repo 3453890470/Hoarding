@@ -93,7 +93,7 @@ dependencies {
     localRuntime "maven.modrinth:jade:15.10.5+neoforge"
     
     // 客户端工具 - JECharacters (中文搜索)
-    localRuntime "maven.modrinth:justenoughcharacters:4.6.0"
+    localRuntime "maven.modrinth:I7k4B65h:4.5.23"
 
     // 开发时运行时依赖（取消注释用于测试）
     // localRuntime "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"

@@ -46,9 +46,20 @@ runs {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven {
-        url = "https://maven.blamejared.com"
-    }
+    // Botania / Patchouli
+    maven { url = "https://maven.blamejared.com" }
+    
+    // EMI
+    maven { url = "https://maven.terraformersmc.com/" }
+    
+    // Geckolib
+    maven { url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
+    
+    // Curios
+    maven { url = "https://maven.theillusivec4.top/" }
+    
+    // Modrinth mods
+    maven { url = "https://api.modrinth.com/maven" }
 }
 
 configurations {
@@ -64,9 +75,29 @@ dependencies {
     // 可选依赖 - Ars Nouveau (编译时)
     compileOnly "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
 
+    // === 测试环境 mod (仅运行时) ===
+    
+    // 配方查看器 - JEI
+    localRuntime "mezz.jei:jei-1.21.1-neoforge:19.21.1.305"
+    
+    // Botania 依赖
+    localRuntime "vazkii.patchouli:Patchouli:1.21.1-92"
+    
+    // Ars Nouveau 依赖
+    localRuntime "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7.2"
+    
+    // 通用依赖 - 饰品栏
+    localRuntime "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
+    
+    // 客户端工具 - Jade (方块信息)
+    localRuntime "maven.modrinth:jade:15.10.5+neoforge"
+    
+    // 客户端工具 - JECharacters (中文搜索)
+    localRuntime "maven.modrinth:justenoughcharacters:4.6.0"
+
     // 开发时运行时依赖（取消注释用于测试）
-    // runtimeOnly "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"
-    // runtimeOnly "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
+    // localRuntime "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"
+    // localRuntime "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
 }
 
 tasks.withType(JavaCompile).configureEach {

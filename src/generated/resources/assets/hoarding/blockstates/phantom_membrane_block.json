@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hoarding:block/phantom_membrane_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hoarding:block/phantom_membrane_block"
+    },
+    "facing=south": {
+      "model": "hoarding:block/phantom_membrane_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hoarding:block/phantom_membrane_block",
+      "y": 270
+    }
+  }
+}

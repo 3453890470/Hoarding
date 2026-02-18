@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hoarding:block/rack/rack_top",
+    "side": "hoarding:block/rack/turtle_egg_rack_side"
+  }
+}

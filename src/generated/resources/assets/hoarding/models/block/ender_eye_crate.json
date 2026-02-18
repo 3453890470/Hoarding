@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "hoarding:block/crate/iron/bottom_iron",
+    "side": "hoarding:block/crate/iron/ender_eye_crate_side",
+    "top": "hoarding:block/crate/iron/ender_eye_crate_top"
+  }
+}

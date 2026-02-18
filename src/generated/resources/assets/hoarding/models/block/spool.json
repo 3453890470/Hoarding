@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hoarding:block/spool_end",
+    "side": "hoarding:block/spool_side"
+  }
+}

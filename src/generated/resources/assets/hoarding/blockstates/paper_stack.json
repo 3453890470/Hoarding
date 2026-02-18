@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hoarding:block/paper_stack",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hoarding:block/paper_stack"
+    },
+    "facing=south": {
+      "model": "hoarding:block/paper_stack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hoarding:block/paper_stack",
+      "y": 270
+    }
+  }
+}

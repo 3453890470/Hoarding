@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hoarding:block/nautilus_shell_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hoarding:block/nautilus_shell_block"
+    },
+    "facing=south": {
+      "model": "hoarding:block/nautilus_shell_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hoarding:block/nautilus_shell_block",
+      "y": 270
+    }
+  }
+}

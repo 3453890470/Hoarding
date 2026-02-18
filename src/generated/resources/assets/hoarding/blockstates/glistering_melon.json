@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hoarding:block/glistering_melon_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hoarding:block/glistering_melon"
+    },
+    "axis=z": {
+      "model": "hoarding:block/glistering_melon_horizontal",
+      "x": 90
+    }
+  }
+}

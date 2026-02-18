@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hoarding:block/gunpowder_bag",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hoarding:block/gunpowder_bag"
+    },
+    "facing=south": {
+      "model": "hoarding:block/gunpowder_bag",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hoarding:block/gunpowder_bag",
+      "y": 270
+    }
+  }
+}

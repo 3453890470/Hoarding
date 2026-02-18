@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "hoarding:block/crate/others/bottom_crimson",
+    "side": "hoarding:block/crate/others/wither_rose_crate_side",
+    "top": "hoarding:block/crate/others/wither_rose_crate_top"
+  }
+}

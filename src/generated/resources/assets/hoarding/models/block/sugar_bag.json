@@ -1,0 +1,9 @@
+{
+  "parent": "hoarding:block/cube_symmetry_north_west",
+  "textures": {
+    "bottom": "hoarding:block/bag/sack/sack_bottom",
+    "north": "hoarding:block/bag/sack/sack_side",
+    "top": "hoarding:block/bag/sack/sugar_bag_top",
+    "west": "hoarding:block/bag/sack/sack_side_tied"
+  }
+}

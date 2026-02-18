@@ -75,12 +75,16 @@ dependencies {
     // 可选依赖 - Ars Nouveau (编译时)
     compileOnly "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
 
+    // === 配方查看器 ===
+    // JEI - 仅编译时（兼容性测试）
+    compileOnly "mezz.jei:jei-1.21.1-neoforge:19.21.1.305"
+    
+    // EMI - 测试环境运行时
+    localRuntime "dev.emi:emi-neoforge:1.1.22+1.21.1"
+
     // === 测试环境 mod (仅运行时) ===
     
-    // 配方查看器 - JEI
-    localRuntime "mezz.jei:jei-1.21.1-neoforge:19.21.1.305"
-    
-    // Botania 依赖 - Patchouli (via Modrinth Maven)
+    // Botania 依赖
     localRuntime "maven.modrinth:patchouli:1.21.1-92-neoforge"
     
     // Ars Nouveau 依赖

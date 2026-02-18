@@ -29,3 +29,19 @@ type = "required"
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
+
+# 可选依赖 - Botania
+[[dependencies.hoarding]]
+modId = "botania"
+type = "optional"
+versionRange = "[451,)"
+ordering = "AFTER"
+side = "BOTH"
+
+# 可选依赖 - Ars Nouveau
+[[dependencies.hoarding]]
+modId = "ars_nouveau"
+type = "optional"
+versionRange = "[5.11,)"
+ordering = "AFTER"
+side = "BOTH"

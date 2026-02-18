@@ -45,12 +45,28 @@ runs {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+    maven {
+        url = "https://maven.blamejared.com"
+    }
+}
+
 configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
+
+    // 可选依赖 - Botania (编译时)
+    compileOnly "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"
+
+    // 可选依赖 - Ars Nouveau (编译时)
+    compileOnly "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
+
+    // 开发时运行时依赖（取消注释用于测试）
+    // runtimeOnly "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"
+    // runtimeOnly "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
 }
 
 tasks.withType(JavaCompile).configureEach {

@@ -1,0 +1,52 @@
+name: Build
+
+on:
+  push:
+    branches: [ "1.20.1" ]
+    paths:
+      - 'src/**'
+      - 'gradle/**'
+      - '**/*.gradle.kts'
+      - '**/gradle.properties'
+      - '.github/workflows/**'
+      - '.github/actions/**'
+  pull_request:
+    branches: [ "1.20.1" ]
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      CI: true
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Setup Environment
+        uses: ./.github/actions/setup
+
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+
+      - name: Get Mod Information
+        id: info
+        run: |
+          MOD_VERSION=$(grep -oP 'mod_version=\K.*' gradle.properties)
+          MC_VERSION=$(grep -oP 'minecraft_version=\K.*' gradle.properties)
+          echo "mod_version=$MOD_VERSION" >> $GITHUB_OUTPUT
+          echo "mc_version=$MC_VERSION" >> $GITHUB_OUTPUT
+          echo "sha_short=$(echo '${{ github.sha }}' | cut -c 1-7)" >> $GITHUB_OUTPUT
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: hoarding-${{ steps.info.outputs.mc_version }}-${{ steps.info.outputs.mod_version }}+${{ steps.info.outputs.sha_short }}
+          path: build/libs/*.jar
+          if-no-files-found: error
+          retention-days: 7

@@ -2,7 +2,7 @@
  * Botania 整合方块 — 16色神秘花板条箱
  *
  * == 状态说明 ==
- * 这些方块通过 HoardingBlocks.BLOCKS.registerBlock() 注册（纯 NeoForge API），
+ * 这些方块通过 HoardingBlocks.block() 注册（纯 NeoForge API），
  * 因此不需要 Botania 在 classpath 上就能编译通过。
  *
  * == TODO: 26.1.2 兼容后 ==
@@ -63,14 +63,14 @@ public final class HoardingBotaniaBlocks {
     private HoardingBotaniaBlocks() {}
 
     public static void init() {
-        // Static initialization triggers registration via HoardingBlocks.BLOCKS.registerBlock
+        // Static initialization triggers registration via HoardingBlocks.block()
     }
 
     private static DeferredBlock<Block> mysticalFlowerCrate(String name) {
-        return HoardingBlocks.BLOCKS.registerBlock(
+        return HoardingBlocks.block(
                 name,
-                Block::new,
-                BlockBehaviour.Properties.of().strength(2.0F, 3.0F)
+                () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F),
+                Block::new
         );
     }
 }

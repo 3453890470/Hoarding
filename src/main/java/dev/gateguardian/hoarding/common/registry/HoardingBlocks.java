@@ -257,69 +257,77 @@ public class HoardingBlocks {
         BLOCKS.register(eventBus);
     }
 
-    public static <T extends Block> DeferredBlock<T> block(String name, Supplier<T> supplier) {
-        DeferredBlock<T> block = BLOCKS.register(name, supplier);
+    public static <T extends Block> DeferredBlock<T> block(String name, Supplier<BlockBehaviour.Properties> properties, Function<BlockBehaviour.Properties, T> factory) {
+        DeferredBlock<T> block = BLOCKS.registerBlock(name, factory, properties);
         HoardingItems.item(name, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
 
+
+    // Helper for blocks where we need the item but register Block directly via BLOCKS
+    public static <T extends Block> DeferredBlock<T> directBlock(String name, DeferredBlock<T> registered) {
+        return registered;
+    }
+
+    // === Crates (simple Block) ===
     private static DeferredBlock<Block> birchCrate(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS));
     }
 
     private static DeferredBlock<Block> oakCrate(String name) {
         return oakCrate(name, Block::new);
     }
-
     private static DeferredBlock<Block> oakCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), blockFactory);
     }
 
     private static DeferredBlock<Block> spruceCrate(String name) {
         return spruceCrate(name, Block::new);
     }
-
     private static DeferredBlock<Block> spruceCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS), blockFactory);
     }
 
     private static DeferredBlock<Block> crimsonCrate(String name) {
         return crimsonCrate(name, Block::new);
     }
-
     private static DeferredBlock<Block> crimsonCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS), blockFactory);
     }
 
-    private static DeferredBlock<Block> ironCrate(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+    // === Custom blocks ===
+    private static DeferredBlock<Block> hotFoodBlock(String name) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.STONE), HotFoodBlock::new);
     }
 
-    private static DeferredBlock<Block> endStoneCrate(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+    private static DeferredBlock<Block> mobEffectBlock(String name, BlockBehaviour.Properties props) {
+        return block(name, () -> props, MobEffectBlock::new);
     }
 
-    private static DeferredBlock<Block> barrel(String name) {
-        return barrel(name, Block::new);
+    private static DeferredBlock<Block> nautilusBlock(String name) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK), NautilusBlock::new);
     }
 
-    private static DeferredBlock<Block> barrel(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+    private static DeferredBlock<Block> horizontalFacingBlock(String name, BlockBehaviour.Properties props) {
+        return block(name, () -> props, HorizontalFacingBlock::new);
     }
 
-    private static DeferredBlock<Block> bucket(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+    private static DeferredBlock<Block> facingBlock(String name, BlockBehaviour.Properties props) {
+        return block(name, () -> props, HorizontalFacingBlock::new);
+    }
+
+    private static DeferredBlock<RotatedPillarBlock> pillarBlock(String name) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), RotatedPillarBlock::new);
     }
 
     private static DeferredBlock<Block> rack(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
     }
 
     private static DeferredBlock<Block> bag(String name) {
         return bag(name, HorizontalFacingBlock::new);
     }
-
     private static DeferredBlock<Block> bag(String name, Function<BlockBehaviour.Properties, HorizontalFacingBlock> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL), blockFactory);
     }
 }

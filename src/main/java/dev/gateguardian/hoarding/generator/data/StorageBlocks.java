@@ -9,7 +9,7 @@ import dev.gateguardian.hoarding.integration.ModIntegration;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -219,14 +219,14 @@ public class StorageBlocks {
     //     if (!ModIntegration.isBotaniaLoaded()) return;
     //
     //     builder(HoardingBotaniaBlocks.WHITE_MYSTICAL_FLOWER_CRATE,
-    //             BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "white_mystical_flower")))
+    //             BuiltInRegistries.ITEM.get(Identifier.of(ModIntegration.BOTANIA_MOD_ID, "white_mystical_flower")))
     //             .modId(ModIntegration.BOTANIA_MOD_ID).build();
     //     builder(HoardingBotaniaBlocks.ORANGE_MYSTICAL_FLOWER_CRATE,
-    //             BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "orange_mystical_flower")))
+    //             BuiltInRegistries.ITEM.get(Identifier.of(ModIntegration.BOTANIA_MOD_ID, "orange_mystical_flower")))
     //             .modId(ModIntegration.BOTANIA_MOD_ID).build();
     //     // ... 另有14色，格式同上，见 hoarding-1.21.1-neoforge 完整代码
     //     builder(HoardingBotaniaBlocks.BLACK_MYSTICAL_FLOWER_CRATE,
-    //             BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.BOTANIA_MOD_ID, "black_mystical_flower")))
+    //             BuiltInRegistries.ITEM.get(Identifier.of(ModIntegration.BOTANIA_MOD_ID, "black_mystical_flower")))
     //             .modId(ModIntegration.BOTANIA_MOD_ID).build();
     // }
 
@@ -237,10 +237,10 @@ public class StorageBlocks {
     //     if (!ModIntegration.isArsNouveauLoaded()) return;
     //
     //     builder(HoardingArsNouveauBlocks.MAGEBLOOM_CRATE,
-    //             BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.ARS_NOUVEAU_MOD_ID, "magebloom")))
+    //             BuiltInRegistries.ITEM.get(Identifier.of(ModIntegration.ARS_NOUVEAU_MOD_ID, "magebloom")))
     //             .modId(ModIntegration.ARS_NOUVEAU_MOD_ID).build();
     //     builder(HoardingArsNouveauBlocks.SOURCEBERRY_CRATE,
-    //             BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(ModIntegration.ARS_NOUVEAU_MOD_ID, "sourceberry")))
+    //             BuiltInRegistries.ITEM.get(Identifier.of(ModIntegration.ARS_NOUVEAU_MOD_ID, "sourceberry")))
     //             .modId(ModIntegration.ARS_NOUVEAU_MOD_ID).build();
     // }
 

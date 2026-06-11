@@ -1,19 +1,11 @@
 package dev.gateguardian.hoarding.generator.provider;
 
-import dev.gateguardian.hoarding.Hoarding;
-import dev.gateguardian.hoarding.common.registry.HoardingItems;
-import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-
-public class HoardingItemModelProvider extends ItemModelProvider {
-
-    public HoardingItemModelProvider(PackOutput output, ExistingFileHelper helper) {
-        super(output, Hoarding.MOD_ID, helper);
-    }
-
-    @Override
-    protected void registerModels() {
-        basicItem(HoardingItems.PUMPKIN_SLICE.get());
-    }
+/**
+ * TODO: MC 26.1.2 DataGen API 已重构
+ * ItemModelProvider (net.neoforged.neoforge.client.model.generators.ItemModelProvider) 已移除。
+ * 需要改用 MC 26.1.2 的 net.minecraft.client.data.models.ItemModelGenerators。
+ * 恢复时请参考 DataGenerator.java 顶部 TODO 说明。
+ */
+public class HoardingItemModelProvider {
+    private HoardingItemModelProvider() {}
 }

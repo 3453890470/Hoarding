@@ -1,3 +1,17 @@
+/**
+ * Ars Nouveau 整合方块 — 魔幻花板条箱、源浆果板条箱
+ *
+ * == 状态说明 ==
+ * 这些方块通过 HoardingBlocks.BLOCKS.registerBlock() 注册（纯 NeoForge API），
+ * 因此不需要 Ars Nouveau 在 classpath 上就能编译通过。
+ *
+ * == TODO: 26.1.2 兼容后 ==
+ * 恢复步骤：
+ * 1. 解除 ModIntegration.java 中 Ars 检测代码的注释（搜索 [TODO-ARS]）
+ * 2. 解除 StorageBlocks.java 中 addArsNouveauEntries() 的注释（搜索 [TODO-ARS]）
+ * 3. 确保 libs.versions.toml 中 ars-nouveau 版本已填好
+ * 4. 确保 build.gradle 中 compileOnly libs.ars.nouveau 已取消注释
+ */
 package dev.gateguardian.hoarding.integration.arsnouveau;
 
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;

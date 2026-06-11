@@ -15,11 +15,11 @@ import java.util.function.Supplier;
 
 public class HoardingItems {
 
-    public static final Queue<DeferredItem<Item>> CREATIVE_MODE_TAB_ITEMS = new ArrayDeque<>(128);
+    public static final Queue<DeferredItem<? extends Item>> CREATIVE_MODE_TAB_ITEMS = new ArrayDeque<>(128);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Hoarding.MOD_ID);
 
     // MC 26.1.2: Item.Properties needs item ID set before construction.
-    // Use registerItem(name, Item::new, () -> props) which calls properties.setId(...) internally.
+    // Uses registerItem(name, Item::new, () -> props) which calls properties.setId(...) internally.
     public static final DeferredItem<Item> PUMPKIN_SLICE = ITEMS.registerItem("pumpkin_slice",
             Item::new,
             () -> new Item.Properties().food(new FoodProperties.Builder()
@@ -40,10 +40,9 @@ public class HoardingItems {
         return item;
     }
 
-    /** Legacy support for callers that create items directly (e.g. BlockItem construction).
-     *  Only works if the Item constructor doesn't require item ID in properties. */
-    public static DeferredItem<Item> item(String name, Supplier<Item> supplier) {
-        DeferredItem<Item> item = ITEMS.register(name, supplier);
+    /** Register an item via legacy supplier (only for cases where Item constructor doesn't need props with ID) */
+    public static <T extends Item> DeferredItem<T> item(String name, Supplier<T> supplier) {
+        DeferredItem<T> item = ITEMS.register(name, key -> supplier.get());
         CREATIVE_MODE_TAB_ITEMS.offer(item);
         return item;
     }

@@ -277,8 +277,9 @@ public class HoardingBlocks {
     public static <T extends Block> DeferredBlock<T> block(String name, Supplier<BlockBehaviour.Properties> properties, Function<BlockBehaviour.Properties, T> factory) {
         DeferredBlock<T> block = BLOCKS.registerBlock(name, factory, properties);
         // MC 26.1.2: BlockItem needs item ID set in Properties before construction.
-        // Use registerSimpleBlockItem which handles ID setting internally.
-        HoardingItems.ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
+        // 使用 registerSimpleBlockItem 自动处理 ID 设置，并将 BlockItem 加入创造模式标签页
+        var blockItem = HoardingItems.ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
+        HoardingItems.CREATIVE_MODE_TAB_ITEMS.offer(blockItem);
         return block;
     }
 

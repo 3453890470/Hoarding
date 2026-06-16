@@ -21,7 +21,7 @@ public class HoardingCreativeModeTabs {
                     .icon(() -> new ItemStack(HoardingItems.PUMPKIN_SLICE.get()))
                     .displayItems((params, output) -> {
                         output.accept(HoardingItems.PUMPKIN_SLICE.get());
-                        for (DeferredItem<Item> item : HoardingItems.CREATIVE_MODE_TAB_ITEMS) {
+                        for (DeferredItem<? extends Item> item : HoardingItems.CREATIVE_MODE_TAB_ITEMS) {
                             output.accept(item.get());
                         }
                     })

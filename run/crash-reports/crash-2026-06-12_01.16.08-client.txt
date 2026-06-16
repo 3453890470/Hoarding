@@ -1,0 +1,218 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 2026-06-12 01:16:08
+Description: Bootstrap
+
+net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Hoarding (hoarding) has failed to load correctly
+	  java.lang.RuntimeException: java.lang.IllegalArgumentException: Cannot register listeners for abstract class net.neoforged.neoforge.data.event.GatherDataEvent. Register a listener to one of its subclasses instead!
+
+	at net.neoforged.fml.ModLoader.waitForFuture(ModLoader.java:253) ~[loader-11.0.13.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.dispatchParallelTask(ModLoader.java:216) ~[loader-11.0.13.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.constructMods(ModLoader.java:124) ~[loader-11.0.13.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:101) ~[loader-11.0.13.jar:11.0] {}
+	at TRANSFORMER/neoforge@26.1.2.75/net.neoforged.neoforge.internal.CommonModLoader.begin(CommonModLoader.java:49) ~[neoforge-26.1.2.75-universal.jar:?] {}
+	at TRANSFORMER/neoforge@26.1.2.75/net.neoforged.neoforge.client.loading.ClientModLoader.begin(ClientModLoader.java:55) ~[neoforge-26.1.2.75-universal.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.main.Main.main(Main.java:122) [minecraft-patched-26.1.2.75.jar:?] {}
+	at net.neoforged.fml.startup.Client.main(Client.java:19) [loader-11.0.13.jar:11.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at net.neoforged.fml.ModLoader.waitForFuture(ModLoader.java:253) ~[loader-11.0.13.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.dispatchParallelTask(ModLoader.java:216) ~[loader-11.0.13.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.constructMods(ModLoader.java:124) ~[loader-11.0.13.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:101) ~[loader-11.0.13.jar:11.0] {}
+	at TRANSFORMER/neoforge@26.1.2.75/net.neoforged.neoforge.internal.CommonModLoader.begin(CommonModLoader.java:49) ~[neoforge-26.1.2.75-universal.jar:?] {}
+	at TRANSFORMER/neoforge@26.1.2.75/net.neoforged.neoforge.client.loading.ClientModLoader.begin(ClientModLoader.java:55) ~[neoforge-26.1.2.75-universal.jar:?] {}
+-- Initialization --
+Details:
+	Modules: 
+		ADVAPI32.dll:高级 Windows 32 基本 API:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:用户体验控件库:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.19041.5856 (WinBuild.160101.0800):Microsoft Corporation
+		ColorAdapterClient.dll:Microsoft Color Adapter Client:10.0.19041.5129 (WinBuild.160101.0800):Microsoft Corporation
+		CoreMessaging.dll:Microsoft CoreMessaging Dll:10.0.19041.5915:Microsoft Corporation
+		CoreUIComponents.dll:Microsoft Core UI Components Dll:10.0.19041.3636:Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.19041.5848 (WinBuild.160101.0800):Microsoft Corporation
+		DEVOBJ.dll:Device Information Set DLL:10.0.19041.5794 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DNS 客户端 API DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.19041.6157 (WinBuild.160101.0800):Microsoft Corporation
+		GLU32.dll:OpenGL 实用工具库 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.19041.6157 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:IP 帮助程序 API:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Windows NT 基本 API 客户端 DLL:10.0.19041.5915 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Windows NT 基本 API 客户端 DLL:10.0.19041.5915 (WinBuild.160101.0800):Microsoft Corporation
+		MSCTF.dll:MSCTF 服务器 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		NLAapi.dll:Network Location Awareness 2:10.0.19041.6456 (WinBuild.160101.0800):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		POWRPROF.dll:电源配置文件帮助程序 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		PROPSYS.dll:Microsoft 属性系统:7.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		PSAPI.DLL:Process Status Helper:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:远程过程调用运行时:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Windows Shell 公用 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		UMPDC.dll
+		USER32.dll:多用户 Windows 用户 API 客户端 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:Windows Socket 2.0 32 位 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		Wldp.dll:Windows 锁定策略:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		amsi.dll:Anti-Malware Scan Interface:10.0.19041.4355 (WinBuild.160101.0800):Microsoft Corporation
+		bcrypt.dll:Windows 加密基元库:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.19041.5007 (WinBuild.160101.0800):Microsoft Corporation
+		cfgmgr32.dll:Configuration Manager DLL:10.0.19041.3996 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:用于 Windows 的 Microsoft COM:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.19041.5794 (WinBuild.160101.0800):Microsoft Corporation
+		dinput8.dll:Microsoft DirectInput:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		dwmapi.dll:Microsoft 桌面窗口管理器 API:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		dxgi.dll:DirectX Graphics Infrastructure:10.0.19041.5794 (WinBuild.160101.0800):Microsoft Corporation
+		fwpuclnt.dll:FWP/IPsec 用户模式 API:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.19041.6157 (WinBuild.160101.0800):Microsoft Corporation
+		glfw.dll:GLFW 3.5.0 DLL:3.5.0:GLFW
+		icm32.dll:Microsoft Color Management Module (CMM):10.0.19041.5129 (WinBuild.160101.0800):Microsoft Corporation
+		ig11icd64.dll:OpenGL(R) Driver for Intel(R) Graphics Accelerator:31.0.101.1999:Intel Corporation
+		igc64.dll:Intel Graphics Shader Compiler for Intel(R) Graphics Accelerator:31.0.101.1999:Intel Corporation
+		igdgmm64.dll:User Mode Driver for Intel(R) Graphics Technology:31.0.101.1999:Intel Corporation
+		igdml64.dll:Metrics Library for Intel(R) Graphics Technology:31.0.101.1999:Intel Corporation
+		inputhost.dll:InputHost:10.0.19041.5794 (WinBuild.160101.0800):Microsoft Corporation
+		java.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		java.exe:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		jemalloc.dll
+		jimage.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		jli.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		jna13092873711023448068.dll:JNA native library:7.0.2:Java(TM) Native Access (JNA)
+		jvm.dll:OpenJDK 64-Bit server VM:25.0.3.0:Eclipse Adoptium
+		kernel.appcore.dll:AppModel API Host:10.0.19041.3758 (WinBuild.160101.0800):Microsoft Corporation
+		lwjgl.dll
+		lwjgl_opengl.dll
+		lwjgl_stb.dll
+		management.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		management_ext.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		mscms.dll:Microsoft 颜色匹配系统 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		msvcp140.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		msvcp_win.dll:Microsoft® C Runtime Library:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Microsoft Windows Sockets 2.0 服务提供程序:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:电子邮件命名填充提供程序:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		nio.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		ntdll.dll:NT 层 DLL:10.0.19041.4842 (WinBuild.160101.0800):Microsoft Corporation
+		ntmarta.dll:Windows NT MARTA 提供程序:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		ole32.dll:用于 Windows 的 Microsoft OLE:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		opengl32.dll:OpenGL Client DLL:10.0.19041.5794 (WinBuild.160101.0800):Microsoft Corporation
+		pdh.dll:Windows 性能数据助手 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:Windows 系统性能对象 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		perfproc.dll:Windows 系统进程性能对象 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		pnrpnsp.dll:PNRP 命名空间提供程序:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.19041.6033 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.19041.6328 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.19041.1 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.19041.1 (WinBuild.160101.0800):Microsoft Corporation
+		shlwapi.dll:外壳简易实用工具库:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		textinputframework.dll:"TextInputFramework.DYNLINK":10.0.19041.6456 (WinBuild.160101.0800):Microsoft Corporation
+		ucrtbase.dll:Microsoft® C Runtime Library:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		uxtheme.dll:Microsoft UxTheme 库:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		verify.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+		win32u.dll:Win32u:10.0.19041.6456 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:Microsoft WinRT Storage API:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		wintypes.dll:Windows 基本类型 DLL:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.19041.5848 (WinBuild.160101.0800):Microsoft Corporation
+		xinput1_4.dll:Microsoft 公共控制器 API:10.0.19041.4522 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:OpenJDK Platform binary:25.0.3.0:Eclipse Adoptium
+Stacktrace:
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.main.Main.main(Main.java:122) [minecraft-patched-26.1.2.75.jar:?] {}
+	at net.neoforged.fml.startup.Client.main(Client.java:19) [loader-11.0.13.jar:11.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 26.1.2
+	Minecraft Version ID: 26.1.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 25.0.3, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 88779688 bytes (84 MiB) / 274726912 bytes (262 MiB) up to 4255121408 bytes (4058 MiB)
+	Memory (heap): init: 254MiB, used: 176MiB, committed: 262MiB, max: 4058MiB
+	Memory (non-head): init: 007MiB, used: 122MiB, committed: 124MiB, max: 000MiB
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Celeron(R) N5095 @ 2.00GHz
+	Identifier: Intel64 Family 6 Model 156 Stepping 0
+	Microarchitecture: Jasper Lake
+	Frequency (GHz): 2.00
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 4
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 VRAM (MiB): 1024.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.101.1999
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 4.27
+	Memory slot #0 type: LPDDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 4.27
+	Memory slot #1 type: LPDDR4
+	Virtual memory max (MiB): 31076.39
+	Virtual memory used (MiB): 19130.87
+	Swap memory total (MiB): 14848.00
+	Swap memory used (MiB): 1742.27
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 21880.57, total: 325219.00
+	Space in storage for workdir (MiB): available: 122945.14, total: 325218.00
+	JVM Flags: 0 total; 
+	Debug Flags: 0 total; 
+	Launched Version: 26.1.2.75
+	Backend library: LWJGL version 3.4.1+2
+	Backend API: Unknown
+	Window size: <not initialized>
+	GFLW Platform: win32
+	Render Extensions: <no renderer available>
+	GL debug messages: <no renderer available>
+	Is Modded: Definitely; Client brand changed to 'neoforge'
+	Universe: 404
+	Type: Client
+	Locale: zh_CN
+	System encoding: GBK
+	File encoding: UTF-8
+	CPU: 4x Intel(R) Celeron(R) N5095 @ 2.00GHz
+	Class Processors: 
+		00.00%: neoforge:neoforge_dev_dist_cleaner
+		00.00%: neoforge:computing_frames (marker)
+		00.00%: neoforge:runtime_enum_extender
+		04.49%: neoforge:access_transformer
+		00.08%: neoforge:mixin
+		00.00%: neoforge:simple_processors_default (marker)
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.biome.biome
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.block.flowerpotblock
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.levelgen.structure.structure
+		00.38%: neoforge.coremods:method_redirector
+	Mod List: 
+		main                                              |Hoarding                      |hoarding                      |1.0.0               |Manifest: NOSIGNATURE
+		minecraft-patched-26.1.2.75.jar                   |Minecraft                     |minecraft                     |26.1.2              |Manifest: NOSIGNATURE
+		neoforge-26.1.2.75-universal.jar                  |NeoForge                      |neoforge                      |26.1.2.75           |Manifest: NOSIGNATURE
+	Crash Report UUID: 5e0357ed-2acd-4b37-be27-dd778e5418b7
+	FML: 11.0.13
+	NeoForge: 26.1.2.75

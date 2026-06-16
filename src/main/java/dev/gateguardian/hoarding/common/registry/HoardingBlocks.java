@@ -31,41 +31,68 @@ public class HoardingBlocks {
     public static final DeferredBlock<Block> CORNFLOWER_CRATE = birchCrate("cornflower_crate");
     public static final DeferredBlock<Block> DANDELION_CRATE = birchCrate("dandelion_crate");
     public static final DeferredBlock<Block> LILY_CRATE = birchCrate("lily_crate");
-    public static final DeferredBlock<Block> OXEYE_DAISY_CRATE = birchCrate("oxeye_daisy_crate");
-    public static final DeferredBlock<Block> POPPY_CRATE = birchCrate("poppy_crate");
+    public static final DeferredBlock<Block> TORCHFLOWER_CRATE = birchCrate("torchflower_crate");
+    public static final DeferredBlock<Block> PEONY_CRATE = birchCrate("peony_crate");
     public static final DeferredBlock<Block> ORANGE_TULIP_CRATE = birchCrate("orange_tulip_crate");
     public static final DeferredBlock<Block> PINK_TULIP_CRATE = birchCrate("pink_tulip_crate");
     public static final DeferredBlock<Block> RED_TULIP_CRATE = birchCrate("red_tulip_crate");
     public static final DeferredBlock<Block> WHITE_TULIP_CRATE = birchCrate("white_tulip_crate");
-    public static final DeferredBlock<Block> TORCHFLOWER_CRATE = birchCrate("torchflower_crate");
+    public static final DeferredBlock<Block> LILY_OF_THE_VALLEY_CRATE = birchCrate("lily_of_the_valley_crate");
+    public static final DeferredBlock<Block> OXEYE_DAISY_CRATE = birchCrate("oxeye_daisy_crate");
+    public static final DeferredBlock<Block> SUNFLOWER_CRATE = birchCrate("sunflower_crate");
+    public static final DeferredBlock<Block> POPPY_CRATE = birchCrate("poppy_crate");
+    public static final DeferredBlock<Block> ROSE_BUSH_CRATE = birchCrate("rose_bush_crate");
+    public static final DeferredBlock<Block> GOLDEN_APPLE_CRATE = oakCrate("golden_apple_crate");
+    public static final DeferredBlock<Block> POISONOUS_POTATO_CRATE = oakCrate("poisonous_potato_crate");
+    public static final DeferredBlock<Block> BROWN_MUSHROOM_CRATE = birchCrate("brown_mushroom_crate");
+    public static final DeferredBlock<Block> RED_MUSHROOM_CRATE = birchCrate("red_mushroom_crate");
+    public static final DeferredBlock<Block> SWEET_BERRIES_CRATE = oakCrate("sweet_berries_crate");
+    public static final DeferredBlock<Block> GLOW_BERRIES_CRATE = spruceCrate("glow_berries_crate");
+    public static final DeferredBlock<Block> LILAC_CRATE = birchCrate("lilac_crate");
+    public static final DeferredBlock<Block> WITHER_ROSE_CRATE = birchCrate("wither_rose_crate",
+            props -> new MobEffectBlock(props, MobEffects.WITHER));
     //endregion Birch Crates
 
     //region Oak Crates
     public static final DeferredBlock<Block> APPLE_CRATE = oakCrate("apple_crate");
-    public static final DeferredBlock<Block> GOLDEN_APPLE_CRATE = oakCrate("golden_apple_crate");
-    public static final DeferredBlock<Block> POTATO_CRATE = oakCrate("potato_crate");
     public static final DeferredBlock<Block> BAKED_POTATO_CRATE = oakCrate("baked_potato_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> POISONOUS_POTATO_CRATE = oakCrate("poisonous_potato_crate");
+    public static final DeferredBlock<Block> BEEF_CRATE = oakCrate("beef_crate");
+    public static final DeferredBlock<Block> COOKED_BEEF_CRATE = oakCrate("cooked_beef_crate", HotFoodBlock::new);
     public static final DeferredBlock<Block> BEETROOT_CRATE = oakCrate("beetroot_crate");
-    public static final DeferredBlock<Block> BROWN_MUSHROOM_CRATE = oakCrate("brown_mushroom_crate");
-    public static final DeferredBlock<Block> RED_MUSHROOM_CRATE = oakCrate("red_mushroom_crate");
+    public static final DeferredBlock<Block> BREAD_CRATE = oakCrate("bread_crate", HotFoodBlock::new);
     public static final DeferredBlock<Block> CARROT_CRATE = oakCrate("carrot_crate");
     public static final DeferredBlock<Block> GOLDEN_CARROT_CRATE = oakCrate("golden_carrot_crate");
-    public static final DeferredBlock<Block> SWEET_BERRIES_CRATE = oakCrate("sweet_berries_crate");
-    public static final DeferredBlock<Block> GLOW_BERRIES_CRATE = oakCrate("glow_berries_crate");
-    public static final DeferredBlock<Block> COOKIE_CRATE = oakCrate("cookie_crate");
-    public static final DeferredBlock<Block> BREAD_CRATE = oakCrate("bread_crate");
+    public static final DeferredBlock<Block> CHICKEN_CRATE = oakCrate("chicken_crate");
+    public static final DeferredBlock<Block> COOKED_CHICKEN_CRATE = oakCrate("cooked_chicken_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> COD_CRATE = oakCrate("cod_crate");
+    public static final DeferredBlock<Block> COOKED_COD_CRATE = oakCrate("cooked_cod_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> POTATO_CRATE = oakCrate("potato_crate");
+    public static final DeferredBlock<Block> PUMPKIN_PIE_CRATE = oakCrate("pumpkin_pie_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> MUTTON_CRATE = oakCrate("mutton_crate");
+    public static final DeferredBlock<Block> COOKED_MUTTON_CRATE = oakCrate("cooked_mutton_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> SALMON_CRATE = oakCrate("salmon_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> COOKED_SALMON_CRATE = oakCrate("cooked_salmon_crate", HotFoodBlock::new);
     //endregion Oak Crates
 
     //region Spruce Crates
-    public static final DeferredBlock<Block> BEEF_CRATE = spruceCrate("beef_crate");
-    public static final DeferredBlock<Block> COOKED_BEEF_CRATE = spruceCrate("cooked_beef_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> CHICKEN_CRATE = spruceCrate("chicken_crate");
-    public static final DeferredBlock<Block> COOKED_CHICKEN_CRATE = spruceCrate("cooked_chicken_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> MUTTON_CRATE = spruceCrate("mutton_crate");
-    public static final DeferredBlock<Block> COOKED_MUTTON_CRATE = spruceCrate("cooked_mutton_crate", HotFoodBlock::new);
     public static final DeferredBlock<Block> RABBIT_CRATE = spruceCrate("rabbit_crate");
     public static final DeferredBlock<Block> COOKED_RABBIT_CRATE = spruceCrate("cooked_rabbit_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> RABBIT_STEW_CRATE = spruceCrate("rabbit_stew_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> MUSHROOM_STEW_CRATE = spruceCrate("mushroom_stew_crate");
+    public static final DeferredBlock<Block> BEETROOT_SOUP_CRATE = spruceCrate("beetroot_soup_crate");
+    public static final DeferredBlock<Block> SUSPICIOUS_STEW_CRATE = spruceCrate("suspicious_stew_crate",
+            props -> new MobEffectBlock(props, MobEffects.BLINDNESS));
+    public static final DeferredBlock<Block> COOKIE_CRATE = spruceCrate("cookie_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> SUGAR_CRATE = spruceCrate("sugar_crate");
+    public static final DeferredBlock<Block> MELON_SLICE_CRATE = spruceCrate("melon_slice_crate");
+    public static final DeferredBlock<Block> PUFFERFISH_CRATE = spruceCrate("pufferfish_crate",
+            props -> new MobEffectBlock(props, MobEffects.POISON));
+    public static final DeferredBlock<Block> TROPICAL_FISH_CRATE = spruceCrate("tropical_fish_crate");
+    public static final DeferredBlock<Block> KELP_CRATE = spruceCrate("kelp_crate");
+    public static final DeferredBlock<Block> DRIED_KELP_CRATE = spruceCrate("dried_kelp_crate");
+    public static final DeferredBlock<Block> BONE_MEAL_CRATE = spruceCrate("bone_meal_crate");
+    public static final DeferredBlock<Block> STRING_CRATE = spruceCrate("string_crate");
+    public static final DeferredBlock<Block> FEATHER_CRATE = spruceCrate("feather_crate");
     public static final DeferredBlock<Block> RABBIT_FOOT_CRATE = spruceCrate("rabbit_foot_crate");
     public static final DeferredBlock<Block> PORKCHOP_CRATE = spruceCrate("porkchop_crate");
     public static final DeferredBlock<Block> COOKED_PORKCHOP_CRATE = spruceCrate("cooked_porkchop_crate", HotFoodBlock::new);
@@ -83,8 +110,8 @@ public class HoardingBlocks {
     public static final DeferredBlock<Block> CRIMSON_FUNGUS_CRATE = crimsonCrate("crimson_fungus_crate");
     public static final DeferredBlock<Block> WARPED_FUNGUS_CRATE = crimsonCrate("warped_fungus_crate");
     public static final DeferredBlock<Block> NETHER_WART_CRATE = crimsonCrate("nether_wart_crate");
-    public static final DeferredBlock<Block> WITHER_ROSE_CRATE = crimsonCrate(
-            "wither_rose_crate",
+    public static final DeferredBlock<Block> WITHER_ROSE_NETHER_CRATE = crimsonCrate(
+            "withered_rose_crate",
             props -> new MobEffectBlock(props, MobEffects.WITHER)
     );
     //endregion Crimson Crates
@@ -153,173 +180,171 @@ public class HoardingBlocks {
     //endregion Crimson Bags
 
     //region Compressed Blocks
+    // NOTE: MC 26.1.2 requires block ID to be set in Properties before Block construction.
+    // Using block(name, () -> props, Constructor::new) 3-arg form which internally calls
+    // properties.setId(...) before passing to the constructor.
     public static final DeferredBlock<Block> FLINT_BLOCK = block(
             "flint_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.STONE)
-                    .requiresCorrectToolForDrops()
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.STONE).requiresCorrectToolForDrops(),
+            Block::new
     );
     public static final DeferredBlock<Block> NETHER_STAR_BLOCK = block(
             "nether_star_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(50.0F, 1200.0F)
-                    .sound(SoundType.METAL)
-                    .requiresCorrectToolForDrops()
-            )
+            () -> BlockBehaviour.Properties.of().strength(50.0F, 1200.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(),
+            Block::new
     );
     public static final DeferredBlock<RotatedPillarBlock> LEATHER_BLOCK = block(
             "leather_block",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOL)
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOL),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> CACTUS_BUNDLE = block(
             "cactus_bundle",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS))
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> SUGARCANE_BUNDLE = block(
             "sugarcane_bundle",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOD)
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> STICK_BUNDLE = block(
             "stick_bundle",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOD)
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> BLAZE_ROD_BUNDLE = block(
             "blaze_rod_bundle",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOD)
-                    .lightLevel(state -> 10)
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> 10),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> GLISTERING_MELON = block(
             "glistering_melon",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MELON))
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.MELON),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> SPOOL = block(
             "spool",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL))
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL),
+            RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> BONE_PILE = block(
             "bone_pile",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK))
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK),
+            RotatedPillarBlock::new
     );
-    public static final DeferredBlock<Block> BOOK_PILE = block(
+    public static final DeferredBlock<HorizontalFacingBlock> BOOK_PILE = block(
             "book_pile",
-            () -> new HorizontalFacingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BOOKSHELF))
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BOOKSHELF),
+            HorizontalFacingBlock::new
     );
-    public static final DeferredBlock<Block> PAPER_STACK = block(
+    public static final DeferredBlock<HorizontalFacingBlock> PAPER_STACK = block(
             "paper_stack",
-            () -> new HorizontalFacingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL))
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL),
+            HorizontalFacingBlock::new
     );
-    public static final DeferredBlock<Block> SCUTE_BLOCK = block(
+    public static final DeferredBlock<HorizontalFacingBlock> SCUTE_BLOCK = block(
             "scute_block",
-            () -> new HorizontalFacingBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOL)
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOL),
+            HorizontalFacingBlock::new
     );
-    public static final DeferredBlock<Block> PHANTOM_MEMBRANE_BLOCK = block(
+    public static final DeferredBlock<HorizontalFacingBlock> PHANTOM_MEMBRANE_BLOCK = block(
             "phantom_membrane_block",
-            () -> new HorizontalFacingBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOL)
-            )
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOL),
+            HorizontalFacingBlock::new
     );
-    public static final DeferredBlock<Block> MAGMA_CREAM_BLOCK = block(
+    public static final DeferredBlock<HorizontalFacingBlock> MAGMA_CREAM_BLOCK = block(
             "magma_cream_block",
-            () -> new HorizontalFacingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK)
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.SLIME_BLOCK)
-                    .lightLevel(state -> 10)
-            )
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK).lightLevel(state -> 10),
+            HorizontalFacingBlock::new
     );
     public static final DeferredBlock<Block> NAUTILUS_BLOCK = block(
             "nautilus_block",
-            () -> new NautilusBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK)
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.BONE_BLOCK)
-            )
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK).strength(2.0F, 3.0F).sound(SoundType.BONE_BLOCK),
+            NautilusBlock::new
     );
     //endregion Compressed Blocks
+
+    // =================================================================
+    // Helper methods
+    // =================================================================
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 
-    public static <T extends Block> DeferredBlock<T> block(String name, Supplier<T> supplier) {
-        DeferredBlock<T> block = BLOCKS.register(name, supplier);
-        HoardingItems.item(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    /** 3-arg block registration — MC 26.1.2 requires this form so that DeferredRegister can set block ID on Properties */
+    public static <T extends Block> DeferredBlock<T> block(String name, Supplier<BlockBehaviour.Properties> properties, Function<BlockBehaviour.Properties, T> factory) {
+        DeferredBlock<T> block = BLOCKS.registerBlock(name, factory, properties);
+        // MC 26.1.2: BlockItem needs item ID set in Properties before construction.
+        // 使用 registerSimpleBlockItem 自动处理 ID 设置，并将 BlockItem 加入创造模式标签页
+        var blockItem = HoardingItems.ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
+        HoardingItems.CREATIVE_MODE_TAB_ITEMS.offer(blockItem);
         return block;
     }
 
+    // === Crates ===
     private static DeferredBlock<Block> birchCrate(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS));
+    }
+    private static DeferredBlock<Block> birchCrate(String name, Function<BlockBehaviour.Properties, Block> factory) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS), factory);
     }
 
     private static DeferredBlock<Block> oakCrate(String name) {
-        return oakCrate(name, Block::new);
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), Block::new);
     }
-
-    private static DeferredBlock<Block> oakCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    private static DeferredBlock<Block> oakCrate(String name, Function<BlockBehaviour.Properties, Block> factory) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), factory);
     }
 
     private static DeferredBlock<Block> spruceCrate(String name) {
-        return spruceCrate(name, Block::new);
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS), Block::new);
     }
-
-    private static DeferredBlock<Block> spruceCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+    private static DeferredBlock<Block> spruceCrate(String name, Function<BlockBehaviour.Properties, Block> factory) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS), factory);
     }
 
     private static DeferredBlock<Block> crimsonCrate(String name) {
-        return crimsonCrate(name, Block::new);
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS), Block::new);
+    }
+    private static DeferredBlock<Block> crimsonCrate(String name, Function<BlockBehaviour.Properties, Block> factory) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS), factory);
     }
 
-    private static DeferredBlock<Block> crimsonCrate(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
-    }
-
+    // Iron Crates (use iron block properties)
     private static DeferredBlock<Block> ironCrate(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
     }
 
+    // End Stone Crates
     private static DeferredBlock<Block> endStoneCrate(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE));
     }
 
+    // Barrels
     private static DeferredBlock<Block> barrel(String name) {
-        return barrel(name, Block::new);
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), Block::new);
+    }
+    private static DeferredBlock<Block> barrel(String name, Function<BlockBehaviour.Properties, Block> factory) {
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), factory);
     }
 
-    private static DeferredBlock<Block> barrel(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
-    }
-
+    // Buckets (use iron properties)
     private static DeferredBlock<Block> bucket(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
     }
 
+    // Racks
     private static DeferredBlock<Block> rack(String name) {
-        return block(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
     }
 
+    // Bags
     private static DeferredBlock<Block> bag(String name) {
         return bag(name, HorizontalFacingBlock::new);
     }
-
-    private static DeferredBlock<Block> bag(String name, Function<BlockBehaviour.Properties, HorizontalFacingBlock> blockFactory) {
-        return block(name, () -> blockFactory.apply(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    private static DeferredBlock<Block> bag(String name, Function<BlockBehaviour.Properties, HorizontalFacingBlock> factory) {
+        return (DeferredBlock<Block>) (DeferredBlock<?>) block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL), factory);
     }
 }

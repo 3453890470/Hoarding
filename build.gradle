@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    alias libs.plugins.neoforge.userdev
+    alias libs.plugins.neoforge.moddev
 }
 
 version = "${libs.versions.minecraft.get()}-${libs.versions.mod.get()}"
@@ -13,82 +13,114 @@ base {
     archivesName = mod_id
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge {
+    version = libs.versions.neo.get()
 
-minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
+    // TODO: 26.1.2 兼容后恢复 Parchment 映射
+    // 需要找到 26.1.2 对应的 Parchment 版本号
+    // parchment {
+    //     minecraftVersion = libs.versions.minecraft.get()
+    //     mappingsVersion  = libs.versions.parchment.get()
+    // }
+    // ================================================================
+    // [TODO-AT] Access Transformer — 26.1.2 兼容后恢复
+    // 说明：1.21.1 时有 accesstransformer.cfg（内容为空），26.1.2 需要重新评估
+    // 参考文件：src/main/resources/META-INF/accesstransformer.cfg
+    // ================================================================
+    // accessTransformers {
+    //     from 'src/main/resources/META-INF/accesstransformer.cfg'
+    // }
 
-runs {
-    configureEach {
-        systemProperty 'forge.logging.markers', 'REGISTRIES'
-        systemProperty 'forge.logging.console.level', 'debug'
-
-        modSource project.sourceSets.main
+    mods {
+        register(mod_id) {
+            sourceSet sourceSets.main
+        }
     }
 
-    client {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-    }
+    runs {
+        configureEach {
+            systemProperty 'neoforge.logging.markers', 'REGISTRIES'
+            systemProperty 'neoforge.logging.console.level', 'debug'
+            logLevel = 'DEBUG'
+        }
 
-    server {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        programArgument '--nogui'
-    }
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
 
-    gameTestServer {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-    }
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
 
-    data {
-        arguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll(
+                    '--mod', mod_id,
+                    '--all',
+                    '--output', file('src/generated/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
+            )
+        }
     }
 }
+
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    // 阿里云镜像（国内加速）
+    maven {
+        name = "阿里云镜像"
+        url = "https://maven.aliyun.com/repository/public"
+    }
+
+    mavenCentral()
+
     // Botania / Patchouli
     maven {
         name = "BlameJared"
         url = "https://maven.blamejared.com"
     }
-    
+
     // EMI
     maven {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
     }
-    
+
     // Geckolib
     maven {
         name = "Geckolib"
         url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
     }
-    
+
     // Curios
     maven {
         name = "Curios"
         url = "https://maven.theillusivec4.top/"
     }
-    
+
     // Modrinth mods
     maven {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven"
     }
-    
-    // CurseForge Maven (Jade, Infiniverse, TerraBlender 等)
+
+    // CurseForge Maven
     maven {
         name = "CurseForge"
         url = "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
-    }
-    
-    // TerraBlender (Botania 世界生成依赖)
-    maven {
-        name = "ForgeNet"
-        url = "https://maven.minecraftforge.net/"
     }
 }
 
@@ -97,44 +129,38 @@ configurations {
 }
 
 dependencies {
-    implementation libs.neoforge
-
-    // 可选依赖 - Botania (编译时)
-    compileOnly libs.botania
-
-    // 可选依赖 - Ars Nouveau (编译时)
-    compileOnly libs.ars.nouveau
-
-    // === 配方查看器 ===
-    // JEI - 仅编译时（兼容性测试）
-    compileOnly libs.jei
-    
-    // EMI - 测试环境运行时
-    localRuntime libs.emi
-
-    // === 测试环境 mod (仅运行时) ===
-    
-    // Botania 依赖
-    localRuntime libs.patchouli
-    
-    // Ars Nouveau 依赖
-    localRuntime libs.geckolib
-    
-    // 通用依赖 - 饰品栏
-    localRuntime libs.curios
-    
-    // 客户端工具 - Jade (方块信息)
-    localRuntime libs.jade
-    
-    // 客户端工具 - Modern UI (Modrinth Maven)
-    localRuntime libs.modern.ui
-    
-    // 客户端工具 - JECharacters (中文搜索)
-    localRuntime libs.jecharacters
-
-    // 开发时运行时依赖
-    localRuntime libs.botania
-    localRuntime libs.ars.nouveau
+    // ================================================================
+    // [TODO-DEPS] 26.1.2 依赖兼容 — 以下依赖在 26.1.2 下暂无对应版本，已注释
+    // 恢复步骤：
+    //   1. 在 gradle/libs.versions.toml 中找到对应依赖的 TODO 块，填上 26.1.2 兼容版本号
+    //   2. 取消下方对应行的注释
+    //
+    // 各依赖说明：
+    //   compileOnly libs.botania        — Botania API，编译引用 → vazkii.botania:botania-neoforge-26.1.2
+    //   compileOnly libs.ars.nouveau    — Ars Nouveau API，编译引用 → com.hollingsworth.ars_nouveau:ars_nouveau-26.1.2
+    //   compileOnly libs.jei            — JEI API，编译引用 → mezz.jei:jei-26.1.2-neoforge
+    //   localRuntime libs.emi           — EMI，测试环境运行时 → dev.emi:emi-neoforge
+    //   localRuntime libs.patchouli     — Patchouli，Botania 依赖
+    //   localRuntime libs.geckolib      — Geckolib，Ars Nouveau 依赖
+    //   localRuntime libs.curios        — Curios，饰品栏
+    //   localRuntime libs.jade          — Jade，方块信息
+    //   localRuntime libs.modern.ui     — Modern UI
+    //   localRuntime libs.jecharacters  — JECharacters 中文搜索
+    //   localRuntime libs.botania       — Botania 本体（运行时）
+    //   localRuntime libs.ars.nouveau   — Ars Nouveau 本体（运行时）
+    // ================================================================
+    // compileOnly libs.botania
+    // compileOnly libs.ars.nouveau
+    // compileOnly libs.jei
+    // localRuntime libs.emi
+    // localRuntime libs.patchouli
+    // localRuntime libs.geckolib
+    // localRuntime libs.curios
+    // localRuntime libs.jade
+    // localRuntime libs.modern.ui
+    // localRuntime libs.jecharacters
+    // localRuntime libs.botania
+    // localRuntime libs.ars.nouveau
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -142,6 +168,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 tasks.withType(ProcessResources).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.WARN
     var replaceProperties = [
             'mod_id'                    : mod_id,
             'mod_name'                  : mod_name,

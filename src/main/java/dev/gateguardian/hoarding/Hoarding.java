@@ -6,7 +6,7 @@ import dev.gateguardian.hoarding.common.registry.HoardingCreativeModeTabs;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
 import dev.gateguardian.hoarding.common.registry.HoardingParticleTypes;
 import dev.gateguardian.hoarding.integration.ModIntegration;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
@@ -16,8 +16,8 @@ public class Hoarding {
     public static final String MOD_ID = "hoarding";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static ResourceLocation id(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    public static Identifier id(String path) {
+        return Identifier.parse(MOD_ID + ":" + path);
     }
 
     public Hoarding(IEventBus modEventBus) {

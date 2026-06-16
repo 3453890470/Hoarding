@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blaze_rod_bundle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hoarding:blaze_rod_bundle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoarding:decompress/blaze_rod"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blaze_rod_bundle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoarding:decompress/blaze_rod"
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "all": "minecraft:block/end_stone"
+    "bottom": "hoarding:block/crate/others/bottom_end_stone",
+    "side": "hoarding:block/crate/others/chorus_fruit_crate_side",
+    "top": "hoarding:block/crate/others/chorus_fruit_crate_top"
   }
 }

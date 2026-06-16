@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "minecraft:block/oak_planks"
+    "end": "hoarding:block/rack/rack_top",
+    "side": "hoarding:block/rack/egg_rack_side"
   }
 }

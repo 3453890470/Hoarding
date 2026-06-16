@@ -1,6 +1,9 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "hoarding:block/cube_symmetry_north_west",
   "textures": {
-    "all": "minecraft:block/white_wool"
+    "bottom": "hoarding:block/bag/sack/crimson_bag_bottom",
+    "north": "hoarding:block/bag/sack/crimson_bag_side",
+    "top": "hoarding:block/bag/sack/blaze_powder_bag_top",
+    "west": "hoarding:block/bag/sack/crimson_bag_side_tied"
   }
 }

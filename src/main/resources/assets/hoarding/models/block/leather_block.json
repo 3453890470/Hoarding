@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "minecraft:block/brown_wool"
+    "end": "hoarding:block/leather_block_end",
+    "side": "hoarding:block/leather_block_side"
   }
 }

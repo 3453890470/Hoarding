@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "hoarding:block/stick_bundle_end",
+    "side": "hoarding:block/stick_bundle_side"
+  }
+}

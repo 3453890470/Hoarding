@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "minecraft:block/gold_block"
+    "end": "hoarding:block/blaze_rod_bundle_end",
+    "side": "hoarding:block/blaze_rod_bundle_side"
   }
 }

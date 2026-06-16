@@ -1,11 +1,38 @@
 package dev.gateguardian.hoarding.generator.provider;
 
+import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.block.Block;
+
+import java.util.Set;
+
 /**
- * TODO: MC 26.1.2 DataGen API 已重构
- * LootTableProvider / BlockLootSubProvider (net.minecraft.data.loot) 已重构。
- * 需要改用 MC 26.1.2 的新战利品表生成 API。
- * 恢复时请参考 DataGenerator.java 顶部 TODO 说明。
+ * MC 26.1.2 BlockLootSubProvider — 所有方块自掉落
  */
-public class HoardingLootProvider {
-    private HoardingLootProvider() {}
+public abstract class HoardingLootProvider {
+
+    public static BlockLootSubProvider create(HolderLookup.Provider lookupProvider) {
+        return new HoardingBlockLootSubProvider(lookupProvider);
+    }
+
+    private static class HoardingBlockLootSubProvider extends BlockLootSubProvider {
+
+        protected HoardingBlockLootSubProvider(HolderLookup.Provider lookupProvider) {
+            super(Set.of(), FeatureFlags.DEFAULT_FLAGS, lookupProvider);
+        }
+
+        @Override
+        protected void generate() {
+            HoardingBlocks.BLOCKS.getEntries().forEach(block -> dropSelf(block.get()));
+        }
+
+        @Override
+        protected Iterable<Block> getKnownBlocks() {
+            return HoardingBlocks.BLOCKS.getEntries().stream()
+                    .<Block>map(holder -> holder.get())
+                    .toList();
+        }
+    }
 }

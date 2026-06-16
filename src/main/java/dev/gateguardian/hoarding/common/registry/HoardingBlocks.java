@@ -24,104 +24,73 @@ public class HoardingBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Hoarding.MOD_ID);
 
-    //region Birch Crates
+    // =================================================================
+    // 主世界 (Overworld)
+    // =================================================================
+
+    //region === 主世界 · 白桦木箱子 (Birch Crates — 花/材料类) ===
     public static final DeferredBlock<Block> ALLIUM_CRATE = birchCrate("allium_crate");
     public static final DeferredBlock<Block> AZURE_BLUET_CRATE = birchCrate("azure_bluet_crate");
     public static final DeferredBlock<Block> BLUE_ORCHID_CRATE = birchCrate("blue_orchid_crate");
     public static final DeferredBlock<Block> CORNFLOWER_CRATE = birchCrate("cornflower_crate");
     public static final DeferredBlock<Block> DANDELION_CRATE = birchCrate("dandelion_crate");
     public static final DeferredBlock<Block> LILY_CRATE = birchCrate("lily_crate");
-    public static final DeferredBlock<Block> TORCHFLOWER_CRATE = birchCrate("torchflower_crate");
-    public static final DeferredBlock<Block> PEONY_CRATE = birchCrate("peony_crate");
+    public static final DeferredBlock<Block> OXEYE_DAISY_CRATE = birchCrate("oxeye_daisy_crate");
+    public static final DeferredBlock<Block> POPPY_CRATE = birchCrate("poppy_crate");
     public static final DeferredBlock<Block> ORANGE_TULIP_CRATE = birchCrate("orange_tulip_crate");
     public static final DeferredBlock<Block> PINK_TULIP_CRATE = birchCrate("pink_tulip_crate");
     public static final DeferredBlock<Block> RED_TULIP_CRATE = birchCrate("red_tulip_crate");
     public static final DeferredBlock<Block> WHITE_TULIP_CRATE = birchCrate("white_tulip_crate");
-    public static final DeferredBlock<Block> LILY_OF_THE_VALLEY_CRATE = birchCrate("lily_of_the_valley_crate");
-    public static final DeferredBlock<Block> OXEYE_DAISY_CRATE = birchCrate("oxeye_daisy_crate");
-    public static final DeferredBlock<Block> SUNFLOWER_CRATE = birchCrate("sunflower_crate");
-    public static final DeferredBlock<Block> POPPY_CRATE = birchCrate("poppy_crate");
-    public static final DeferredBlock<Block> ROSE_BUSH_CRATE = birchCrate("rose_bush_crate");
-    public static final DeferredBlock<Block> GOLDEN_APPLE_CRATE = oakCrate("golden_apple_crate");
-    public static final DeferredBlock<Block> POISONOUS_POTATO_CRATE = oakCrate("poisonous_potato_crate");
-    public static final DeferredBlock<Block> BROWN_MUSHROOM_CRATE = birchCrate("brown_mushroom_crate");
-    public static final DeferredBlock<Block> RED_MUSHROOM_CRATE = birchCrate("red_mushroom_crate");
-    public static final DeferredBlock<Block> SWEET_BERRIES_CRATE = oakCrate("sweet_berries_crate");
-    public static final DeferredBlock<Block> GLOW_BERRIES_CRATE = spruceCrate("glow_berries_crate");
-    public static final DeferredBlock<Block> LILAC_CRATE = birchCrate("lilac_crate");
-    public static final DeferredBlock<Block> WITHER_ROSE_CRATE = birchCrate("wither_rose_crate",
-            props -> new MobEffectBlock(props, MobEffects.WITHER));
-    //endregion Birch Crates
+    public static final DeferredBlock<Block> TORCHFLOWER_CRATE = birchCrate("torchflower_crate");
+    //endregion
 
-    //region Oak Crates
+    //region === 主世界 · 橡木箱子 (Oak Crates — 食材/蘑菇类) ===
     public static final DeferredBlock<Block> APPLE_CRATE = oakCrate("apple_crate");
+    public static final DeferredBlock<Block> GOLDEN_APPLE_CRATE = oakCrate("golden_apple_crate");
+    public static final DeferredBlock<Block> POTATO_CRATE = oakCrate("potato_crate");
     public static final DeferredBlock<Block> BAKED_POTATO_CRATE = oakCrate("baked_potato_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> BEEF_CRATE = oakCrate("beef_crate");
-    public static final DeferredBlock<Block> COOKED_BEEF_CRATE = oakCrate("cooked_beef_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> POISONOUS_POTATO_CRATE = oakCrate("poisonous_potato_crate");
     public static final DeferredBlock<Block> BEETROOT_CRATE = oakCrate("beetroot_crate");
-    public static final DeferredBlock<Block> BREAD_CRATE = oakCrate("bread_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> BROWN_MUSHROOM_CRATE = oakCrate("brown_mushroom_crate");
+    public static final DeferredBlock<Block> RED_MUSHROOM_CRATE = oakCrate("red_mushroom_crate");
     public static final DeferredBlock<Block> CARROT_CRATE = oakCrate("carrot_crate");
     public static final DeferredBlock<Block> GOLDEN_CARROT_CRATE = oakCrate("golden_carrot_crate");
-    public static final DeferredBlock<Block> CHICKEN_CRATE = oakCrate("chicken_crate");
-    public static final DeferredBlock<Block> COOKED_CHICKEN_CRATE = oakCrate("cooked_chicken_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> COD_CRATE = oakCrate("cod_crate");
-    public static final DeferredBlock<Block> COOKED_COD_CRATE = oakCrate("cooked_cod_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> POTATO_CRATE = oakCrate("potato_crate");
-    public static final DeferredBlock<Block> PUMPKIN_PIE_CRATE = oakCrate("pumpkin_pie_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> MUTTON_CRATE = oakCrate("mutton_crate");
-    public static final DeferredBlock<Block> COOKED_MUTTON_CRATE = oakCrate("cooked_mutton_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> SALMON_CRATE = oakCrate("salmon_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> COOKED_SALMON_CRATE = oakCrate("cooked_salmon_crate", HotFoodBlock::new);
-    //endregion Oak Crates
+    public static final DeferredBlock<Block> SWEET_BERRIES_CRATE = oakCrate("sweet_berries_crate");
+    public static final DeferredBlock<Block> GLOW_BERRIES_CRATE = oakCrate("glow_berries_crate");
+    public static final DeferredBlock<Block> COOKIE_CRATE = oakCrate("cookie_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> BREAD_CRATE = oakCrate("bread_crate", HotFoodBlock::new);
+    //endregion
 
-    //region Spruce Crates
+    //region === 主世界 · 云杉木箱子 (Spruce Crates — 肉类) ===
+    public static final DeferredBlock<Block> BEEF_CRATE = spruceCrate("beef_crate");
+    public static final DeferredBlock<Block> COOKED_BEEF_CRATE = spruceCrate("cooked_beef_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> CHICKEN_CRATE = spruceCrate("chicken_crate");
+    public static final DeferredBlock<Block> COOKED_CHICKEN_CRATE = spruceCrate("cooked_chicken_crate", HotFoodBlock::new);
+    public static final DeferredBlock<Block> MUTTON_CRATE = spruceCrate("mutton_crate");
+    public static final DeferredBlock<Block> COOKED_MUTTON_CRATE = spruceCrate("cooked_mutton_crate", HotFoodBlock::new);
     public static final DeferredBlock<Block> RABBIT_CRATE = spruceCrate("rabbit_crate");
     public static final DeferredBlock<Block> COOKED_RABBIT_CRATE = spruceCrate("cooked_rabbit_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> RABBIT_STEW_CRATE = spruceCrate("rabbit_stew_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> MUSHROOM_STEW_CRATE = spruceCrate("mushroom_stew_crate");
-    public static final DeferredBlock<Block> BEETROOT_SOUP_CRATE = spruceCrate("beetroot_soup_crate");
-    public static final DeferredBlock<Block> SUSPICIOUS_STEW_CRATE = spruceCrate("suspicious_stew_crate",
-            props -> new MobEffectBlock(props, MobEffects.BLINDNESS));
-    public static final DeferredBlock<Block> COOKIE_CRATE = spruceCrate("cookie_crate", HotFoodBlock::new);
-    public static final DeferredBlock<Block> SUGAR_CRATE = spruceCrate("sugar_crate");
-    public static final DeferredBlock<Block> MELON_SLICE_CRATE = spruceCrate("melon_slice_crate");
-    public static final DeferredBlock<Block> PUFFERFISH_CRATE = spruceCrate("pufferfish_crate",
-            props -> new MobEffectBlock(props, MobEffects.POISON));
-    public static final DeferredBlock<Block> TROPICAL_FISH_CRATE = spruceCrate("tropical_fish_crate");
-    public static final DeferredBlock<Block> KELP_CRATE = spruceCrate("kelp_crate");
-    public static final DeferredBlock<Block> DRIED_KELP_CRATE = spruceCrate("dried_kelp_crate");
-    public static final DeferredBlock<Block> BONE_MEAL_CRATE = spruceCrate("bone_meal_crate");
-    public static final DeferredBlock<Block> STRING_CRATE = spruceCrate("string_crate");
-    public static final DeferredBlock<Block> FEATHER_CRATE = spruceCrate("feather_crate");
     public static final DeferredBlock<Block> RABBIT_FOOT_CRATE = spruceCrate("rabbit_foot_crate");
     public static final DeferredBlock<Block> PORKCHOP_CRATE = spruceCrate("porkchop_crate");
     public static final DeferredBlock<Block> COOKED_PORKCHOP_CRATE = spruceCrate("cooked_porkchop_crate", HotFoodBlock::new);
-    //endregion Spruce Crates
+    //endregion
+    //region === 下界 · 绯红菌箱子 (Crimson Crates) ===
+    public static final DeferredBlock<Block> CRIMSON_FUNGUS_CRATE = crimsonCrate("crimson_fungus_crate");
+    public static final DeferredBlock<Block> WARPED_FUNGUS_CRATE = crimsonCrate("warped_fungus_crate");
+    public static final DeferredBlock<Block> NETHER_WART_CRATE = crimsonCrate("nether_wart_crate");
+    public static final DeferredBlock<Block> WITHER_ROSE_CRATE = crimsonCrate("wither_rose_crate",
+            props -> new MobEffectBlock(props, MobEffects.WITHER));
+    //endregion
 
-    //region Iron Crates
+    //region === 主世界 · 铁箱子 (Iron Crates) ===
     public static final DeferredBlock<Block> ENDER_EYE_CRATE = ironCrate("ender_eye_crate");
     public static final DeferredBlock<Block> ENDER_PEARL_CRATE = ironCrate("ender_pearl_crate");
     public static final DeferredBlock<Block> ROTTEN_FLESH_CRATE = ironCrate("rotten_flesh_crate");
     public static final DeferredBlock<Block> SPIDER_EYE_CRATE = ironCrate("spider_eye_crate");
     public static final DeferredBlock<Block> FERMENTED_SPIDER_EYE_CRATE = ironCrate("fermented_spider_eye_crate");
-    //endregion Iron Crates
+    //endregion
 
-    //region Crimson Crates
-    public static final DeferredBlock<Block> CRIMSON_FUNGUS_CRATE = crimsonCrate("crimson_fungus_crate");
-    public static final DeferredBlock<Block> WARPED_FUNGUS_CRATE = crimsonCrate("warped_fungus_crate");
-    public static final DeferredBlock<Block> NETHER_WART_CRATE = crimsonCrate("nether_wart_crate");
-    public static final DeferredBlock<Block> WITHER_ROSE_NETHER_CRATE = crimsonCrate(
-            "withered_rose_crate",
-            props -> new MobEffectBlock(props, MobEffects.WITHER)
-    );
-    //endregion Crimson Crates
-
-    //region End Stone Crates
-    public static final DeferredBlock<Block> CHORUS_FRUIT_CRATE = endStoneCrate("chorus_fruit_crate");
-    public static final DeferredBlock<Block> POPPED_CHORUS_FRUIT_CRATE = endStoneCrate("popped_chorus_fruit_crate");
-    //endregion End Stone Crates
-
-    //region Barrels
+    //region === 主世界 · 木桶 (Barrels) ===
     public static final DeferredBlock<Block> COD_BARREL = barrel("cod_barrel");
     public static final DeferredBlock<Block> COOKED_COD_BARREL = barrel("cooked_cod_barrel", HotFoodBlock::new);
     public static final DeferredBlock<Block> SALMON_BARREL = barrel("salmon_barrel");
@@ -133,9 +102,9 @@ public class HoardingBlocks {
             props -> new MobEffectBlock(props, MobEffects.POISON)
     );
     public static final DeferredBlock<Block> TROPICAL_FISH_BARREL = barrel("tropical_fish_barrel");
-    //endregion Barrels
+    //endregion
 
-    //region Buckets
+    //region === 主世界 · 染料桶 (Buckets) ===
     public static final DeferredBlock<Block> WHITE_DYE_BUCKET = bucket("white_dye_bucket");
     public static final DeferredBlock<Block> ORANGE_DYE_BUCKET = bucket("orange_dye_bucket");
     public static final DeferredBlock<Block> MAGENTA_DYE_BUCKET = bucket("magenta_dye_bucket");
@@ -152,45 +121,33 @@ public class HoardingBlocks {
     public static final DeferredBlock<Block> GREEN_DYE_BUCKET = bucket("green_dye_bucket");
     public static final DeferredBlock<Block> RED_DYE_BUCKET = bucket("red_dye_bucket");
     public static final DeferredBlock<Block> BLACK_DYE_BUCKET = bucket("black_dye_bucket");
-    //endregion Buckets
+    //endregion
 
-    //region Racks
+    //region === 主世界 · 架子 (Racks) ===
     public static final DeferredBlock<Block> EGG_RACK = rack("egg_rack");
     public static final DeferredBlock<Block> TURTLE_EGG_RACK = rack("turtle_egg_rack");
     public static final DeferredBlock<Block> BOTTLE_RACK = rack("bottle_rack");
-    //endregion Racks
+    //endregion
 
-    //region Sacks
+    //region === 主世界 · 袋子 (Sacks) ===
     public static final DeferredBlock<Block> SUGAR_BAG = bag("sugar_bag");
     public static final DeferredBlock<Block> GUNPOWDER_BAG = bag("gunpowder_bag");
     public static final DeferredBlock<Block> COCOA_BEANS_BAG = bag("cocoa_beans_bag");
     public static final DeferredBlock<Block> FEATHER_BAG = bag("feather_bag");
-    //endregion Sacks
+    //endregion
 
-    //region Seed Bags
+    //region === 主世界 · 种子袋 (Seed Bags) ===
     public static final DeferredBlock<Block> WHEAT_SEEDS_BAG = bag("wheat_seeds_bag");
     public static final DeferredBlock<Block> BEETROOT_SEEDS_BAG = bag("beetroot_seeds_bag");
     public static final DeferredBlock<Block> MELON_SEEDS_BAG = bag("melon_seeds_bag");
     public static final DeferredBlock<Block> PUMPKIN_SEEDS_BAG = bag("pumpkin_seeds_bag");
     public static final DeferredBlock<Block> TORCHFLOWER_SEEDS_BAG = bag("torchflower_seeds_bag");
-    //endregion Seed Bags
+    //endregion
 
-    //region Crimson Bags
-    public static final DeferredBlock<Block> BLAZE_POWDER_BAG = bag("blaze_powder_bag");
-    //endregion Crimson Bags
-
-    //region Compressed Blocks
-    // NOTE: MC 26.1.2 requires block ID to be set in Properties before Block construction.
-    // Using block(name, () -> props, Constructor::new) 3-arg form which internally calls
-    // properties.setId(...) before passing to the constructor.
+    //region === 主世界 · 压缩方块 (Compressed Blocks) ===
     public static final DeferredBlock<Block> FLINT_BLOCK = block(
             "flint_block",
             () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.STONE).requiresCorrectToolForDrops(),
-            Block::new
-    );
-    public static final DeferredBlock<Block> NETHER_STAR_BLOCK = block(
-            "nether_star_block",
-            () -> BlockBehaviour.Properties.of().strength(50.0F, 1200.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(),
             Block::new
     );
     public static final DeferredBlock<RotatedPillarBlock> LEATHER_BLOCK = block(
@@ -211,11 +168,6 @@ public class HoardingBlocks {
     public static final DeferredBlock<RotatedPillarBlock> STICK_BUNDLE = block(
             "stick_bundle",
             () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD),
-            RotatedPillarBlock::new
-    );
-    public static final DeferredBlock<RotatedPillarBlock> BLAZE_ROD_BUNDLE = block(
-            "blaze_rod_bundle",
-            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> 10),
             RotatedPillarBlock::new
     );
     public static final DeferredBlock<RotatedPillarBlock> GLISTERING_MELON = block(
@@ -253,20 +205,55 @@ public class HoardingBlocks {
             () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOL),
             HorizontalFacingBlock::new
     );
-    public static final DeferredBlock<HorizontalFacingBlock> MAGMA_CREAM_BLOCK = block(
-            "magma_cream_block",
-            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK).lightLevel(state -> 10),
-            HorizontalFacingBlock::new
-    );
     public static final DeferredBlock<Block> NAUTILUS_BLOCK = block(
             "nautilus_block",
             () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK).strength(2.0F, 3.0F).sound(SoundType.BONE_BLOCK),
             NautilusBlock::new
     );
-    //endregion Compressed Blocks
+    //endregion
 
     // =================================================================
-    // Helper methods
+    // 下界 (Nether)
+    // =================================================================
+
+
+    //region === 下界 · 绯红菌袋子 (Crimson Bags) ===
+    public static final DeferredBlock<Block> BLAZE_POWDER_BAG = bag("blaze_powder_bag");
+    //endregion
+
+    //region === 下界 · 压缩方块 (Compressed Blocks) ===
+    public static final DeferredBlock<Block> NETHER_STAR_BLOCK = block(
+            "nether_star_block",
+            () -> BlockBehaviour.Properties.of().strength(50.0F, 1200.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(),
+            Block::new
+    );
+    public static final DeferredBlock<RotatedPillarBlock> BLAZE_ROD_BUNDLE = block(
+            "blaze_rod_bundle",
+            () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> 10),
+            RotatedPillarBlock::new
+    );
+    public static final DeferredBlock<HorizontalFacingBlock> MAGMA_CREAM_BLOCK = block(
+            "magma_cream_block",
+            () -> BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK).lightLevel(state -> 10),
+            HorizontalFacingBlock::new
+    );
+    //endregion
+
+    // =================================================================
+    // 末地 (End)
+    // =================================================================
+
+    //region === 末地 · 末地石箱子 (End Stone Crates) ===
+    public static final DeferredBlock<Block> CHORUS_FRUIT_CRATE = endStoneCrate("chorus_fruit_crate");
+    public static final DeferredBlock<Block> POPPED_CHORUS_FRUIT_CRATE = endStoneCrate("popped_chorus_fruit_crate");
+    //endregion
+
+    // =================================================================
+    // 其他 (Other) — 目前无不属于以上三类的方块
+    // =================================================================
+
+    // =================================================================
+    // 注册入口
     // =================================================================
 
     public static void register(IEventBus eventBus) {
@@ -285,7 +272,7 @@ public class HoardingBlocks {
 
     // === Crates ===
     private static DeferredBlock<Block> birchCrate(String name) {
-        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS), Block::new);
     }
     private static DeferredBlock<Block> birchCrate(String name, Function<BlockBehaviour.Properties, Block> factory) {
         return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS), factory);
@@ -314,12 +301,12 @@ public class HoardingBlocks {
 
     // Iron Crates (use iron block properties)
     private static DeferredBlock<Block> ironCrate(String name) {
-        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK), Block::new);
     }
 
     // End Stone Crates
     private static DeferredBlock<Block> endStoneCrate(String name) {
-        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE), Block::new);
     }
 
     // Barrels
@@ -332,12 +319,12 @@ public class HoardingBlocks {
 
     // Buckets (use iron properties)
     private static DeferredBlock<Block> bucket(String name) {
-        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK), Block::new);
     }
 
     // Racks
     private static DeferredBlock<Block> rack(String name) {
-        return BLOCKS.registerSimpleBlock(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+        return block(name, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS), Block::new);
     }
 
     // Bags

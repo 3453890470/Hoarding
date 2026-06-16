@@ -18,7 +18,7 @@ build/
 bin/
 
 # Minecraft
-runs/
+run/
 logs/
 *.log
 

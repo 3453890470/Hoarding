@@ -1,0 +1,35 @@
+[versions]
+minecraft = "1.21.1"
+neo = "21.1.218"
+mod = "3.0"
+
+neoforge-userdev = "7.0.165"
+foojay-resolver = "0.8.0"
+
+botania = "451-SNAPSHOT"
+ars-nouveau = "5.11.2.1298"
+jei = "19.21.1.305"
+emi = "1.1.22+1.21.1"
+patchouli = "1.21.1-92-neoforge"
+geckolib = "4.7.2"
+curios = "9.5.1+1.21.1"
+jade = "15.10.5+neoforge"
+modern-ui = "3.11.1.9"
+jecharacters = "4.5.23"
+
+[libraries]
+neoforge = { module = "net.neoforged:neoforge", version.ref = "neo" }
+
+botania = { module = "vazkii.botania:botania-neoforge-1.21.1", version.ref = "botania" }
+ars-nouveau = { module = "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1", version.ref = "ars-nouveau" }
+jei = { module = "mezz.jei:jei-1.21.1-neoforge", version.ref = "jei" }
+emi = { module = "dev.emi:emi-neoforge", version.ref = "emi" }
+patchouli = { module = "maven.modrinth:patchouli", version.ref = "patchouli" }
+geckolib = { module = "software.bernie.geckolib:geckolib-neoforge-1.21.1", version.ref = "geckolib" }
+curios = { module = "top.theillusivec4.curios:curios-neoforge", version.ref = "curios" }
+jade = { module = "maven.modrinth:jade", version.ref = "jade" }
+modern-ui = { module = "maven.modrinth:modern-ui", version.ref = "modern-ui" }
+jecharacters = { module = "maven.modrinth:I7k4B65h", version.ref = "jecharacters" }
+
+[plugins]
+neoforge-userdev = { id = "net.neoforged.gradle.userdev", version.ref = "neoforge-userdev" }

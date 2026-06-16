@@ -38,3 +38,6 @@ local.properties
 
 # Agent documentation (local only)
 AGENTS.md
+
+# Plans (local planning only)
+plans/

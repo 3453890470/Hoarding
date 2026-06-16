@@ -3,10 +3,10 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.165'
+    alias libs.plugins.neoforge.userdev
 }
 
-version = mod_version
+version = "${libs.versions.minecraft.get()}-${libs.versions.mod.get()}"
 group = mod_group_id
 
 base {
@@ -47,22 +47,38 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     // Botania / Patchouli
-    maven { url = "https://maven.blamejared.com" }
+    maven {
+        name = "BlameJared"
+        url = "https://maven.blamejared.com"
+    }
     
     // EMI
-    maven { url = "https://maven.terraformersmc.com/" }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
     
     // Geckolib
-    maven { url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
+    maven {
+        name = "Geckolib"
+        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+    }
     
     // Curios
-    maven { url = "https://maven.theillusivec4.top/" }
+    maven {
+        name = "Curios"
+        url = "https://maven.theillusivec4.top/"
+    }
     
     // Modrinth mods
-    maven { url = "https://api.modrinth.com/maven" }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
     
     // CurseForge Maven (Jade, Infiniverse, TerraBlender 等)
-    maven { 
+    maven {
+        name = "CurseForge"
         url = "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
@@ -70,7 +86,10 @@ repositories {
     }
     
     // TerraBlender (Botania 世界生成依赖)
-    maven { url = "https://maven.minecraftforge.net/" }
+    maven {
+        name = "ForgeNet"
+        url = "https://maven.minecraftforge.net/"
+    }
 }
 
 configurations {
@@ -78,44 +97,44 @@ configurations {
 }
 
 dependencies {
-    implementation "net.neoforged:neoforge:${neo_version}"
+    implementation libs.neoforge
 
     // 可选依赖 - Botania (编译时)
-    compileOnly "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"
+    compileOnly libs.botania
 
     // 可选依赖 - Ars Nouveau (编译时)
-    compileOnly "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
+    compileOnly libs.ars.nouveau
 
     // === 配方查看器 ===
     // JEI - 仅编译时（兼容性测试）
-    compileOnly "mezz.jei:jei-1.21.1-neoforge:19.21.1.305"
+    compileOnly libs.jei
     
     // EMI - 测试环境运行时
-    localRuntime "dev.emi:emi-neoforge:1.1.22+1.21.1"
+    localRuntime libs.emi
 
     // === 测试环境 mod (仅运行时) ===
     
     // Botania 依赖
-    localRuntime "maven.modrinth:patchouli:1.21.1-92-neoforge"
+    localRuntime libs.patchouli
     
     // Ars Nouveau 依赖
-    localRuntime "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7.2"
+    localRuntime libs.geckolib
     
     // 通用依赖 - 饰品栏
-    localRuntime "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
+    localRuntime libs.curios
     
     // 客户端工具 - Jade (方块信息)
-    localRuntime "maven.modrinth:jade:15.10.5+neoforge"
+    localRuntime libs.jade
     
     // 客户端工具 - Modern UI (Modrinth Maven)
-    localRuntime "maven.modrinth:modern-ui:3.11.1.9"
+    localRuntime libs.modern.ui
     
     // 客户端工具 - JECharacters (中文搜索)
-    localRuntime "maven.modrinth:I7k4B65h:4.5.23"
+    localRuntime libs.jecharacters
 
     // 开发时运行时依赖
-    localRuntime "vazkii.botania:botania-neoforge-1.21.1:451-SNAPSHOT"
-    localRuntime "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1:5.11.2.1298"
+    localRuntime libs.botania
+    localRuntime libs.ars.nouveau
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -126,13 +145,13 @@ tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
             'mod_id'                    : mod_id,
             'mod_name'                  : mod_name,
-            'mod_version'               : mod_version,
+            'mod_version'               : libs.versions.mod.get(),
             'mod_authors'               : mod_authors,
             'mod_description'           : mod_description,
             'mod_license'               : mod_license,
-            'minecraft_version'         : minecraft_version,
+            'minecraft_version'         : libs.versions.minecraft.get(),
             'minecraft_version_range'   : minecraft_version_range,
-            'neo_version'               : neo_version,
+            'neo_version'               : libs.versions.neo.get(),
             'neo_version_range'         : neo_version_range,
             'loader_version_range'      : loader_version_range,
     ]

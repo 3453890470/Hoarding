@@ -183,6 +183,12 @@ tasks.withType(ProcessResources).configureEach {
     }
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 idea {
     module {
         downloadSources = true

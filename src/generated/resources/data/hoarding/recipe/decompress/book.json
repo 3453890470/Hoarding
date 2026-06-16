@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:book_pile"
-    }
+    "hoarding:book_pile"
   ],
   "result": {
     "count": 9,

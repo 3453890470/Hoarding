@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:brown_mushroom_crate"
-    }
+    "hoarding:brown_mushroom_crate"
   ],
   "result": {
     "count": 9,

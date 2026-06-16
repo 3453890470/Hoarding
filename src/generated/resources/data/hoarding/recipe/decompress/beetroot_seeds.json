@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:beetroot_seeds_bag"
-    }
+    "hoarding:beetroot_seeds_bag"
   ],
   "result": {
     "count": 9,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:porkchop_crate"
-    }
+    "hoarding:porkchop_crate"
   ],
   "result": {
     "count": 9,

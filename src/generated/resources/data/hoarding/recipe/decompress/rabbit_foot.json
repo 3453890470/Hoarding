@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:rabbit_foot_crate"
-    }
+    "hoarding:rabbit_foot_crate"
   ],
   "result": {
     "count": 9,

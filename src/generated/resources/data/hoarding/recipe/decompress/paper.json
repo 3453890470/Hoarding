@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:paper_stack"
-    }
+    "hoarding:paper_stack"
   ],
   "result": {
     "count": 9,

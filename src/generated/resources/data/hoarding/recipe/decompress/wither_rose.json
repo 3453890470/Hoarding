@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:wither_rose_crate"
-    }
+    "hoarding:wither_rose_crate"
   ],
   "result": {
     "count": 9,

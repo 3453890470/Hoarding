@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:warped_fungus_crate"
-    }
+    "hoarding:warped_fungus_crate"
   ],
   "result": {
     "count": 9,

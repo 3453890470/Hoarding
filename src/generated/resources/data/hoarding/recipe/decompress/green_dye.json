@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:green_dye_bucket"
-    }
+    "hoarding:green_dye_bucket"
   ],
   "result": {
     "count": 9,

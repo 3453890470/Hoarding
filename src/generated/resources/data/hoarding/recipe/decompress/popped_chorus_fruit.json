@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:popped_chorus_fruit_crate"
-    }
+    "hoarding:popped_chorus_fruit_crate"
   ],
   "result": {
     "count": 9,

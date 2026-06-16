@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:ender_pearl_crate"
-    }
+    "hoarding:ender_pearl_crate"
   ],
   "result": {
     "count": 9,

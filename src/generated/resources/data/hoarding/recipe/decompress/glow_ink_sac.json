@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:glow_ink_sac_barrel"
-    }
+    "hoarding:glow_ink_sac_barrel"
   ],
   "result": {
     "count": 9,

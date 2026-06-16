@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:rotten_flesh_crate"
-    }
+    "hoarding:rotten_flesh_crate"
   ],
   "result": {
     "count": 9,

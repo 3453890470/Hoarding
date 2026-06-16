@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:cookie_crate"
-    }
+    "hoarding:cookie_crate"
   ],
   "result": {
     "count": 9,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:popped_chorus_fruit"
-    }
+    "#": "minecraft:popped_chorus_fruit"
   },
   "pattern": [
     "###",
@@ -12,7 +10,6 @@
     "###"
   ],
   "result": {
-    "count": 1,
     "id": "hoarding:popped_chorus_fruit_crate"
   }
 }

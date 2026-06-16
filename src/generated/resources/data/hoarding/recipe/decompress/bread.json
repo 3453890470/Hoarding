@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:bread_crate"
-    }
+    "hoarding:bread_crate"
   ],
   "result": {
     "count": 9,

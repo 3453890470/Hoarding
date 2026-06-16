@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "hoarding:block/crate/botania/magenta_mystical_flower_crate_top",
-    "side": "hoarding:block/crate/botania/magenta_mystical_flower_crate_side"
-  }
-}

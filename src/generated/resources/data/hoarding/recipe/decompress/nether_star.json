@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:nether_star_block"
-    }
+    "hoarding:nether_star_block"
   ],
   "result": {
     "count": 9,

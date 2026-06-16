@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "hoarding:block/crate/ars_nouveau/sourceberry_crate_top",
-    "side": "hoarding:block/crate/ars_nouveau/sourceberry_crate_side"
-  }
-}

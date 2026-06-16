@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:cooked_salmon_barrel"
-    }
+    "hoarding:cooked_salmon_barrel"
   ],
   "result": {
     "count": 9,

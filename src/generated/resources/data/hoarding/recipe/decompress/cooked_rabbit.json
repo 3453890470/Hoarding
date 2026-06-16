@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:cooked_rabbit_crate"
-    }
+    "hoarding:cooked_rabbit_crate"
   ],
   "result": {
     "count": 9,

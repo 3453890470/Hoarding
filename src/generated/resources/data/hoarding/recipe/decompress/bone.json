@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:bone_pile"
-    }
+    "hoarding:bone_pile"
   ],
   "result": {
     "count": 9,

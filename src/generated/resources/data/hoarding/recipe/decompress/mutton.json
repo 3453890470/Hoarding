@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:mutton_crate"
-    }
+    "hoarding:mutton_crate"
   ],
   "result": {
     "count": 9,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:phantom_membrane_block"
-    }
+    "hoarding:phantom_membrane_block"
   ],
   "result": {
     "count": 9,

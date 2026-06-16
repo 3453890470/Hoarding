@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:pink_tulip_crate"
-    }
+    "hoarding:pink_tulip_crate"
   ],
   "result": {
     "count": 9,

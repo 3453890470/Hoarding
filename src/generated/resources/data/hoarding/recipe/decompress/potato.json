@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:potato_crate"
-    }
+    "hoarding:potato_crate"
   ],
   "result": {
     "count": 9,

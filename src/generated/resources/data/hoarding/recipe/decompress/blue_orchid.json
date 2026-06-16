@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:blue_orchid_crate"
-    }
+    "hoarding:blue_orchid_crate"
   ],
   "result": {
     "count": 9,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:egg_rack"
-    }
+    "hoarding:egg_rack"
   ],
   "result": {
     "count": 9,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:nautilus_block"
-    }
+    "hoarding:nautilus_block"
   ],
   "result": {
     "count": 9,

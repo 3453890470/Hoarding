@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:dandelion_crate"
-    }
+    "hoarding:dandelion_crate"
   ],
   "result": {
     "count": 9,

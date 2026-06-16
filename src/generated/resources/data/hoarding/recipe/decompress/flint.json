@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "hoarding:flint_block"
-    }
+    "hoarding:flint_block"
   ],
   "result": {
     "count": 9,

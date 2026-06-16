@@ -41,7 +41,6 @@ neoForge {
         configureEach {
             systemProperty 'neoforge.logging.markers', 'REGISTRIES'
             systemProperty 'neoforge.logging.console.level', 'debug'
-            logLevel = 'DEBUG'
         }
 
         client {
@@ -60,8 +59,8 @@ neoForge {
             systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
         }
 
-        data {
-            data()
+        clientData {
+            clientData()
             programArguments.addAll(
                     '--mod', mod_id,
                     '--all',
@@ -74,6 +73,12 @@ neoForge {
 
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+// 确保 main 手工资源优先于 generated DataGen 输出
+// （generated 的 blockstates/models 纹理路径错误，不应覆盖 main 的正确版本）
+tasks.named('processResources', ProcessResources).configure {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
 
 repositories {
     // 阿里云镜像（国内加速）
@@ -130,37 +135,26 @@ configurations {
 
 dependencies {
     // ================================================================
-    // [TODO-DEPS] 26.1.2 依赖兼容 — 以下依赖在 26.1.2 下暂无对应版本，已注释
-    // 恢复步骤：
-    //   1. 在 gradle/libs.versions.toml 中找到对应依赖的 TODO 块，填上 26.1.2 兼容版本号
-    //   2. 取消下方对应行的注释
+    // 26.1.2 依赖状态
+    // 已验证可用的依赖（取消注释即可启用）：
+    //   compileOnly libs.jei           — JEI 29.6.2.31
+    //   localRuntime libs.geckolib      — Geckolib 5.5.1（Ars Nouveau 前置）
+    //   localRuntime libs.curios        — Curios 15.0.0-beta.2+26.1.2（Botania 前置）
+    //   localRuntime libs.jade          — Jade 26.1.1+neoforge
+    //   localRuntime libs.modern.ui     — Modern UI 3.13.0.4
+    //   localRuntime libs.jecharacters  — JECharacters 4.6.3
     //
-    // 各依赖说明：
-    //   compileOnly libs.botania        — Botania API，编译引用 → vazkii.botania:botania-neoforge-26.1.2
-    //   compileOnly libs.ars.nouveau    — Ars Nouveau API，编译引用 → com.hollingsworth.ars_nouveau:ars_nouveau-26.1.2
-    //   compileOnly libs.jei            — JEI API，编译引用 → mezz.jei:jei-26.1.2-neoforge
-    //   localRuntime libs.emi           — EMI，测试环境运行时 → dev.emi:emi-neoforge
-    //   localRuntime libs.patchouli     — Patchouli，Botania 依赖
-    //   localRuntime libs.geckolib      — Geckolib，Ars Nouveau 依赖
-    //   localRuntime libs.curios        — Curios，饰品栏
-    //   localRuntime libs.jade          — Jade，方块信息
-    //   localRuntime libs.modern.ui     — Modern UI
-    //   localRuntime libs.jecharacters  — JECharacters 中文搜索
-    //   localRuntime libs.botania       — Botania 本体（运行时）
-    //   localRuntime libs.ars.nouveau   — Ars Nouveau 本体（运行时）
+    // 尚无 26.1.2 版本（无法启用）：
+    //   ✗ Botania        — 最高 1.20.1（Forge 版）
+    //   ✗ Ars Nouveau    — 最高 1.21.1（NeoForge 版）
+    //   ✗ Patchouli      — 最高 1.21.1（NeoForge 版，Botania 前置）
+    //   ✗ EMI            — 最高 1.21.1（NeoForge 版）
     // ================================================================
-    // compileOnly libs.botania
-    // compileOnly libs.ars.nouveau
-    // compileOnly libs.jei
-    // localRuntime libs.emi
-    // localRuntime libs.patchouli
-    // localRuntime libs.geckolib
-    // localRuntime libs.curios
-    // localRuntime libs.jade
-    // localRuntime libs.modern.ui
-    // localRuntime libs.jecharacters
-    // localRuntime libs.botania
-    // localRuntime libs.ars.nouveau
+    localRuntime libs.jei
+    localRuntime libs.curios
+    localRuntime libs.jade
+    localRuntime libs.modern.ui
+    localRuntime libs.jecharacters
 }
 
 tasks.withType(JavaCompile).configureEach {

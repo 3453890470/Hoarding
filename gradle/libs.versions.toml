@@ -8,17 +8,17 @@ mod = "1.0.0"
 moddev = "2.0.141"
 foojay-resolver = "0.8.0"
 
-# TODO: 26.1.2 兼容后恢复以下依赖版本
-# botania = "26.1.2-???-NEOFORGE"
-# ars-nouveau = "???"
-# jei = "???.???.???"
-# emi = "???.???.???+26.1.2"
-# patchouli = "26.1.2-???-neoforge"
-# geckolib = "???.???.???"
-# curios = "???.???.???+26.1.2"
-# jade = "???.???.???+neoforge"
-# modern-ui = "???.???.???"
-# jecharacters = "???.???.???"
+# 26.1.2 依赖版本（已验证可用）
+botania = "1.20.1-454-FORGE-SNAPSHOT"  # ❌ 尚无 26.1.2 版本
+ars-nouveau = "5.12.0"                 # ❌ 尚无 26.1.2 版本（最高 1.21.1）
+jei = "29.6.2.31"                      # ✅ 已确认
+emi = "1.1.24+1.21.1"                  # ❌ 尚无 26.1.2 版本（最高 1.21.1）
+patchouli = "1.21.1-84-NEOFORGE"       # ❌ 尚无 26.1.2 版本（最高 1.21.1）
+geckolib = "5.5.1"                     # ✅ 已确认
+curios = "15.0.0-beta.2+26.1.2"        # ✅ 已确认
+jade = "26.1.1+neoforge"               # ✅ 已确认
+modern-ui = "3.13.0.4"                 # ✅ 已确认
+jecharacters = "4.6.3"                 # ✅ 已确认
 
 [libraries]
 # ================================================================
@@ -28,17 +28,22 @@ foojay-resolver = "0.8.0"
 # ================================================================
 # neoforge = { module = "net.neoforged:neoforge", version.ref = "neo" }
 
-# TODO: 26.1.2 兼容后恢复以下依赖坐标
-# botania = { module = "vazkii.botania:botania-neoforge-26.1.2", version.ref = "botania" }
-# ars-nouveau = { module = "com.hollingsworth.ars_nouveau:ars_nouveau-26.1.2", version.ref = "ars-nouveau" }
-# jei = { module = "mezz.jei:jei-26.1.2-neoforge", version.ref = "jei" }
-# emi = { module = "dev.emi:emi-neoforge", version.ref = "emi" }
-# patchouli = { module = "maven.modrinth:patchouli", version.ref = "patchouli" }
-# geckolib = { module = "software.bernie.geckolib:geckolib-neoforge-26.1.2", version.ref = "geckolib" }
-# curios = { module = "top.theillusivec4.curios:curios-neoforge", version.ref = "curios" }
-# jade = { module = "maven.modrinth:jade", version.ref = "jade" }
-# modern-ui = { module = "maven.modrinth:modern-ui", version.ref = "modern-ui" }
-# jecharacters = { module = "maven.modrinth:I7k4B65h", version.ref = "jecharacters" }
+# ================================================================
+# 26.1.2 依赖坐标 — 有版本号的可直接取消注释
+# ================================================================
+# 以下四项尚无 26.1.2 版本：
+# botania = { module = "vazkii.botania:Botania", version.ref = "botania" }    # ❌ 仅 1.20.1
+# ars-nouveau = { module = "com.hollingsworth.ars_nouveau:ars_nouveau-1.21.1", version.ref = "ars-nouveau" }  # ❌ 仅 1.21.1
+# patchouli = { module = "vazkii.patchouli:Patchouli", version.ref = "patchouli" }  # ❌ 仅 1.21.1
+# emi = { module = "dev.emi:emi-neoforge", version.ref = "emi" }              # ❌ 仅 1.21.1
+
+# 以下六项已确认支持 26.1.2：
+jei = { module = "mezz.jei:jei-26.1.2-neoforge", version.ref = "jei" }
+geckolib = { module = "software.bernie.geckolib:geckolib-neoforge-26.1.2", version.ref = "geckolib" }
+curios = { module = "top.theillusivec4.curios:curios-neoforge", version.ref = "curios" }
+jade = { module = "maven.modrinth:jade", version.ref = "jade" }
+modern-ui = { module = "maven.modrinth:modern-ui", version.ref = "modern-ui" }
+jecharacters = { module = "maven.modrinth:I7k4B65h", version.ref = "jecharacters" }
 
 [plugins]
 neoforge-moddev = { id = "net.neoforged.moddev", version.ref = "moddev" }

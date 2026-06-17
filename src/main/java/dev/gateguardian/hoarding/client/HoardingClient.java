@@ -1,4 +1,4 @@
-﻿package dev.gateguardian.hoarding.client;
+package dev.gateguardian.hoarding.client;
 
 import dev.gateguardian.hoarding.Hoarding;
 import dev.gateguardian.hoarding.client.particle.SteamParticle;

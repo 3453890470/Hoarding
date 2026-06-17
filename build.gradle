@@ -147,7 +147,7 @@ dependencies {
     // 尚无 26.1.2 版本（无法启用）：
     //   ✗ Botania        — 最高 1.20.1（Forge 版）
     //   ✗ Ars Nouveau    — 最高 1.21.1（NeoForge 版）
-    //   ✗ Patchouli      — 最高 1.21.1（NeoForge 版，Botania 前置）
+    //   ✗ Patchouli      — 最低 1.21.1（NeoForge 版，Botania 前置）
     //   ✗ EMI            — 最高 1.21.1（NeoForge 版）
     // ================================================================
     localRuntime libs.jei
@@ -192,6 +192,7 @@ java {
 idea {
     module {
         downloadSources = true
-        downloadJavadoc = true
-    }
+        downloadJavadoc = true    }
 }
+
+

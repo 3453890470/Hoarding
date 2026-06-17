@@ -1,4 +1,4 @@
-﻿package dev.gateguardian.hoarding.client.particle;
+package dev.gateguardian.hoarding.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;

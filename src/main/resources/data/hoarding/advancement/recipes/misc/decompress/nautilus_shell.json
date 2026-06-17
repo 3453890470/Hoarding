@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_nautilus_block": {
+    "has_nautilus_shell_block": {
       "conditions": {
         "items": [
           {
-            "items": "hoarding:nautilus_block"
+            "items": "hoarding:nautilus_shell_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_nautilus_block"
+      "has_nautilus_shell_block"
     ]
   ],
   "rewards": {

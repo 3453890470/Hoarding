@@ -70,7 +70,7 @@
   "block.hoarding.magma_cream_block": "岩浆膏块",
   "block.hoarding.melon_seeds_bag": "袋装西瓜种子",
   "block.hoarding.mutton_crate": "箱装生羊肉",
-  "block.hoarding.nautilus_block": "鹦鹉螺壳块",
+  "block.hoarding.nautilus_shell_block": "鹦鹉螺壳块",
   "block.hoarding.nether_star_block": "下界之星块",
   "block.hoarding.nether_wart_crate": "箱装下界疣",
   "block.hoarding.orange_dye_bucket": "桶装橙色染料",
@@ -120,5 +120,10 @@
   "block.hoarding.yellow_dye_bucket": "桶装黄色染料",
   "block.hoarding.yellow_mystical_flower_crate": "箱装黄色神秘花",
   "item.hoarding.pumpkin_slice": "南瓜片",
-  "itemGroup.hoarding.main": "囤物"
+  "itemGroup.hoarding.main": "囤物",
+  "hoarding.config.integration": "联动设置",
+  "hoarding.config.enableBotaniaIntegration": "启用 Botania 联动",
+  "hoarding.config.enableBotaniaIntegration.tooltip": "显示 Botania 联动方块和合成配方",
+  "hoarding.config.enableArsNouveauIntegration": "启用 Ars Nouveau 联动",
+  "hoarding.config.enableArsNouveauIntegration.tooltip": "显示 Ars Nouveau 联动方块和合成配方"
 }

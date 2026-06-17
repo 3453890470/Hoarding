@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-12T22:33:18.9257366	Hoarding Recipes
+// 26.1.2	2026-06-17T00:19:36.0403328	Hoarding Recipes
 735e31bfb5e863784782eee3d51a89d5583095e6 data/hoarding/advancement/recipes/building_blocks/compress/allium_crate.json
 68112b3e1647a06ff77de6a76c5a0db6f9f67937 data/hoarding/advancement/recipes/building_blocks/compress/apple_crate.json
 485e34c2c0a1552791596bbb1913a499d048d6e5 data/hoarding/advancement/recipes/building_blocks/compress/azure_bluet_crate.json
@@ -59,7 +59,7 @@ c84542d362fec10be7810f16194b026aacb0cc34 data/hoarding/advancement/recipes/build
 6eb759aadac0ac8f119028e4051057841446b8e1 data/hoarding/advancement/recipes/building_blocks/compress/magma_cream_block.json
 900512fbc82a8284b143e8fbe8c0d5c5ed628639 data/hoarding/advancement/recipes/building_blocks/compress/melon_seeds_bag.json
 84d0f8062ff54a4e8cb89f8b838382ee75171cde data/hoarding/advancement/recipes/building_blocks/compress/mutton_crate.json
-fb1c3941b7a765bcac61d2127441df7a9e1d644b data/hoarding/advancement/recipes/building_blocks/compress/nautilus_block.json
+fba8134fecd2615900a1069f000e654012068686 data/hoarding/advancement/recipes/building_blocks/compress/nautilus_shell_block.json
 de39415b79c3273e7d745b2a8592561305fd9c0b data/hoarding/advancement/recipes/building_blocks/compress/nether_star_block.json
 6547a1c5845cfc2f3cfe1a358c481e6243ff1262 data/hoarding/advancement/recipes/building_blocks/compress/nether_wart_crate.json
 c6e240829d6130cfb973b49be227ac06d7b65c6f data/hoarding/advancement/recipes/building_blocks/compress/orange_dye_bucket.json
@@ -171,7 +171,7 @@ b8849741f793054f2f3ac754fd1068f4abc34172 data/hoarding/advancement/recipes/misc/
 56249acde7d82a294fa90041d5e8ded7922102cf data/hoarding/advancement/recipes/misc/decompress/magenta_dye.json
 3304345f5f0271d52e3650b4978187b3b9931b44 data/hoarding/advancement/recipes/misc/decompress/magma_cream.json
 df0e3aa95e4caffdab3fdaa1870d2cd7ba463637 data/hoarding/advancement/recipes/misc/decompress/melon_seeds.json
-26e32c0a07df7cafdec3ab968d8fc562afea2645 data/hoarding/advancement/recipes/misc/decompress/nautilus_shell.json
+8acc54f9e2ef8918fad94df46b55e646e1afe4c8 data/hoarding/advancement/recipes/misc/decompress/nautilus_shell.json
 b95182ea517ef407554839886c4e2916e148bc33 data/hoarding/advancement/recipes/misc/decompress/nether_star.json
 a5e3ff1756d108cd0075ae19d3c1e5a9b01fe9ed data/hoarding/advancement/recipes/misc/decompress/nether_wart.json
 50460174b2eb585fd6a83005f5fa4b00d115cf4e data/hoarding/advancement/recipes/misc/decompress/orange_dye.json
@@ -265,7 +265,7 @@ acb3950dfd0d03640f46b7c65dc2b8adeb9755dc data/hoarding/recipe/compress/lily_crat
 802703a04a31a5cfe90cc305f30f736d481b4986 data/hoarding/recipe/compress/magma_cream_block.json
 1524da0a1aa6ab4defabd2369010f32aa306cbc5 data/hoarding/recipe/compress/melon_seeds_bag.json
 14e336eb80411c2041e73159b704e43f122eb6b4 data/hoarding/recipe/compress/mutton_crate.json
-ec7a26efd2afc4a9c1f76e5b8bdc94e8f21146f3 data/hoarding/recipe/compress/nautilus_block.json
+22a2b548628a6a83a6664ffc1afb5fc94734a6e1 data/hoarding/recipe/compress/nautilus_shell_block.json
 a99fd8c1edad13c8a6ffa09b957019d1de0c2444 data/hoarding/recipe/compress/nether_star_block.json
 43be7912655b341ddcbe2083145a7a56b5eff6ee data/hoarding/recipe/compress/nether_wart_crate.json
 227f96a37cdf3e694bbc607948d4a38997d30e84 data/hoarding/recipe/compress/orange_dye_bucket.json
@@ -368,7 +368,7 @@ b6f0101c9332ec5334c94cdffbdee13bfd00f198 data/hoarding/recipe/decompress/lime_dy
 6af9b160494e346b795a64f69a9a3017687f1571 data/hoarding/recipe/decompress/magma_cream.json
 428db82360d270714f016aed8714d2698ec2e3d5 data/hoarding/recipe/decompress/melon_seeds.json
 187fcd130ecd10ded4df688bb6b633a4080da03d data/hoarding/recipe/decompress/mutton.json
-566d25e18ab865fb480887e6be9461c7c913e935 data/hoarding/recipe/decompress/nautilus_shell.json
+c3b65d7e2fe7550223212dbd8a43e1c663fdbcbb data/hoarding/recipe/decompress/nautilus_shell.json
 0a7499ad44c83257544032875754e29a2cf745c4 data/hoarding/recipe/decompress/nether_star.json
 9f17401e27aa8da901e1bb0924c53483e0de5833 data/hoarding/recipe/decompress/nether_wart.json
 a902b0cf1048d014c2fec147fe130df558c1bf1b data/hoarding/recipe/decompress/orange_dye.json

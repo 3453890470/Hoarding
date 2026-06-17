@@ -3,12 +3,12 @@
   "credit": "Made with Blockbench",
   "parent": "block/block",
   "textures": {
-    "south": "hoarding:block/nautilus_block_back",
-    "bottom": "hoarding:block/nautilus_block_bottom",
-    "west": "hoarding:block/nautilus_block_side",
-    "top": "hoarding:block/nautilus_block_top",
-    "north": "hoarding:block/nautilus_block_front",
-    "particle": "hoarding:block/nautilus_block_side"
+    "south": "hoarding:block/nautilus_shell_block_back",
+    "bottom": "hoarding:block/nautilus_shell_block_bottom",
+    "west": "hoarding:block/nautilus_shell_block_side",
+    "top": "hoarding:block/nautilus_shell_block_top",
+    "north": "hoarding:block/nautilus_shell_block_front",
+    "particle": "hoarding:block/nautilus_shell_block_side"
   },
   "elements": [
     {

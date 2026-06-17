@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "hoarding:block/magma_cream_block",
+      "y": 90
+    },
+    "facing=north": {
       "model": "hoarding:block/magma_cream_block"
+    },
+    "facing=south": {
+      "model": "hoarding:block/magma_cream_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hoarding:block/magma_cream_block",
+      "y": 270
     }
   }
 }

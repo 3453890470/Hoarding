@@ -1,0 +1,25 @@
+{
+  "favorites": [],
+  "lookup_history": [
+    "item:hoarding:glistering_melon",
+    "item:hoarding:cooked_beef_crate",
+    "item:hoarding:tropical_fish_barrel",
+    "item:hoarding:spider_eye_crate",
+    "item:hoarding:crimson_fungus_crate",
+    "item:hoarding:pumpkin_slice",
+    "item:hoarding:cornflower_crate",
+    "item:hoarding:golden_carrot_crate",
+    "item:minecraft:brown_banner",
+    "item:minecraft:orange_tulip",
+    "item:minecraft:petrified_oak_slab",
+    "item:minecraft:oak_fence"
+  ],
+  "craft_history": [],
+  "recipe_defaults": {
+    "added": [],
+    "tags": {},
+    "resolutions": {},
+    "disabled": []
+  },
+  "hidden_stacks": []
+}

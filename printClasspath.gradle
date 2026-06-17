@@ -1,0 +1,7 @@
+tasks.register('printClasspath') {
+    doLast {
+        sourceSets.main.compileClasspath.each { file ->
+            println file.absolutePath
+        }
+    }
+}

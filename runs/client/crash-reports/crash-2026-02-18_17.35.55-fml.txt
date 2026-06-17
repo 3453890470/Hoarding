@@ -1,0 +1,110 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2026-02-18 17:35:55
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.ItemStack.<init>(ItemStack.java:258) ~[neoforge-21.1.77.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+-- Mod loading issue for: hoarding --
+Details:
+	Mod file: /E:/GitHub/hoarding-1.21.1-neoforge/build/resources/main/
+	Failure message: Hoarding (hoarding) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.NullPointerException: Cannot invoke "net.minecraft.world.level.ItemLike.asItem()" because "p_41601_" is null
+	Mod version: 3.0.0
+	Mod issues URL: https://github.com/gateguardian/hoarding/issues
+	Exception message: java.lang.NullPointerException: Cannot invoke "net.minecraft.world.level.ItemLike.asItem()" because "p_41601_" is null
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.ItemStack.<init>(ItemStack.java:258) ~[neoforge-21.1.77.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.item.ItemStack.<init>(ItemStack.java:242) ~[neoforge-21.1.77.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.food.FoodProperties$Builder.usingConvertsTo(FoodProperties.java:109) ~[neoforge-21.1.77.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/hoarding@3.0.0/dev.gateguardian.hoarding.common.registry.HoardingItems.lambda$static$0(HoardingItems.java:21) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.registries.DeferredRegister$Items.lambda$register$0(DeferredRegister.java:483) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:26) ~[bus-8.0.2.jar%23148!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350) ~[bus-8.0.2.jar%23148!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:329) ~[bus-8.0.2.jar%23148!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.31.jar%23144!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.31.jar%23144!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.31.jar%23144!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.31.jar%23144!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.31.jar%23144!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.77/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.77.jar%23190!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 21.0.6, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Amazon.com Inc.
+	Memory: 166856008 bytes (159 MiB) / 572522496 bytes (546 MiB) up to 4255121408 bytes (4058 MiB)
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Celeron(R) N5095 @ 2.00GHz
+	Identifier: Intel64 Family 6 Model 156 Stepping 0
+	Microarchitecture: Jasper Lake
+	Frequency (GHz): 2.00
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 4
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 VRAM (MiB): 1024.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.101.1999
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 4.27
+	Memory slot #0 type: LPDDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 4.27
+	Memory slot #1 type: LPDDR4
+	Virtual memory max (MiB): 42060.61
+	Virtual memory used (MiB): 36549.64
+	Swap memory total (MiB): 25832.21
+	Swap memory used (MiB): 2787.29
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 18919.05, total: 325219.00
+	Space in storage for workdir (MiB): available: 119531.04, total: 325218.00
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.31.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.31.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.31.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		main                                              |Hoarding                      |hoarding                      |3.0.0               |Manifest: NOSIGNATURE
+		neoforge-21.1.77.jar                              |Minecraft                     |minecraft                     |1.21.1              |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		neoforge-21.1.77.jar                              |NeoForge                      |neoforge                      |21.1.77             |Manifest: NOSIGNATURE
+	Crash Report UUID: 4af92951-36f4-4b8f-b77c-3f72d0d00d3f
+	FML: 4.0.31
+	NeoForge: 21.1.77

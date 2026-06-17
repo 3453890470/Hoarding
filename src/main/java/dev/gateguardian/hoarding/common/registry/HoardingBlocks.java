@@ -15,8 +15,10 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -205,8 +207,8 @@ public class HoardingBlocks {
             () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOL),
             HorizontalFacingBlock::new
     );
-    public static final DeferredBlock<Block> NAUTILUS_BLOCK = block(
-            "nautilus_block",
+    public static final DeferredBlock<Block> NAUTILUS_SHELL_BLOCK = block(
+            "nautilus_shell_block",
             () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK).strength(2.0F, 3.0F).sound(SoundType.BONE_BLOCK),
             NautilusBlock::new
     );
@@ -268,6 +270,28 @@ public class HoardingBlocks {
         var blockItem = HoardingItems.ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
         HoardingItems.CREATIVE_MODE_TAB_ITEMS.offer(blockItem);
         return block;
+    }
+
+    /**
+     * Register a block without auto-adding to creative tab.
+     * Used by integration blocks whose visibility is controlled by config.
+     *
+     * @param itemCallback optional callback to receive the registered DeferredItem (for later creative tab use)
+     */
+    public static <T extends Block> DeferredBlock<T> blockIntegration(String name, Supplier<BlockBehaviour.Properties> properties, Function<BlockBehaviour.Properties, T> factory, Consumer<DeferredItem<?>> itemCallback) {
+        DeferredBlock<T> block = BLOCKS.registerBlock(name, factory, properties);
+        var blockItem = HoardingItems.ITEMS.registerSimpleBlockItem(name, block, () -> new Item.Properties());
+        if (itemCallback != null) {
+            itemCallback.accept(blockItem);
+        }
+        return block;
+    }
+
+    /**
+     * Register a block without auto-adding to creative tab (no item callback).
+     */
+    public static <T extends Block> DeferredBlock<T> blockIntegration(String name, Supplier<BlockBehaviour.Properties> properties, Function<BlockBehaviour.Properties, T> factory) {
+        return blockIntegration(name, properties, factory, null);
     }
 
     // === Crates ===

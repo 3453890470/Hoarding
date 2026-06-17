@@ -15,13 +15,18 @@
 package dev.gateguardian.hoarding.integration.botania;
 
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public final class HoardingBotaniaBlocks {
+
+    private static final List<DeferredItem<?>> BLOCK_ITEMS = new ArrayList<>();
 
     // Mystical Flower Crates - 16 colors
     public static final DeferredBlock<Block> WHITE_MYSTICAL_FLOWER_CRATE = mysticalFlowerCrate("white_mystical_flower_crate");
@@ -66,11 +71,20 @@ public final class HoardingBotaniaBlocks {
         // Static initialization triggers registration via HoardingBlocks.block()
     }
 
+    public static List<DeferredBlock<Block>> getAllBlocks() {
+        return ALL_CRATES;
+    }
+
+    public static List<DeferredItem<?>> getAllItems() {
+        return BLOCK_ITEMS;
+    }
+
     private static DeferredBlock<Block> mysticalFlowerCrate(String name) {
-        return HoardingBlocks.block(
+        return HoardingBlocks.blockIntegration(
                 name,
                 () -> BlockBehaviour.Properties.of().strength(2.0F, 3.0F),
-                Block::new
+                Block::new,
+                BLOCK_ITEMS::add
         );
     }
 }

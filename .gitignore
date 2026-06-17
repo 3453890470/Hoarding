@@ -38,3 +38,15 @@ local.properties
 
 # Agent documentation (local only)
 AGENTS.md
+
+# Plans
+plans/
+
+# Python cache
+__pycache__/
+
+# Temp files
+*.tmp
+
+# World saves
+run/saves/

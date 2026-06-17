@@ -1,0 +1,10 @@
+{
+  "values": [
+    "hoarding:flint_block",
+    "hoarding:nether_star_block",
+    "hoarding:scute_block",
+    "hoarding:nautilus_shell_block",
+    "hoarding:magma_cream_block",
+    "hoarding:bone_pile"
+  ]
+}

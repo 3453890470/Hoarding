@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-17T00:19:36.0243366	Tags for minecraft:block mod id hoarding
+// 26.1.2	2026-06-18T00:23:33.1098663	Tags for minecraft:block mod id hoarding
 49aa5b6322ed5faa6ec9d575ac9ea32f884f2868 data/c/tags/block/storage_blocks.json
 13b60f682e6fa3d834bac97e3fe9d5b0e1c39cbd data/c/tags/block/storage_blocks/allium.json
 3089a331965917e599e0a08ae6dc5a04ad5c23ac data/c/tags/block/storage_blocks/apple.json
@@ -104,3 +104,5 @@ bd4c4d76f0c9a515bc69735dd2b095ef09f004f6 data/c/tags/block/storage_blocks/sweet_
 567256cde9f25ce3ad62a8773c489fa02eaeebee data/c/tags/block/storage_blocks/wither_rose.json
 17e6d960faf3dc9667b78ba133519d3f047d5945 data/c/tags/block/storage_blocks/yellow_dye.json
 eaf9f3921809919b3ba4125c0de6012199d23dc3 data/minecraft/tags/block/enchantment_power_provider.json
+bb1fcd7d2d63c5b284e9a32bf733304a4c7acde0 data/minecraft/tags/block/mineable/axe.json
+8130e9247d080392dbe2db9eea3467a004e019cf data/minecraft/tags/block/mineable/pickaxe.json

@@ -137,7 +137,7 @@ dependencies {
     // ================================================================
     // 26.1.2 依赖状态
     // 已验证可用的依赖（取消注释即可启用）：
-    //   compileOnly libs.jei           — JEI 29.6.2.31
+    compileOnly libs.jei           // JEI 29.6.2.31 (API for JEI plugin)
     //   localRuntime libs.geckolib      — Geckolib 5.5.1（Ars Nouveau 前置）
     //   localRuntime libs.curios        — Curios 15.0.0-beta.2+26.1.2（Botania 前置）
     //   localRuntime libs.jade          — Jade 26.1.1+neoforge

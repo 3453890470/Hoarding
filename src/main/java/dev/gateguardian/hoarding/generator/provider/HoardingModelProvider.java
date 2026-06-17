@@ -14,11 +14,16 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class HoardingModelProvider implements DataProvider {
 
-
+    // Blocks whose models are hand-crafted in src/main/resources/ — skip model generation
+    private static final Set<Block> SKIP_MODEL_GENERATION = Set.of(
+        HoardingBlocks.MAGMA_CREAM_BLOCK.get(),
+        HoardingBlocks.NAUTILUS_SHELL_BLOCK.get()
+    );
 
     private final PackOutput output;
 
@@ -108,6 +113,11 @@ public class HoardingModelProvider implements DataProvider {
                     "hoarding:block/cube_symmetry_west",
                     "\"bottom\":\"hoarding:" + p + "bottom\",\"north\":\"hoarding:" + p + "front\",\"south\":\"hoarding:" + p + "back\",\"top\":\"hoarding:" + p + "top\",\"west\":\"hoarding:" + p + "side\"");
         } else if (block instanceof HorizontalFacingBlock) {
+            if (SKIP_MODEL_GENERATION.contains(block)) {
+                // Only generate blockstate, skip model — hand-crafted Blockbench model exists
+                save(cache, list, bsDir.resolve(name + ".json"), blockstate(name, "h"));
+                return;
+            }
             emit(cache, list, bsDir, mbDir, name, "h",
                     "minecraft:block/cube_all", "\"all\":\"hoarding:block/" + name + "\"");
         } else {

@@ -1,5 +1,6 @@
 package dev.gateguardian.hoarding.generator.data;
 
+import dev.gateguardian.hoarding.common.config.HoardingConfig;
 import dev.gateguardian.hoarding.common.registry.HoardingBlocks;
 import dev.gateguardian.hoarding.common.registry.HoardingItems;
 import dev.gateguardian.hoarding.integration.ModIntegration;
@@ -191,12 +192,12 @@ public class StorageBlocks {
         builder(HoardingBlocks.SCUTE_BLOCK, Items.TURTLE_SCUTE).build();
         builder(HoardingBlocks.PHANTOM_MEMBRANE_BLOCK, Items.PHANTOM_MEMBRANE).build();
         builder(HoardingBlocks.MAGMA_CREAM_BLOCK, Items.MAGMA_CREAM).build();
-        builder(HoardingBlocks.NAUTILUS_BLOCK, Items.NAUTILUS_SHELL).build();
+        builder(HoardingBlocks.NAUTILUS_SHELL_BLOCK, Items.NAUTILUS_SHELL).build();
         addBotaniaEntries();
         addArsNouveauEntries();
     }
     private static void addBotaniaEntries() {
-        if (!ModIntegration.isBotaniaLoaded()) return;
+        if (!ModIntegration.isBotaniaLoaded() || !HoardingConfig.ENABLE_BOTANIA_INTEGRATION.get()) return;
 
         builder(HoardingBotaniaBlocks.WHITE_MYSTICAL_FLOWER_CRATE,
                 modItem(ModIntegration.BOTANIA_MOD_ID, "white_mystical_flower"))
@@ -249,7 +250,7 @@ public class StorageBlocks {
     }
 
     private static void addArsNouveauEntries() {
-        if (!ModIntegration.isArsNouveauLoaded()) return;
+        if (!ModIntegration.isArsNouveauLoaded() || !HoardingConfig.ENABLE_ARS_NOUVEAU_INTEGRATION.get()) return;
 
         builder(HoardingArsNouveauBlocks.MAGEBLOOM_CRATE,
                 modItem(ModIntegration.ARS_NOUVEAU_MOD_ID, "magebloom"))

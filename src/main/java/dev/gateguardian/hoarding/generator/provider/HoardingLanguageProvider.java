@@ -51,6 +51,12 @@ public class HoardingLanguageProvider implements DataProvider {
         json.addProperty("hoarding.config.enableArsNouveauIntegration", "Enable Ars Nouveau Integration");
         json.addProperty("hoarding.config.enableArsNouveauIntegration.tooltip", "Show Ars Nouveau integration blocks and recipes in creative tab and JEI");
 
+        // Configuration screen translations (screen title, section headers)
+        json.addProperty("hoarding.configuration.title", "Hoarding Configuration");
+        json.addProperty("hoarding.configuration.section.hoarding.client.toml", "Hoarding");
+        json.addProperty("hoarding.configuration.integration", "Integration Settings");
+        json.addProperty("hoarding.configuration.integration.tooltip", "Configure integration mod features");
+
         var path = output.getOutputFolder(PackOutput.Target.RESOURCE_PACK)
                 .resolve(Hoarding.MOD_ID).resolve("lang").resolve("en_us.json");
         return DataProvider.saveStable(cache, json, path);

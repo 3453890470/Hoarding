@@ -106,6 +106,10 @@
   "hoarding.config.enableBotaniaIntegration": "Enable Botania Integration",
   "hoarding.config.enableBotaniaIntegration.tooltip": "Show Botania integration blocks and recipes in creative tab and JEI",
   "hoarding.config.integration": "Integration",
+  "hoarding.configuration.integration": "Integration Settings",
+  "hoarding.configuration.integration.tooltip": "Configure integration mod features",
+  "hoarding.configuration.section.hoarding.client.toml": "Hoarding",
+  "hoarding.configuration.title": "Hoarding Configuration",
   "item.hoarding.pumpkin_slice": "Pumpkin Slice",
   "itemGroup.hoarding.main": "Hoarding"
 }

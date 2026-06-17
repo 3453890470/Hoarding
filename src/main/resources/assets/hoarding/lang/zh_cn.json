@@ -125,5 +125,9 @@
   "hoarding.config.enableBotaniaIntegration": "启用 Botania 联动",
   "hoarding.config.enableBotaniaIntegration.tooltip": "显示 Botania 联动方块和合成配方",
   "hoarding.config.enableArsNouveauIntegration": "启用 Ars Nouveau 联动",
-  "hoarding.config.enableArsNouveauIntegration.tooltip": "显示 Ars Nouveau 联动方块和合成配方"
+  "hoarding.config.enableArsNouveauIntegration.tooltip": "显示 Ars Nouveau 联动方块和合成配方",
+  "hoarding.configuration.title": "Hoarding 配置",
+  "hoarding.configuration.section.hoarding.client.toml": "Hoarding",
+  "hoarding.configuration.integration": "联动设置",
+  "hoarding.configuration.integration.tooltip": "配置联动模组功能"
 }

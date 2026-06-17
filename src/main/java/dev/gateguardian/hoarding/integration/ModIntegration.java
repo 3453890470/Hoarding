@@ -12,6 +12,7 @@ import dev.gateguardian.hoarding.common.registry.HoardingItems;
 import dev.gateguardian.hoarding.integration.arsnouveau.HoardingArsNouveauBlocks;
 import dev.gateguardian.hoarding.integration.botania.HoardingBotaniaBlocks;
 import dev.gateguardian.hoarding.integration.jei.HoardingJeiPlugin;
+import net.minecraft.client.Minecraft;
 import net.neoforged.fml.ModList;
 
 public final class ModIntegration {
@@ -57,8 +58,13 @@ public final class ModIntegration {
             Hoarding.LOGGER.info("Ars Nouveau integration blocks added to creative tab");
         }
 
-        // Also notify JEI to update ingredient visibility
-        HoardingJeiPlugin.updateVisibility();
+        // Also notify JEI to update ingredient visibility (must be on main thread)
+        var mc = Minecraft.getInstance();
+        if (mc != null) {
+            mc.execute(HoardingJeiPlugin::updateVisibility);
+        } else {
+            HoardingJeiPlugin.updateVisibility();
+        }
     }
 
     public static boolean isBotaniaLoaded() {
